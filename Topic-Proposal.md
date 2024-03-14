@@ -2,7 +2,8 @@
 
 ---
 ## Propriety Information
-(Y/N)
+(Y/N)?
+No. There will be no use of proprietary information in this document or machine learning project.
 
 ---
 ## Analysis
