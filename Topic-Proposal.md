@@ -52,7 +52,7 @@ Web Application
 | Total | 60 hours |
 
 ### Projected Completion Date
-
+04/19/2024
 ---
 ## Implementation and Evaluation
 ### Approach for Executing The Project
