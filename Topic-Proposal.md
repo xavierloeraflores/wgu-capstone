@@ -9,6 +9,9 @@ No. There will be no use of proprietary information in this document or machine 
 ## Analysis
 
 ### Project Topic and Description
+Topic: Racism in Social Media
+
+
 
 ### Project Purpose and Goals
 
