@@ -44,12 +44,12 @@ Web Application
 
 ### Estimated Development Time
 
-| Sprint | Time(hours) |
+| Sprint | Time |
 | ------ | ----------- |
-| Planning and Design |  |
-| Development |  |
-| Documentation |  |
-| Total |  |
+| Planning and Design | 10 hours|
+| Development | 40 hours |
+| Documentation | 10 hours |
+| Total | 60 hours |
 
 ### Projected Completion Date
 
