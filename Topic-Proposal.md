@@ -29,6 +29,9 @@ Web Application
 ### Programming/Development Language(s)
 
 - Python
+- Sci-kit Learn
+- Pandas
+- FastAPI
 - Next.js
 - TypeScript
 - Tailwind CSS
