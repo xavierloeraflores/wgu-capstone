@@ -24,12 +24,23 @@ Topic: Racism in Social Media
 
 ### Computer Science Application Type
 (Mobile/Web/Standalone)
+Web Application
 
 ### Programming/Development Language(s)
 
+- Python
+- Next.js
+- TypeScript
+- Tailwind CSS
+
 ### Operating System(s)/Platform(s)
 
+- Vercel for front-end hosting
+- Railway for back-end hosting
+
 ### Database Management System
+
+- Postgres on Vercel
 
 ### Estimated Development Time
 
