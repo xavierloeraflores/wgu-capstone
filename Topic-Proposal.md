@@ -40,7 +40,7 @@ Web Application
 
 ### Database Management System
 
-- Postgres on Vercel
+- Postgres on Vercel DB
 
 ### Estimated Development Time
 
