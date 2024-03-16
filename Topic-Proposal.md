@@ -19,7 +19,7 @@ The purpose of the project is to create a machine learning model that can detect
 ### Descriptive Method
 
 ### Predictive or Prescriptive Method
-The project will utilize a classification model to predict whether a social media post contains racism or offensive material. It should be be able to predict with a high degree of accuracy whether a short text post contains racism or not.
+The project will utilize a classification model to predict whether a social media post contains racism or offensive material. It should be be able to predict with a high degree of accuracy whether a short text post contains racism or not. The model should receive a string input of the social media post's text and out a binary classification of whether the post contains offensive racism or not.
 
 ---
 ## Design and Development
