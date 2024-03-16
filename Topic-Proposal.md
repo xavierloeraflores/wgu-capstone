@@ -11,6 +11,8 @@ No. There will be no use of proprietary information in this document or machine 
 ### Project Topic and Description
 Topic: Racism in Social Media
 
+Description: With the rise in competitors to social media platforms such as Twitter, some platforms may feel it is important to maintain a safe and inclusive environment for all their users. This project will focus on creating a machine learning model that can detect racism in social media posts. The model will be trained on a dataset of social media posts from Twitter that have been labeled as on whether or not they contain any offensive racist material. The model will then be used to create a web application that will demo the machine learning model's capabilities by allowing users to post tweet-like posts to a central timeline that flags posts depending on their content. This will allow social media platforms to automatically detect and remove/hide offensive posts, reducing the amount of hate speech on their platforms. The timeline will by default hide posts that are flagged as offensive, but users will be able to toggle the visibility of these posts.
+
 
 
 ### Project Purpose and Goals
