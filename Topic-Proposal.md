@@ -14,6 +14,7 @@ Topic: Racism in Social Media
 
 
 ### Project Purpose and Goals
+The purpose of the project is to create a machine learning model that can detect racism in offensive social media posts. This would allow social media platforms to automatically detect and remove/hide offensive posts, reducing the amount of hate speech on their platforms. The goal is to create a model that can accurately detect racism in the text of social media posts. 
 
 ### Descriptive Method
 
