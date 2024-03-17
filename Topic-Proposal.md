@@ -20,8 +20,8 @@ The purpose of the project is to create a machine learning model that can detect
 
 ### Descriptive Method
 
-### Predictive or Prescriptive Method
-The project will utilize a classification model to predict whether a social media post contains racism or offensive material. It should be be able to predict with a high degree of accuracy whether a short text post contains racism or not. The model should receive a string input of the social media post's text and out a binary classification of whether the post contains offensive racism or not.
+### Predictive/Prescriptive Method
+The project will utilize a classification model to predict whether a social media post contains racism or offensive material. It should be be able to predict with a high degree of accuracy whether a short text post contains racism or not. The model should receive a string input of the social media post's text and return out a binary classification that will be shown to users via a frontend web application. From the model's predictions, the web application will be able to toggle hide posts that are flagged as offensive. The user will by default not read offensive posts but will be able to toggle the visibility of these posts.
 
 ---
 ## Design and Development
@@ -67,7 +67,7 @@ Postgres on Vercel DB was chosen for its cheap cost and ease of use. With a SQL 
 ## Implementation and Evaluation
 ### Approach for Executing The Project
 The project will be executed in the following steps:
-1. Data Collection: Utilize a dataset of social media posts from Twitter that have been labeled as on whether or not they contain any offensive racist material.
+1. Data Collection: Utilize a dataset of social media posts from Twitter that have been labeled as on whether they contain any offensive racist material.
 2. Data Preprocessing: Clean the data and prepare it for training.
 3. Model Training: Using Pandas and Scikit-learn, train a machine learning model to detect racism in social media posts.,
 4. Model Evaluation: Evaluate the model's performance using a test dataset.
