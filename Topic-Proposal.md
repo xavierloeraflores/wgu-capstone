@@ -24,7 +24,7 @@ The machine learning model utilize Natural Language Processing (NLP) to analyze 
 
 
 ### Project Purpose and Goals
-The purpose of the project is to create a machine learning model that can detect racism in offensive social media posts. This would allow social media platforms to automatically detect and remove/hide offensive posts, reducing the amount of hate speech on their platforms. The goal is to create a model that can accurately detect racism in the text of social media posts. 
+The purpose of the project is to create a machine learning model that can detect racism in offensive social media posts. This would allow the social media platform to automatically detect and remove/hide offensive posts, reducing the amount of hate speech on their platforms. Since the social media platform is marketing to users that want a safe environment for discussion, hiding offensive posts by default for users will likely increase engagement and time spent on the platform. The goal is to create a model integrated into a system that can accurately hide offensive posts on the platform. 
 
 ### Descriptive Method
 
