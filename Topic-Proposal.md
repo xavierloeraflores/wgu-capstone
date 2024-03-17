@@ -1,7 +1,11 @@
 # Computer Science Capstone Topic Proposal
 
 ---
-## Propriety Information
+#### Human Subjects Disclosure
+(Y/N)?
+No. There will be no use of human subjects in this document or machine learning project.
+
+#### Propriety Information Disclosure
 (Y/N)?
 No. There will be no use of proprietary information in this document or machine learning project.
 
