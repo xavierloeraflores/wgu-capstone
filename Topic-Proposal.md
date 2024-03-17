@@ -47,6 +47,11 @@ Web Application
 
 ### Operating System(s)/Platform(s)
 
+Operating Systems:
+Any operating system that features a modern web browser will be able to access the web application.
+The machine learning model will be trained and deployed on a Linux-based operating system.
+
+Platforms: 
 - Vercel for front-end hosting
 - Railway for back-end hosting
 Vercel was choses as the hosting platform for the front-end for its integration with Next.js and its free hosting tier for small projects which will be sufficient for the scope of this project. Railway was chosen as the hosting platform for the back-end for its intuitive deployment/monitoring process as well as its compatibility with different frameworks.
