@@ -60,10 +60,10 @@ Postgres on Vercel DB was chosen for its cheap cost and ease of use. With a SQL 
 
 | Sprint | Time |
 | ------ | ----------- |
-| Planning and Design | 10 hours|
-| Development | 40 hours |
+| Planning and Design | 20 hours|
+| Development | 50 hours |
 | Documentation | 10 hours |
-| Total | 60 hours |
+| Total | 80 hours |
 
 ### Projected Completion Date
 04/19/2024
