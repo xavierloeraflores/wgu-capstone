@@ -40,11 +40,16 @@ Web Application
 
 ### Programming/Development Language(s)
 
+Machine Learning Model:
 - Python
 - Sci-kit Learn
 - Pandas
+
+Backend:
+- Python
 - FastAPI
 
+Frontend:
 - TypeScript
 - Next.js
 - Tailwind CSS
