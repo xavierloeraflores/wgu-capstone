@@ -63,3 +63,11 @@ Web Application
 ---
 ## Implementation and Evaluation
 ### Approach for Executing The Project
+The project will be executed in the following steps:
+1. Data Collection: Utilize a dataset of social media posts from Twitter that have been labeled as on whether or not they contain any offensive racist material.
+2. Data Preprocessing: Clean the data and prepare it for training.
+3. Model Training: Using Pandas and Scikit-learn, train a machine learning model to detect racism in social media posts.,
+4. Model Evaluation: Evaluate the model's performance using a test dataset.
+5. Model Deployment: Create and deploy a backend FastAPI application that will serve as an API to the machine learning model.
+5. Web Application Development: Create a frontend Next.js application that will demo the machine learning model's capabilities. 
+6. Documentation: Document the project and its development process.
