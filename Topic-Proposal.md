@@ -36,14 +36,16 @@ Web Application
 - Sci-kit Learn
 - Pandas
 - FastAPI
-- Next.js
+
 - TypeScript
+- Next.js
 - Tailwind CSS
 
 ### Operating System(s)/Platform(s)
 
 - Vercel for front-end hosting
 - Railway for back-end hosting
+Vercel was choses as the hosting platform for the front-end for its integration with Next.js and its free hosting tier for small projects which will be sufficient for the scope of this project. Railway was chosen as the hosting platform for the back-end for its intuitive deployment/monitoring process as well as its compatibility with different frameworks.
 
 ### Database Management System
 
