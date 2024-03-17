@@ -13,7 +13,7 @@ No. There will be no use of proprietary information in this document or machine 
 ## Analysis
 
 ### Project Topic and Description
-Topic: Racism in Social Media
+Topic: Racism on a social media discussion platform
 
 Description: 
 With the rise in competitors to social media platforms such as Twitter, some platforms may feel it is important to maintain a safe and inclusive environment for all their users. Our client will be a fictional social media platform that is trying to rival Twitter and is looking to create a safe and inclusive environment for all its users. Similar to Twitter, the company has a social media platform that allows their users to create text posts that can be seen by other users. The company needs a solution that can automatically detect and remove/hide offensive posts, reducing the amount of unwanted hate speech their users see on their platform.
