@@ -17,6 +17,7 @@ Topic: Racism in Social Media
 
 Description: With the rise in competitors to social media platforms such as Twitter, some platforms may feel it is important to maintain a safe and inclusive environment for all their users. This project will focus on creating a machine learning model that can detect racism in social media posts. The model will be trained on a dataset of social media posts from Twitter that have been labeled as on whether or not they contain any offensive racist material. The model will then be used to create a web application that will demo the machine learning model's capabilities by allowing users to post tweet-like posts to a central timeline that flags posts depending on their content. This will allow social media platforms to automatically detect and remove/hide offensive posts, reducing the amount of hate speech on their platforms. The timeline will by default hide posts that are flagged as offensive, but users will be able to toggle the visibility of these posts.
 
+The machine learning model utilize Natural Language Processing (NLP) to analyze the words, phrases, and sentences for sentiment analysis. The goal is cerate a model that can classify and predict with a high degree of accuracy of at least 90% whether a short text post contains racism or not. Ideally, the machine learning service should also fail to classify posts at rate of less than 25%. Since hiding offensive posts is the number one priority, the model can have a false positive (post is falsely labeled as offensive) rate of less than 25% but a false negative (falsely labeled as as safe) rate of 15%.
 
 
 ### Project Purpose and Goals
@@ -48,6 +49,7 @@ Web Application
 ### Operating System(s)/Platform(s)
 
 Operating Systems:
+
 Any operating system that features a modern web browser will be able to access the web application.
 The machine learning model will be trained and deployed on a Linux-based operating system.
 
