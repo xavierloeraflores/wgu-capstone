@@ -48,6 +48,7 @@ Web Application
 ### Database Management System
 
 - Postgres on Vercel DB
+Postgres on Vercel DB was chosen for its cheap cost and ease of use. With a SQL interface, it will be a simple task to store and retrieve social media posts.
 
 ### Estimated Development Time
 
