@@ -6,7 +6,8 @@ from sklearn.metrics import accuracy_score
 
 data = read_csv('train.csv')
 X = data['tweet']
-y = data['label']
+raw_y = data['label']
+y = raw_y.map({1: 'offensive',  0: 'safe'})
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
@@ -21,3 +22,7 @@ y_pred = model.predict(X_test_vec)
 
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
+
+input = ["Test Text"]
+output = model.predict(vectorizer.transform(input))
+print(input, ":", output)
