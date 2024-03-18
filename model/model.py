@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
+from wordcloud import WordCloud, STOPWORDS , ImageColorGenerator
 
 data = read_csv('train.csv')
 
@@ -40,3 +41,6 @@ print("Accuracy:", accuracy)
 input = ["Test Text"]
 output = model.predict(vectorizer.transform(input))
 print(input, ":", output)
+
+_wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white").generate(' '.join(tweet for tweet in data['tweet']))
+_wordcloud.to_file("wordcloud.png")
