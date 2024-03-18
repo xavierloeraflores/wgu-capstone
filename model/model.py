@@ -23,7 +23,7 @@ X = X.apply(clean)
 raw_y = data['label']
 y = raw_y.map({1: 'offensive',  0: 'safe'})
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=64)
 
 vectorizer = TfidfVectorizer() #Test: max_features=1000 
 X_train_vec = vectorizer.fit_transform(X_train)
