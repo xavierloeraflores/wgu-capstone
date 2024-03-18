@@ -5,4 +5,5 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 data = read_csv('train.csv')
-print(data)
+X = data['tweet']
+y = data['label']
