@@ -1,6 +1,7 @@
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
+import { cn } from "@/lib/utils";
 
-export const PostAvatar: React.FC<{ filter: boolean }> = ({ filter }) => {
+export const PostAvatar: React.FC<{ filter: boolean, className?: string }> = ({ filter, className='' }) => {
   const SFW = {
     fallback: "SFW",
     alt: "SFW Avatar",
@@ -14,7 +15,7 @@ export const PostAvatar: React.FC<{ filter: boolean }> = ({ filter }) => {
   const AvatarContent = filter ? SFW : NSFW;
 
   return (
-    <Avatar>
+    <Avatar className={cn('', className)}>
       <AvatarImage src={AvatarContent.image} alt={AvatarContent.alt} />
       <AvatarFallback className="text-sm">
         {AvatarContent.fallback}
