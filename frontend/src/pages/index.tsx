@@ -13,7 +13,11 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center">
         <ThemeToggle />
-        <Post />
+        <Post
+          title=""
+          filter={false}
+          text="Post Content: This is an example of post content that will appear in the post component. Posts can be up to 144 characters as originally designed by Twitter"
+        />
       </main>
     </>
   );
