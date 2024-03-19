@@ -1,6 +1,7 @@
 import { type AppType } from "next/app";
 import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 import "@/styles/globals.css";
 
@@ -11,10 +12,17 @@ const inter = Inter({
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <main className={`font-sans ${inter.variable} bg-background`}>
-      <Component {...pageProps} />
-      <Toaster />
-    </main>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <main className={`font-sans ${inter.variable} bg-background`}>
+        <Component {...pageProps} />
+        <Toaster />
+      </main>
+    </ThemeProvider>
   );
 };
 
