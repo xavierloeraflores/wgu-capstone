@@ -3,20 +3,20 @@
 import { Toggle } from "./ui/toggle";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const ThemeToggle: React.FC = () => {
-  const { setTheme, theme } = useTheme();
-  if (!theme) {
-    setTheme("dark");
-  }
-  const [mode, setMode] = useState(theme);
+  const { setTheme } = useTheme();
+
+  const [mode, setMode] = useState("dark");
+  useEffect(() => {
+    setTheme(mode);
+  }, [mode, setTheme]);
+
   const toggleMode = () => {
     if (mode === "dark") {
-      setTheme("light");
       setMode("light");
     } else {
-      setTheme("dark");
       setMode("dark");
     }
   };
