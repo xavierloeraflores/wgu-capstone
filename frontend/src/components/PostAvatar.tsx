@@ -4,12 +4,12 @@ export const PostAvatar: React.FC<{ filter: boolean }> = ({ filter }) => {
   const SFW = {
     fallback: "SFW",
     alt: "SFW Avatar",
-    image: "",
+    image: "/smiley.png",
   };
   const NSFW = {
     fallback: "NSFW",
     alt: "NSFW Avatar",
-    image: "",
+    image: "/frowny.png",
   };
   const AvatarContent = filter ? SFW : NSFW;
 
