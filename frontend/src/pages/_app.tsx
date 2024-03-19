@@ -12,12 +12,7 @@ const inter = Inter({
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
+    <ThemeProvider attribute="class" disableTransitionOnChange>
       <main className={`font-sans ${inter.variable} bg-background`}>
         <Component {...pageProps} />
         <Toaster />

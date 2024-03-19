@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { Post } from "@/components/Post";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center">
+        <ThemeToggle />
         <Post />
       </main>
     </>
