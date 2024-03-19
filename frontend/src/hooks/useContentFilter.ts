@@ -16,5 +16,5 @@ export function useContentFilter() {
       window.removeEventListener("not-filtered", handleNotFiltered);
     };
   }, []);
-  return isFiltered;
+  return { isFiltered, setIsFiltered };
 }
