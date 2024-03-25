@@ -38,7 +38,7 @@ y_pred = model.predict(X_test_vec)
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
-input = ["Test Text"]
+input = [clean("Test Text")]
 output = model.predict(vectorizer.transform(input))
 print(input, ":", output)
 
