@@ -18,7 +18,7 @@ export const Post: React.FC<PostProps & { className?: string }> = ({
 }) => {
   const [isFiltered] = useAtom(ContentFilterAtom);
   return (
-    <Card className={cn("min-w-96 max-w-md", className)}>
+    <Card className={cn("min-w-96 max-w-md min-h-48", className)}>
       <CardHeader className="flex flex-row flex-nowrap gap-2 border-b-2">
         <PostAvatar isNSFW={isNSFW} />
         <h1 className="text-lg font-semibold text-primary">{title}</h1>
