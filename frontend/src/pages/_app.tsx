@@ -16,7 +16,9 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider attribute="class" disableTransitionOnChange>
       <Header />
-      <main className={`font-sans ${inter.variable} bg-background`}>
+      <main
+        className={`font-sans ${inter.variable} justify-center" flex min-h-screen flex-col items-center bg-background`}
+      >
         <Component {...pageProps} />
         <Toaster />
       </main>
