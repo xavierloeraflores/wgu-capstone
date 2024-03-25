@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import { Post } from "@/components/Post";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ContentFilterToggle } from "@/components/ContentFilterToggle";
