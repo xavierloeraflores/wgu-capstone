@@ -2,6 +2,7 @@ import { type AppType } from "next/app";
 import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Footer } from "@/components/Footer";
 
 import "@/styles/globals.css";
 
@@ -17,6 +18,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         <Component {...pageProps} />
         <Toaster />
       </main>
+      <Footer />
     </ThemeProvider>
   );
 };
