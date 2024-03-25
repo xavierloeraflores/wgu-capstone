@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 
 import "@/styles/globals.css";
 
@@ -14,6 +15,7 @@ const inter = Inter({
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider attribute="class" disableTransitionOnChange>
+      <Header />
       <main className={`font-sans ${inter.variable} bg-background`}>
         <Component {...pageProps} />
         <Toaster />
