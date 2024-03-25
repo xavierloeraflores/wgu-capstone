@@ -8,10 +8,12 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { ThemeToggle } from "./ThemeToggle";
+import { ContentFilterToggle } from "./ContentFilterToggle";
 
 export const Header: React.FC = () => {
   return (
-    <header className="flex flex-col items-center justify-center border-b-2 border-accent bg-secondary p-4 text-secondary-foreground">
+    <header className="flex flex-row items-center justify-center border-b-2 border-accent bg-secondary p-4 text-secondary-foreground">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -52,6 +54,10 @@ export const Header: React.FC = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <div className="flex flex-row items-end">
+        <ThemeToggle />
+        <ContentFilterToggle />
+      </div>
     </header>
   );
 };
