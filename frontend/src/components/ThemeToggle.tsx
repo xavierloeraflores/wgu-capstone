@@ -21,6 +21,11 @@ export const ThemeToggle: React.FC = () => {
     }
   };
   return (
-    <Toggle onClick={toggleMode}>{mode === "dark" ? <Moon /> : <Sun />}</Toggle>
+    <Toggle
+      className="bg-transparent disabled:pointer-events-auto disabled:opacity-100 data-[state=on]:bg-transparent data-[state=on]:text-accent-foreground data-[state=on]:hover:bg-muted data-[state=on]:hover:text-muted-foreground"
+      onClick={toggleMode}
+    >
+      {mode === "dark" ? <Moon /> : <Sun />}
+    </Toggle>
   );
 };
