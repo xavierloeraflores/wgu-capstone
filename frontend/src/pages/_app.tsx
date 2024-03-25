@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { atom} from "jotai";
+import { atom } from "jotai";
 
 import "@/styles/globals.css";
 export const ContentFilterAtom = atom(true);

@@ -1,8 +1,8 @@
 import { Card, CardHeader, CardContent } from "./ui/card";
 import { PostAvatar } from "./PostAvatar";
 import { cn } from "@/lib/utils";
-import {useAtom} from "jotai";
-import {ContentFilterAtom} from "@/pages/_app";
+import { useAtom } from "jotai";
+import { ContentFilterAtom } from "@/pages/_app";
 
 type PostProps = {
   text: string;
@@ -26,7 +26,9 @@ export const Post: React.FC<PostProps & { className?: string }> = ({
       <CardContent
         className={isFiltered && isNSFW ? "overflow-hidden blur-xl filter" : ""}
       >
-        <p className={isFiltered && isNSFW? "select-none" : "select-text"}>{text}</p>
+        <p className={isFiltered && isNSFW ? "select-none" : "select-text"}>
+          {text}
+        </p>
       </CardContent>
     </Card>
   );
