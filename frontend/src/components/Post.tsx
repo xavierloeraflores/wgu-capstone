@@ -1,7 +1,6 @@
 import { Card, CardHeader, CardContent } from "./ui/card";
 import { PostAvatar } from "./PostAvatar";
 import { cn } from "@/lib/utils";
-import { useContentFilter } from "@/hooks/useContentFilter";
 import {useAtom} from "jotai";
 import {ContentFilterAtom} from "@/pages/_app";
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { Toggle } from "./ui/toggle";
-import { useContentFilter } from "@/hooks/useContentFilter";
 import { useAtom } from "jotai";
 import { ContentFilterAtom } from "@/pages/_app";
 
