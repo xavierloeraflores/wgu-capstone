@@ -2,9 +2,11 @@
 
 import { Toggle } from "./ui/toggle";
 import { useContentFilter } from "@/hooks/useContentFilter";
+import { useAtom } from "jotai";
+import { ContentFilterAtom } from "@/pages/_app";
 
 export const ContentFilterToggle: React.FC = () => {
-  const { isFiltered, setIsFiltered } = useContentFilter();
+  const [ isFiltered, setIsFiltered ] = useAtom(ContentFilterAtom)
 
   const toggleMode = () => {
     setIsFiltered(!isFiltered);
