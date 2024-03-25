@@ -27,7 +27,7 @@ const MyHoverCard = ({ children }: { children: React.ReactNode }) => {
         <h3>Xavier Loera Flores</h3>
         <div className="flex-col items-center justify-center text-muted-foreground underline">
           <a
-            href="https://loeraflores.tech"
+            href="https://loeraflores.com"
             target="_blank"
             rel="noopener noreferrer"
             className=""
