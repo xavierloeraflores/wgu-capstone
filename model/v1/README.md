@@ -1,0 +1,7 @@
+- linear_model: Logistic Regression
+- model_selection: train_test_split
+- feature_extraction: TfidfVectorizer
+- cleaning: Stopwords
+- stemmer: SnowballStemmer
+- metrics: accuracy_score
+- dataset: [Twitter Sentiment Analysis]
