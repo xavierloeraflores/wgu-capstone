@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from wordcloud import WordCloud, STOPWORDS , ImageColorGenerator
 
-data = read_csv('train.csv')
+data = read_csv('../datasets/train.csv')
 
 X = data['tweet']
 stemmer = nltk.SnowballStemmer('english')
