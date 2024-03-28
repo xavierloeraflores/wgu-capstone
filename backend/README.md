@@ -1,6 +1,7 @@
-# Model
+# Model & Vectorizer
 
 Current model: model/v1 - model.pkl
+Current vectorizer: v1/TfidfVectorizer - vectorizer.pkl
 
 # Set Up
 
