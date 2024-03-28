@@ -7,6 +7,4 @@ def classify_post(post):
     _post = vectorizer.transform([post])
     prediction = model.predict(_post)
     print(prediction)
-    return prediction
-
-classify_post("Test Text")
+    return prediction[0]
