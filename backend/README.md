@@ -32,3 +32,13 @@ Close the virtual environment:
 ```
 deactivate
 ```
+
+# Start the Server
+
+(From the backend directory. This file is backend/README.md.)
+
+Start the server:
+
+```
+uvicorn main:app --reload
+```
