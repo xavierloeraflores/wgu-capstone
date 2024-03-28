@@ -1,3 +1,7 @@
+# Model
+
+Current model: model/v1 - model.pkl
+
 # Set Up
 
 (From the backend directory. This file is backend/README.md.)
