@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="flex flex-row items-end">
+      <div className="mx-1 flex flex-row items-end">
         <ThemeToggle />
         <ContentFilterToggle />
       </div>
