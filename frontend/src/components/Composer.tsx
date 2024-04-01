@@ -12,17 +12,11 @@ export function Composer() {
     const charCount = 144 - post.length;
     setCharacterCount(charCount);
   }, [post]);
-  const AvatarSrc = "/smiley.png";
-  const AvatarAlt = "Avatar";
-  const AvatarFall = "Me";
   return (
     <Card className="min-w-96 max-w-md">
       <CardContent className="grid gap-2 p-4">
         <div className="flex items-center space-x-2">
-          <Avatar>
-            <AvatarImage src={AvatarSrc} alt={AvatarAlt} />
-            <AvatarFallback className="text-sm">{AvatarFall}</AvatarFallback>
-          </Avatar>
+          <NeutralAvatar />
           <div className="grid gap-0.5">
             <p className="font-semibold">Create a post</p>
           </div>
@@ -51,6 +45,18 @@ export function Composer() {
     </Card>
   );
 }
+
+const NeutralAvatar = () => {
+  const AvatarSrc = "/blanky.png";
+  const AvatarAlt = "Neutral Faced Emoji Avatar";
+  const AvatarFall = "Me";
+  return (
+    <Avatar>
+      <AvatarImage src={AvatarSrc} alt={AvatarAlt} />
+      <AvatarFallback className="text-sm">{AvatarFall}</AvatarFallback>
+    </Avatar>
+  );
+};
 
 function TextIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
