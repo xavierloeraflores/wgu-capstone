@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { ButtonProps, buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
       <Head>
         <title>About Xavier</title>
         <meta name="description" content="About Xavier's background" />
-        <link rel="icon" href="/favicon.ico" />
+        <a rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full space-y-6 py-6">
         <div className="container flex flex-col items-center justify-center space-y-4 px-4 md:px-6">
@@ -43,9 +44,34 @@ export default function Home() {
           </div>
         </div>
         <div
-          className="container flex justify-center"
+          className="container flex justify-center gap-2"
           id="personal-links"
-        ></div>
+        >
+          <a
+            className={buttonVariants({ variant: "default" })}
+            href="https://www.loeraflores.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Website
+          </a>
+          <a
+            className={buttonVariants({ variant: "default" })}
+            href="https://www.linkedin.com/in/xavierloeraflores/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            className={buttonVariants({ variant: "default" })}
+            href="https://github.com/xavierloeraflores"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
     </>
   );
