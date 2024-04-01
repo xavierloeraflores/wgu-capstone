@@ -22,7 +22,7 @@ export default function Home() {
             <div className="flex flex-col gap-2">
               <img
                 alt="Xavier Loera Flores"
-                className="mx-auto overflow-hidden rounded-full border border-gray-200 border-gray-200 object-cover object-center dark:border-gray-800 dark:ring-gray-800"
+                className="mx-auto overflow-hidden rounded-full border border-gray-200 object-cover object-center dark:border-gray-800 dark:ring-gray-800"
                 height="200"
                 src="/xavier.jpeg"
                 style={{
@@ -34,7 +34,7 @@ export default function Home() {
               <p className="text-center font-medium">
                 Xavier Alejandro Loera Flores
               </p>
-              <div className="mx-auto w-10 border-t border-gray-200 border-gray-200 dark:border-gray-800" />
+              <div className="mx-auto w-10 border-t border-gray-200 dark:border-gray-800" />
               <p className="text-center text-sm text-gray-500 dark:text-gray-400">
                 Dedicated software engineer with 3 years of hands-on experience
                 in developing robust and scalable applications.
