@@ -16,7 +16,7 @@ export default function Home() {
         <meta name="description" content="Racism ML Detector" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Composer />
+      <Composer className="my-4" />
       {isLoading ? <SkeletonFeed /> : <Feed posts={posts} />}
     </>
   );
