@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { ButtonProps, buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
           </div>
           <div className="flex w-full grid-cols-1 items-stretch justify-center gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
             <div className="flex flex-col gap-2">
-              <img
+              <Image
                 alt="Xavier Loera Flores"
                 className="mx-auto overflow-hidden rounded-full border border-gray-200 object-cover object-center dark:border-gray-800 dark:ring-gray-800"
                 height="200"
