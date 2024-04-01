@@ -3,8 +3,15 @@ import { Button } from "@/components/ui/button";
 import { CardContent, Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 import { type JSX, type SVGProps } from "react";
+import { useState, useEffect } from "react";
 
 export function Composer() {
+  const [characterCount, setCharacterCount] = useState(144);
+  const [post, setPost] = useState("");
+  useEffect(() => {
+    const charCount = 144 - post.length;
+    setCharacterCount(charCount);
+  }, [post]);
   const AvatarSrc = "/smiley.png";
   const AvatarAlt = "Avatar";
   const AvatarFall = "Me";
@@ -24,6 +31,7 @@ export function Composer() {
           className="min-h-[100px] rounded-lg"
           id="tweet"
           placeholder="What's on your mind?"
+          onChange={(e) => setPost(e.target.value)}
         />
         <div className="flex items-center space-x-2">
           <Button aria-label="post" className="h-8">
@@ -31,10 +39,12 @@ export function Composer() {
           </Button>
           <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
             <TextIcon className="-translate-y-px-5 h-4 w-4" />
-            <span className="font-semibold" id="char-count">
-              280
-            </span>
-            <span>Characters remaining</span>
+            <div className="flex flex-row justify-between space-x-1">
+              <span className="w-7 font-semibold" id="char-count">
+                {characterCount}
+              </span>
+              <span>Characters remaining</span>
+            </div>
           </div>
         </div>
       </CardContent>
