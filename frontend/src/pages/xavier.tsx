@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { ButtonProps, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
