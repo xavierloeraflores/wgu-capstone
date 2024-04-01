@@ -4,8 +4,9 @@ import { CardContent, Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 import { type JSX, type SVGProps } from "react";
 import { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
-export function Composer() {
+export const Composer: React.FC<{ className?: string }> = ({ className }) => {
   const [characterCount, setCharacterCount] = useState(144);
   const [post, setPost] = useState("");
   const [isPostDisabled, setIsPostDisabled] = useState(true);
@@ -15,7 +16,7 @@ export function Composer() {
     setIsPostDisabled(charCount < 0 || charCount === 144);
   }, [post]);
   return (
-    <Card className="min-w-96 max-w-md">
+    <Card className={cn("min-w-96 max-w-md", className)}>
       <CardContent className="grid gap-2 p-4">
         <div className="flex items-center space-x-2">
           <NeutralAvatar />
@@ -46,7 +47,7 @@ export function Composer() {
       </CardContent>
     </Card>
   );
-}
+};
 
 const NeutralAvatar = () => {
   const AvatarSrc = "/blanky.png";
