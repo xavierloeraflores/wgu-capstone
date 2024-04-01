@@ -13,7 +13,7 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
   useEffect(() => {
     const charCount = 144 - post.length;
     setCharacterCount(charCount);
-    setIsPostDisabled(charCount < 0 || charCount === 144);
+    setIsPostDisabled(charCount <= 0 || charCount === 144);
   }, [post]);
   return (
     <Card className={cn("min-w-96 max-w-md", className)}>
@@ -36,7 +36,9 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
           </Button>
           <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
             <TextIcon className="-translate-y-px-5 h-4 w-4" />
-            <div className="flex flex-row justify-between space-x-1">
+            <div
+              className={`flex flex-row justify-between space-x-1 ${characterCount < 0 ? "text-red-500" : ""}`}
+            >
               <span className="w-7 font-semibold" id="char-count">
                 {characterCount}
               </span>
