@@ -8,9 +8,11 @@ import { useState, useEffect } from "react";
 export function Composer() {
   const [characterCount, setCharacterCount] = useState(144);
   const [post, setPost] = useState("");
+  const [isPostDisabled, setIsPostDisabled] = useState(true);
   useEffect(() => {
     const charCount = 144 - post.length;
     setCharacterCount(charCount);
+    setIsPostDisabled(charCount < 0 || charCount === 144);
   }, [post]);
   return (
     <Card className="min-w-96 max-w-md">
@@ -28,7 +30,7 @@ export function Composer() {
           onChange={(e) => setPost(e.target.value)}
         />
         <div className="flex items-center space-x-2">
-          <Button aria-label="post" className="h-8">
+          <Button aria-label="post" className="h-8" disabled={isPostDisabled}>
             Post
           </Button>
           <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
