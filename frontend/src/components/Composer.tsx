@@ -18,15 +18,18 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
     setCharacterCount(charCount);
     setIsPostDisabled(charCount <= 0 || charCount === 144);
   }, [post]);
+
   const handlePost = async () => {
     const inputPost: PostInput = {
       text: post,
     };
 
+    setIsPostDisabled(true);
     const result = await createPost(inputPost);
     if (result.error) {
       console.error("Failed to create post");
       toast.error("Failed to create post");
+      setIsPostDisabled(false);
       return;
     }
     toast.success("Post created successfully");
@@ -38,17 +41,21 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
       text: post,
     };
 
+    setIsPostDisabled(true);
     const result = await classifyPost(inputPost);
     if (result.error) {
       console.error("Failed to classify post");
       toast.error("Failed to classify post");
+      setIsPostDisabled(false);
       return;
     }
     toast.success("Post classified successfully");
+    setIsPostDisabled(false);
     setTimeout(() => {
       if (!result.classification) return;
       toast.info(`Post classified using Model-V2`);
     }, 1000);
+
     setTimeout(() => {
       if (!result.classification) return;
       toast.info(`Post is classified as: ${result.classification}`);
