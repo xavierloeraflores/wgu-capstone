@@ -9,16 +9,16 @@ export default function Home() {
         <title>Tech Stack</title>
         <meta name="description" content="About the Project Tech Stack" />
       </Head>
-      <section className="w-full py-12 md:py-24">
-        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
-          <div className="space-y-3">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Tech Stack
-            </h1>
-            <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              The tools and technologies used to build this solution.
-            </p>
-          </div>
+      <section className="w-full space-y-6 py-6">
+        <div className="items-center justify-center space-y-4 text-center">
+          <h1 className="text-3xl font-bold tracking-tighter md:text-5xl ">
+            Tech Stack
+          </h1>
+          <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            The tools and technologies used to build this solution.
+          </p>
+        </div>
+        <div className="container mt-8 grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
           <Stack stackItems={FrontendStackItems} stackTitle="Frontend" />
           <Stack stackItems={BackendStackItems} stackTitle="Backend" />
           <Stack
