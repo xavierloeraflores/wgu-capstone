@@ -6,6 +6,7 @@ import { type JSX, type SVGProps } from "react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { createPost } from "@/api/posts";
+import { toast } from "sonner";
 
 export const Composer: React.FC<{ className?: string }> = ({ className }) => {
   const [characterCount, setCharacterCount] = useState(144);
@@ -18,10 +19,12 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
   }, [post]);
   const handlePost = async () => {
     const result = await createPost(post);
-    if (!result) {
+    if (result.error) {
       console.error("Failed to create post");
+      toast.error("Failed to create post");
       return;
     }
+    toast.success("Post created successfully");
     setPost("");
   };
   return (
