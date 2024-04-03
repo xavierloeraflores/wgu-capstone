@@ -47,7 +47,7 @@ export async function getPosts(): Promise<GetPostsResponse> {
   }
 }
 export interface ClassifyPostResponse {
-  classification?: PostInput;
+  classification?: string;
   error?: string;
 }
 export async function classifyPost(

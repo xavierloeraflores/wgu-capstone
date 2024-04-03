@@ -40,11 +40,19 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
 
     const result = await classifyPost(inputPost);
     if (result.error) {
-      console.error("Failed to validate post");
-      toast.error("Failed to validate post");
+      console.error("Failed to classify post");
+      toast.error("Failed to classify post");
       return;
     }
-    toast.success("Post validated successfully");
+    toast.success("Post classified successfully");
+    setTimeout(() => {
+      if (!result.classification) return;
+      toast.info(`Post classified using Model-V2`);
+    }, 1000);
+    setTimeout(() => {
+      if (!result.classification) return;
+      toast.info(`Post is classified as: ${result.classification}`);
+    }, 2000);
   };
   return (
     <Card className={cn("min-w-96 max-w-md", className)}>
@@ -69,7 +77,7 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
             disabled={isPostDisabled}
             onClick={handleValidate}
           >
-            Validate
+            Classify
           </Button>
           <Button
             aria-label="post"
