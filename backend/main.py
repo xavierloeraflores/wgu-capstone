@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from model import classify_post
+from model import classify_post, model_health
 
 app = FastAPI()
 
@@ -7,6 +7,11 @@ app = FastAPI()
 @app.get("/api")
 def read_root():
     return {"Message": "Hello World"}
+
+
+@app.get("/api/model")
+def model_health_route():
+    return model_health()
 
 @app.post("/api/model/classify")
 def classify(post: str):
