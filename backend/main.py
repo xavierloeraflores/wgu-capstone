@@ -4,7 +4,7 @@ from model import classify_post
 app = FastAPI()
 
 
-@app.get("/")
+@app.get("/api")
 def read_root():
     return {"Message": "Hello World"}
 
