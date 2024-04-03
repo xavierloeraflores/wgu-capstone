@@ -117,28 +117,34 @@ const FrontendStackItems = [
 ];
 const BackendStackItems = [
   {
-    name: "Python",
-    image: "/favicon-96.png",
-  },
-  {
     name: "FastApi",
-    image: "/favicon-96.png",
-  },
-  {
-    name: "Pydantic",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
   },
   {
     name: "PostgreSQL",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "Python",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  },
+  {
+    name: "Docker",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
   },
   {
     name: "Insomnia",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/insomnia/insomnia-original.svg",
   },
   {
     name: "Railway",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/railway/railway-original.svg",
   },
 ];
 const MachineLearningStackItems = [
