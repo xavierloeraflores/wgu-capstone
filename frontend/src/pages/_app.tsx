@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { atom } from "jotai";
 import Head from "next/head";
+import { type ReactNode } from "react";
 
 import "@/styles/globals.css";
 export const ContentFilterAtom = atom(true);
@@ -16,6 +17,22 @@ const inter = Inter({
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  return (
+    <Layout>
+      <main
+        className={`font-sans ${inter.variable} justify-center" flex min-h-screen flex-col items-center bg-background py-8`}
+      >
+        <Component {...pageProps} />
+      </main>
+    </Layout>
+  );
+};
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <ThemeProvider attribute="class" disableTransitionOnChange>
       <Head>
@@ -65,12 +82,8 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         <link rel="icon" sizes="192x192" href="favicon-192.png" />
       </Head>
       <Header />
-      <main
-        className={`font-sans ${inter.variable} justify-center" flex min-h-screen flex-col items-center bg-background py-8`}
-      >
-        <Component {...pageProps} />
-        <Toaster />
-      </main>
+      {children}
+      <Toaster />
       <Footer />
     </ThemeProvider>
   );
