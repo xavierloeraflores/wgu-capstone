@@ -8,7 +8,6 @@ export default function Home() {
       <Head>
         <title>About Xavier</title>
         <meta name="description" content="About Xavier's background" />
-        <a rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full space-y-6 py-6">
         <div className="container flex flex-col items-center justify-center space-y-4 px-4 md:px-6">
