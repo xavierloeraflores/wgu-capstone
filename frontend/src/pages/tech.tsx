@@ -150,26 +150,32 @@ const BackendStackItems = [
 const MachineLearningStackItems = [
   {
     name: "SciKit-Learn",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
   },
   {
     name: "NLTK",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-plain.svg",
   },
   {
     name: "Pandas",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
   },
   {
     name: "NumPy",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
   },
   {
-    name: "pickle",
-    image: "/favicon-96.png",
+    name: "Jupyter Notebook",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg",
   },
   {
     name: "Kaggle",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kaggle/kaggle-original.svg",
   },
 ];
