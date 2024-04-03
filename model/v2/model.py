@@ -51,5 +51,5 @@ print([text],":", input, ":", output)
 _wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white").generate(' '.join(tweet for tweet in data['tweet']))
 _wordcloud.to_file("wordcloud.png")
 
-pickle.dump(model, open('model-v1.pkl', 'wb'))
-pickle.dump(vectorizer, open('vectorizer-v1.pkl', 'wb'))
+pickle.dump(model, open('model-v2.pkl', 'wb'))
+pickle.dump(vectorizer, open('vectorizer-v2.pkl', 'wb'))
