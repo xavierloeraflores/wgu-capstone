@@ -8,6 +8,6 @@ app = FastAPI()
 def read_root():
     return {"Message": "Hello World"}
 
-@app.post("/post/classify")
+@app.post("/api/model/classify")
 def classify(post: str):
     return {"classification": classify_post(post)}
