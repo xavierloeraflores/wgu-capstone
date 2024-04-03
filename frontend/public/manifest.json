@@ -1,0 +1,67 @@
+{
+  "name": "Social Media Racism Machine Learning Detector",
+  "short_name": "Racism ML Detector",
+  "description": "A social media site where you can post and detect racism using a machine learning backend service that detects racism in posts.",
+  "icons": [
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-120-precomposed.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-114-precomposed.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-180-precomposed.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-72-precomposed.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-57.png",
+      "sizes": "57x57",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-152-precomposed.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#C96806",
+  "background_color": "#FF5400",
+  "orientation": "any"
+}
