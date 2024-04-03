@@ -15,6 +15,8 @@ Built with:
 
 ## Docs
 
+[Live Docs](https://wgu-capstone-docs.vercel.app/)
+
 Docs were generated in the `docs` directory using Insomnia-Documenter.
 To generate docs using the insomnia collection, run:
 
