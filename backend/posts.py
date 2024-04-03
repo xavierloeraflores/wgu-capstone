@@ -3,18 +3,21 @@ from Models import Post
 dummy_post1 = {
     "id": 1,
     "isNSFW": False,
-    "text": "Post Content: This is an example of post content that will appear in the post component. Posts can be up to 144 characters as originally designed by Twitter",
+    "text": "Post Content: This is an example of post content that will appear in the post component. Posts can be up to 144 characters as originally designed by Twitter"
   }
+
 dummy_post2 = {
     "id": 2,
     "isNSFW": True,
-    "text": "NSFW Post Content: This is an example of post content that will appear in the post component. Posts can be up to 144 characters as originally designed by Twitter",
-  },
-dummy_post3 =   {
+    "text": "NSFW Post Content: This is an example of post content that will appear in the post component. Posts can be up to 144 characters as originally designed by Twitter"
+  }
+
+dummy_post3 = {
     "id": 3,
     "isNSFW": False,
-    "text": "Post Content: This is an example of post content that will appear in the post component. Posts can be up to 144 characters as originally designed by Twitter",
-  },
+    "text": "Post Content: This is an example of post content that will appear in the post component. Posts can be up to 144 characters as originally designed by Twitter"
+  }
+
 dummy_posts =[
     dummy_post1,
     dummy_post2,
