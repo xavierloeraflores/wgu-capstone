@@ -86,27 +86,33 @@ const StackItem: React.FC<StackItemProps> = ({ name, image }) => {
 const FrontendStackItems = [
   {
     name: "React",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
   },
   {
     name: "Next.js",
-    image: "/favicon-96.png",
-  },
-  {
-    name: "Tailwind CSS",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
   },
   {
     name: "TypeScript",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
   },
   {
-    name: "TailwindCSS",
-    image: "/favicon-96.png",
+    name: "Tailwind CSS",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    name: "PostCSS",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postcss/postcss-original.svg",
   },
   {
     name: "Vercel",
-    image: "/favicon-96.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
   },
 ];
 const BackendStackItems = [
