@@ -37,7 +37,8 @@ def classify(post: str):
 
 @app.get("/api/posts")
 def read_posts():
-    return get_all_posts()
+    posts = get_all_posts()
+    return {"message": "Posts retrieved successfully", "posts": posts}
 
 @app.get("/api/posts/{post_id}")
 def read_post(post_id: int):
