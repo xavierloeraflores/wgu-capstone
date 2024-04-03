@@ -2,12 +2,30 @@ import Head from "next/head";
 import { Feed } from "@/components/Feed";
 import { SkeletonFeed } from "@/components/SkeletonFeed";
 import { postsData } from "@/lib/data";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Composer } from "@/components/Composer";
+import { getPosts } from "@/api/posts";
+import { toast } from "sonner";
+import { type Post } from "@/types";
 
 export default function Home() {
-  const [posts, setPosts] = useState(postsData);
+  const [posts, setPosts] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setIsLoading(true);
+      const result = await getPosts();
+      if (result.error) {
+        console.error("Failed to get posts");
+        toast.error("Failed to get posts");
+        setIsLoading(false);
+        return;
+      }
+      setPosts(result.posts);
+      setIsLoading(false);
+    };
+    void fetchPosts();
+  }, []);
 
   return (
     <>

@@ -11,6 +11,7 @@ export const Feed: React.FC<FeedProps & { className?: string }> = ({
   posts,
   className = "",
 }) => {
+  console.log({ feedPosts: posts });
   return (
     <ScrollArea className={cn("h-[75vh] rounded-md border p-4", className)}>
       <div className="p-4">
