@@ -46,25 +46,29 @@ export async function getPosts(): Promise<GetPostsResponse> {
     };
   }
 }
-
-export async function validatePost(
+export interface ClassifyPostResponse {
+  classification?: PostInput;
+  error?: string;
+}
+export async function classifyPost(
   post: PostInput,
-): Promise<CreatePostResponse> {
+): Promise<ClassifyPostResponse> {
   try {
-    const response = await fetch(`${baseUrl}/api/posts`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const response = await fetch(
+      `${baseUrl}/api/model/classify?post=${post.text}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
-      body: JSON.stringify(post),
-    });
+    );
 
-    const result = (await response.json()) as CreatePostResponse;
+    const result = (await response.json()) as ClassifyPostResponse;
     return result;
   } catch (error) {
     console.error("Failed to create post");
     return {
-      message: "Failed to create post",
       error: "Failed to create post",
     };
   }

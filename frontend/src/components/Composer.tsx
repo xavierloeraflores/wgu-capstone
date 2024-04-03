@@ -5,7 +5,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 import { type JSX, type SVGProps } from "react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { createPost, validatePost } from "@/api/posts";
+import { createPost, classifyPost } from "@/api/posts";
 import { toast } from "sonner";
 import { type PostInput } from "@/types";
 
@@ -38,7 +38,7 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
       text: post,
     };
 
-    const result = await validatePost(inputPost);
+    const result = await classifyPost(inputPost);
     if (result.error) {
       console.error("Failed to validate post");
       toast.error("Failed to validate post");
