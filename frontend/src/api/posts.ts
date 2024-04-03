@@ -1,12 +1,20 @@
-const baseUrl = "http://localhost:3000";
+import { env } from "@/env";
+const baseUrl = env.NEXT_PUBLIC_BACKEND_URL || "http://127.0.0.1:8000";
 
-export async function createPost(text: string) {
-  const response = await fetch(`${baseUrl}/api/post/classify`, {
+export interface CreatePostResponse {
+  message: string;
+  post: {
+    text: string;
+  };
+}
+export async function createPost(text: string): Promise<CreatePostResponse> {
+  const response = await fetch(`${baseUrl}/api/posts`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ text }),
   });
-  return response.json();
+  const result = (await response.json()) as CreatePostResponse;
+  return result;
 }

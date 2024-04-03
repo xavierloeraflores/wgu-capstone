@@ -5,6 +5,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 import { type JSX, type SVGProps } from "react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { createPost } from "@/api/posts";
 
 export const Composer: React.FC<{ className?: string }> = ({ className }) => {
   const [characterCount, setCharacterCount] = useState(144);
@@ -15,6 +16,14 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
     setCharacterCount(charCount);
     setIsPostDisabled(charCount <= 0 || charCount === 144);
   }, [post]);
+  const handlePost = async () => {
+    const result = await createPost(post);
+    if (!result) {
+      console.error("Failed to create post");
+      return;
+    }
+    setPost("");
+  };
   return (
     <Card className={cn("min-w-96 max-w-md", className)}>
       <CardContent className="grid gap-2 p-4">
@@ -28,10 +37,16 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
           className="min-h-[100px] rounded-lg"
           id="tweet"
           placeholder="What's on your mind?"
+          value={post}
           onChange={(e) => setPost(e.target.value)}
         />
         <div className="flex items-center space-x-2">
-          <Button aria-label="post" className="h-8" disabled={isPostDisabled}>
+          <Button
+            aria-label="post"
+            className="h-8"
+            disabled={isPostDisabled}
+            onClick={handlePost}
+          >
             Post
           </Button>
           <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
