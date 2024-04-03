@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ const Stack: React.FC<StackProps & { className?: string }> = ({
 }) => {
   return (
     <>
+      <Separator />
       <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl">
         {stackTitle}
       </h2>
