@@ -27,5 +27,5 @@ def read_post(post_id: int):
     return get_post_by_id(post_id)
 
 @app.post("/api/posts")
-def create_post(post: Post):
+def create_post_route(post: Post):
     return {"Message": "Post created successfully", "post": post}
