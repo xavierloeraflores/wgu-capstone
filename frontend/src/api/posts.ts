@@ -1,21 +1,20 @@
 import { env } from "@/env";
 const baseUrl = env.NEXT_PUBLIC_BACKEND_URL || "http://127.0.0.1:8000";
+import { type PostInput } from "@/types";
 
 export interface CreatePostResponse {
   message: string;
-  post?: {
-    text: string;
-  };
+  post?: PostInput;
   error?: string;
 }
-export async function createPost(text: string): Promise<CreatePostResponse> {
+export async function createPost(post: PostInput): Promise<CreatePostResponse> {
   try {
     const response = await fetch(`${baseUrl}/api/posts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ text }),
+      body: JSON.stringify(post),
     });
 
     const result = (await response.json()) as CreatePostResponse;

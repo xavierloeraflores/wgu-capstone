@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { createPost } from "@/api/posts";
 import { toast } from "sonner";
+import { type PostInput } from "@/types";
 
 export const Composer: React.FC<{ className?: string }> = ({ className }) => {
   const [characterCount, setCharacterCount] = useState(144);
@@ -18,7 +19,11 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
     setIsPostDisabled(charCount <= 0 || charCount === 144);
   }, [post]);
   const handlePost = async () => {
-    const result = await createPost(post);
+    const inputPost: PostInput = {
+      text: post,
+    };
+
+    const result = await createPost(inputPost);
     if (result.error) {
       console.error("Failed to create post");
       toast.error("Failed to create post");
