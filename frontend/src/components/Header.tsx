@@ -23,6 +23,17 @@ export const Header: React.FC = () => {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link
+              href="https://wgu-capstone-docs.vercel.app/"
+              legacyBehavior
+              passHref
+            >
+              <a target="_blank" className={navigationMenuTriggerStyle()}>
+                Docs
+              </a>
+            </Link>
+          </NavigationMenuItem>
 
           <NavigationMenuItem>
             <NavigationMenuTrigger>About</NavigationMenuTrigger>
