@@ -6,6 +6,11 @@ import { type Post as PostType } from "@/types";
 type FeedProps = {
   posts: PostType[];
 };
+const PostError: PostType = {
+  text: "No posts were found",
+  id: -1,
+  isNSFW: false,
+};
 
 export const Feed: React.FC<FeedProps & { className?: string }> = ({
   posts,
@@ -19,6 +24,7 @@ export const Feed: React.FC<FeedProps & { className?: string }> = ({
         {posts.map((post) => (
           <Post key={post.id} post={post} className="mt-4" />
         ))}
+        {posts.length === 0 && <Post post={PostError} />}
       </div>
     </ScrollArea>
   );
