@@ -5,6 +5,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from wordcloud import WordCloud, STOPWORDS , ImageColorGenerator
+import pickle
 
 data = read_csv('../datasets/train.csv')
 data2 = read_csv('../datasets/labeled_data.csv')
@@ -49,3 +50,6 @@ print([text],":", input, ":", output)
 
 _wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white").generate(' '.join(tweet for tweet in data['tweet']))
 _wordcloud.to_file("wordcloud.png")
+
+pickle.dump(model, open('model-v1.pkl', 'wb'))
+pickle.dump(vectorizer, open('vectorizer-v1.pkl', 'wb'))
