@@ -5,7 +5,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 import { type JSX, type SVGProps } from "react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { createPost } from "@/api/posts";
+import { createPost, validatePost } from "@/api/posts";
 import { toast } from "sonner";
 import { type PostInput } from "@/types";
 
@@ -32,6 +32,20 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
     toast.success("Post created successfully");
     setPost("");
   };
+
+  const handleValidate = async () => {
+    const inputPost: PostInput = {
+      text: post,
+    };
+
+    const result = await validatePost(inputPost);
+    if (result.error) {
+      console.error("Failed to validate post");
+      toast.error("Failed to validate post");
+      return;
+    }
+    toast.success("Post validated successfully");
+  };
   return (
     <Card className={cn("min-w-96 max-w-md", className)}>
       <CardContent className="grid gap-2 p-4">
@@ -49,6 +63,14 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
           onChange={(e) => setPost(e.target.value)}
         />
         <div className="flex items-center space-x-2">
+          <Button
+            aria-label="post"
+            className="h-8"
+            disabled={isPostDisabled}
+            onClick={handleValidate}
+          >
+            Validate
+          </Button>
           <Button
             aria-label="post"
             className="h-8"

@@ -46,3 +46,26 @@ export async function getPosts(): Promise<GetPostsResponse> {
     };
   }
 }
+
+export async function validatePost(
+  post: PostInput,
+): Promise<CreatePostResponse> {
+  try {
+    const response = await fetch(`${baseUrl}/api/posts`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(post),
+    });
+
+    const result = (await response.json()) as CreatePostResponse;
+    return result;
+  } catch (error) {
+    console.error("Failed to create post");
+    return {
+      message: "Failed to create post",
+      error: "Failed to create post",
+    };
+  }
+}
