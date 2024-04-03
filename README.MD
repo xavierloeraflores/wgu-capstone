@@ -12,3 +12,12 @@ Built with:
 - [TypeScript](https://www.typescriptlang.org/)
 - [T3 Stack](https://create.t3.gg/)
 - [Vercel](https://vercel.com/)
+
+## Docs
+
+Docs were generated in the `docs` directory using Insomnia-Documenter.
+To generate docs using the insomnia collection, run:
+
+```
+npx insomnia-documenter --config insomnia.json --output docs
+```
