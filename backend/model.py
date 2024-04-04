@@ -1,4 +1,5 @@
 import pickle
+from Utils import clean_text
 
 print('Loading model and vectorizer...')
 model = pickle.load(open('model.pkl', 'rb'))
@@ -25,7 +26,7 @@ def model_health():
             }
 
 def classify_post(post):
-    _post = vectorizer.transform([post])
-    prediction = model.predict(_post)
-    print(prediction)
+    cleaned_post = clean_text(post)
+    vectorized_post = vectorizer.transform([cleaned_post])
+    prediction = model.predict(vectorized_post)
     return prediction[0]
