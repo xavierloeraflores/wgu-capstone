@@ -25,7 +25,7 @@ export const PostErrorAvatar: React.FC<{ className?: string }> = ({
   const PostErrorAvatarData = {
     fallback: "Err",
     alt: "Error Avatar",
-    image: "/smiley.png",
+    image: "/spiraly.png",
   };
 
   return (
