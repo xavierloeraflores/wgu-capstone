@@ -1,3 +1,19 @@
+# Backend
+
+[Live Deployment](https://wgu-capstone-xavier-loera-flores.vercel.app)
+
+[API Docs](https://wgu-capstone-docs.vercel.app/)
+
+Built with:
+
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Python](https://www.python.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Uvicorn](https://www.uvicorn.org/)
+- [Insomnia](https://insomnia.rest/)
+- [Railway](https://railway.app/)
+
+
 # Model & Vectorizer
 
 Current model: v2 - model.pkl
