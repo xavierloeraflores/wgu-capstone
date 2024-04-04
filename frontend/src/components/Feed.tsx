@@ -2,14 +2,10 @@ import { Post } from "@/components/Post";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "./ui/scroll-area";
 import { type Post as PostType } from "@/types";
+import { PostError } from "./PostError";
 
 type FeedProps = {
   posts: PostType[];
-};
-const PostError: PostType = {
-  text: "No posts were found",
-  id: -1,
-  isNSFW: false,
 };
 
 export const Feed: React.FC<FeedProps & { className?: string }> = ({
@@ -24,7 +20,7 @@ export const Feed: React.FC<FeedProps & { className?: string }> = ({
         {posts.map((post) => (
           <Post key={post.id} post={post} className="mt-4" />
         ))}
-        {posts.length === 0 && <Post post={PostError} />}
+        {posts.length === 0 && <PostError />}
       </div>
     </ScrollArea>
   );
