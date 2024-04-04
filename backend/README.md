@@ -1,6 +1,6 @@
 # Backend
 
-[Live Deployment](https://wgu-capstone-xavier-loera-flores.vercel.app)
+[API URL]()
 
 [API Docs](https://wgu-capstone-docs.vercel.app/)
 
