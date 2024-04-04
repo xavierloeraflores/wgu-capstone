@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -67,7 +68,7 @@ const Stack: React.FC<StackProps & { className?: string }> = ({
 const StackItem: React.FC<StackItemProps> = ({ name, image }) => {
   return (
     <div className="flex flex-col items-center justify-center space-y-2">
-      <img
+      <Image
         alt={`${name} Logo`}
         className="rounded-lg"
         height="100"
