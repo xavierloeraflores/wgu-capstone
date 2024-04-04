@@ -1,1 +1,1 @@
-from Models.Post import Post
+from Models.post import Post
