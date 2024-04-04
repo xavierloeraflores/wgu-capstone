@@ -13,6 +13,21 @@ Built with:
 - [T3 Stack](https://create.t3.gg/)
 - [Vercel](https://vercel.com/)
 
+## Backend
+
+[Live Deployment]()
+
+
+Built with:
+
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Python](https://www.python.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Uvicorn](https://www.uvicorn.org/)
+- [Insomnia](https://insomnia.rest/)
+- [Railway](https://railway.app/)
+
+
 ## Docs
 
 [Live Docs](https://wgu-capstone-docs.vercel.app/)
