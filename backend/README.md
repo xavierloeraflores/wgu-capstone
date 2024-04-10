@@ -63,3 +63,23 @@ Start the server:
 ```
 uvicorn main:app --reload
 ```
+
+# Build & Start Docker Image using Nixpacks
+
+Nixpacks is a tool that allows you to build OCI compliant images using Docker. There is a Nixpacks file in the backend directory with the necessary configuration to build the Docker image.
+
+Dependencies: 
+- [Docker](https://docs.docker.com/get-docker/)
+- [Nixpacks](https://nixpacks.com/docs/install)
+
+(From the backend directory. This file is backend/README.md.)
+
+Build:
+```
+nixpacks build . --name <DOCKER_IMAGE_NAME>
+```
+
+Start
+```
+docker run -it <DOCKER_IMAGE_NAME>
+```
