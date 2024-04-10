@@ -10,6 +10,7 @@ import { type ReactNode } from "react";
 
 import "@/styles/globals.css";
 export const ContentFilterAtom = atom(true);
+export const ContentPageAtom = atom(1);
 
 const inter = Inter({
   subsets: ["latin"],
