@@ -24,8 +24,8 @@ def model_health_route():
     return model_health()
 
 @app.post("/api/model/classify")
-def classify(post: str):
-    return {"classification": classify_post(post)}
+def classify(post: Post):
+    return {"classification": classify_post(post.text)}
 
 @app.get("/api/posts")
 def read_posts():
