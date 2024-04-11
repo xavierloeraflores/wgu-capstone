@@ -7,6 +7,7 @@ import { Composer } from "@/components/Composer";
 import { getPosts } from "@/api/posts";
 import { toast } from "sonner";
 import { type Post } from "@/types";
+import { FeedPagination } from "@/components/FeedPagination";
 
 export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -35,6 +36,7 @@ export default function Home() {
       </Head>
       <Composer className="my-4" />
       {isLoading ? <SkeletonFeed /> : <Feed posts={posts} />}
+      <FeedPagination />
     </>
   );
 }
