@@ -54,15 +54,13 @@ export async function classifyPost(
   post: PostInput,
 ): Promise<ClassifyPostResponse> {
   try {
-    const response = await fetch(
-      `${baseUrl}/api/model/classify?post=${post.text}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+    const response = await fetch(`${baseUrl}/api/model/classify`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify(post),
+    });
 
     const result = (await response.json()) as ClassifyPostResponse;
     return result;
