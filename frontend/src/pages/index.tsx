@@ -8,15 +8,26 @@ import { getPosts } from "@/api/posts";
 import { toast } from "sonner";
 import { type Post } from "@/types";
 import { FeedPagination } from "@/components/FeedPagination";
+import { type PrimitiveAtom, useAtom } from "jotai";
+import { ContentPageAtom } from "@/pages/_app";
 
 export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [lastPage, setLastPage] = useState(10);
+  const [page, setPage] = useAtom<number>(
+    ContentPageAtom as PrimitiveAtom<number>,
+  );
+
+  useEffect(() => {
+    setPage(1);
+  }, []);
+
   useEffect(() => {
     const fetchPosts = async () => {
+      console.log("fetching posts", { page });
       setIsLoading(true);
-      const result = await getPosts();
+      const result = await getPosts(page);
       if (result.error) {
         console.error("Failed to get posts");
         toast.error("Failed to get posts");
@@ -28,7 +39,7 @@ export default function Home() {
       setIsLoading(false);
     };
     void fetchPosts();
-  }, []);
+  }, [page]);
 
   return (
     <>
