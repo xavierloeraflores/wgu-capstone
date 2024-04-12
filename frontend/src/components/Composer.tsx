@@ -10,7 +10,10 @@ import { toast } from "sonner";
 import { type PostInput } from "@/types";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 
-export const Composer: React.FC<{ className?: string }> = ({ className }) => {
+export const Composer: React.FC<{
+  className?: string;
+  refreshPosts: () => void;
+}> = ({ className, refreshPosts }) => {
   const [characterCount, setCharacterCount] = useState(144);
   const [post, setPost] = useState("");
   const [isPostDisabled, setIsPostDisabled] = useState(true);
@@ -35,6 +38,7 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
     }
     toast.success("Post created successfully");
     setPost("");
+    refreshPosts();
   };
 
   const handleValidate = async () => {

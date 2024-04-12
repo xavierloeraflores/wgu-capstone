@@ -24,7 +24,6 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      console.log("fetching posts", { page });
       setIsLoading(true);
       const result = await getPosts(page);
       if (result.error) {
@@ -40,13 +39,27 @@ export default function Home() {
     void fetchPosts();
   }, [page]);
 
+  const refreshPosts = async () => {
+    setIsLoading(true);
+    const result = await getPosts(1);
+    if (result.error) {
+      console.error("Failed to get posts");
+      toast.error("Failed to get posts");
+      setIsLoading(false);
+      return;
+    }
+    setPosts(result.posts);
+    setLastPage(result.lastPage);
+    setIsLoading(false);
+  };
+
   return (
     <>
       <Head>
         <title>Racism ML Model</title>
         <meta name="description" content="Racism ML Detector" />
       </Head>
-      <Composer className="my-4" />
+      <Composer className="my-4" refreshPosts={refreshPosts} />
       {isLoading ? <SkeletonFeed /> : <Feed posts={posts} />}
 
       {posts.length != 0 && <FeedPagination lastPage={lastPage} />}
