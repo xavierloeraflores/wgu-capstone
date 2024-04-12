@@ -24,6 +24,7 @@ export default function Home() {
         return;
       }
       setPosts(result.posts);
+      setLastPage(result.lastPage);
       setIsLoading(false);
     };
     void fetchPosts();
