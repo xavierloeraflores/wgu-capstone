@@ -28,9 +28,9 @@ def classify(post: Post):
     return {"classification": classify_post(post.text)}
 
 @app.get("/api/posts")
-def read_posts():
-    posts = get_all_posts()
-    return {"message": "Posts retrieved successfully", "posts": posts}
+def read_posts(page: int = 1):
+    posts = get_all_posts(page)
+    return {"message": "Posts retrieved successfully", "posts": posts, "currentPage":page, "lastPage":15}
 
 @app.get("/api/posts/{post_id}")
 def read_post(post_id: int):
