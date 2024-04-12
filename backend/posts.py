@@ -1,4 +1,5 @@
 from Models import Post
+import random
 
 dummy_post1 = {
     "id": 1,
@@ -69,9 +70,8 @@ dummy_posts =[
     dummy_post9,
     dummy_post10,
 ]
-def get_all_posts(page=0):
-    if page == 0:
-        return dummy_posts
+def get_all_posts(page=1):
+    random.shuffle(dummy_posts)
     return dummy_posts
 
 def get_post_by_id(post_id):
