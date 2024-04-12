@@ -36,10 +36,8 @@ export interface GetPostsResponse {
 }
 export async function getPosts(page = 1): Promise<GetPostsResponse> {
   try {
-    const response = await fetch(`${baseUrl}/api/posts`);
+    const response = await fetch(`${baseUrl}/api/posts?page=${page}`);
     const result = (await response.json()) as GetPostsResponse;
-    result.lastPage = 10;
-    result.currentPage = page;
     return result;
   } catch (error) {
     console.error("Failed to get posts");
