@@ -48,7 +48,8 @@ export default function Home() {
       </Head>
       <Composer className="my-4" />
       {isLoading ? <SkeletonFeed /> : <Feed posts={posts} />}
-      <FeedPagination lastPage={lastPage} />
+
+      {posts.length != 0 && <FeedPagination lastPage={lastPage} />}
     </>
   );
 }
