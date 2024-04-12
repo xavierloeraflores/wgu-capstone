@@ -14,7 +14,7 @@ export const Feed: React.FC<FeedProps & { className?: string }> = ({
 }) => {
   console.log({ feedPosts: posts });
   return (
-    <ScrollArea className={cn("h-[75vh] rounded-md border p-4", className)}>
+    <div className={cn(" mb-4 rounded-md border p-4", className)}>
       <div className="p-4">
         <h4 className="mb-4  font-medium leading-none">Posts</h4>
         {posts.map((post) => (
@@ -22,6 +22,6 @@ export const Feed: React.FC<FeedProps & { className?: string }> = ({
         ))}
         {posts.length === 0 && <PostError />}
       </div>
-    </ScrollArea>
+    </div>
   );
 };
