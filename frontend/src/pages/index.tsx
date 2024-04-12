@@ -12,6 +12,7 @@ import { FeedPagination } from "@/components/FeedPagination";
 export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [lastPage, setLastPage] = useState(10);
   useEffect(() => {
     const fetchPosts = async () => {
       setIsLoading(true);
@@ -36,7 +37,7 @@ export default function Home() {
       </Head>
       <Composer className="my-4" />
       {isLoading ? <SkeletonFeed /> : <Feed posts={posts} />}
-      <FeedPagination />
+      <FeedPagination lastPage={lastPage} />
     </>
   );
 }
