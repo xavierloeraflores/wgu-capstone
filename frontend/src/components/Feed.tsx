@@ -1,6 +1,5 @@
 import { Post } from "@/components/Post";
 import { cn } from "@/lib/utils";
-import { ScrollArea } from "./ui/scroll-area";
 import { type Post as PostType } from "@/types";
 import { PostError } from "./PostError";
 

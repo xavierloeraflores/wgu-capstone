@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Feed } from "@/components/Feed";
 import { SkeletonFeed } from "@/components/SkeletonFeed";
-import { postsData } from "@/lib/data";
 import { useEffect, useState } from "react";
 import { Composer } from "@/components/Composer";
 import { getPosts } from "@/api/posts";
@@ -21,7 +20,7 @@ export default function Home() {
 
   useEffect(() => {
     setPage(1);
-  }, []);
+  }, [setPage]);
 
   useEffect(() => {
     const fetchPosts = async () => {
