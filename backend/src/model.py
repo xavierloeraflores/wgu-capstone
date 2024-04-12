@@ -2,8 +2,8 @@ import pickle
 from Utils import clean_text
 
 print('Loading model and vectorizer...')
-model = pickle.load(open('model.pkl', 'rb'))
-vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
+model = pickle.load(open('./src/model.pkl', 'rb'))
+vectorizer = pickle.load(open('./src/vectorizer.pkl', 'rb'))
 print('Model and vectorizer loaded.')
 
 def model_health():
