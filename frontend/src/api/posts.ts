@@ -34,12 +34,12 @@ export interface GetPostsResponse {
   currentPage: number;
   error?: string;
 }
-export async function getPosts(): Promise<GetPostsResponse> {
+export async function getPosts(page = 1): Promise<GetPostsResponse> {
   try {
     const response = await fetch(`${baseUrl}/api/posts`);
     const result = (await response.json()) as GetPostsResponse;
     result.lastPage = 10;
-    result.currentPage = 1;
+    result.currentPage = page;
     return result;
   } catch (error) {
     console.error("Failed to get posts");
