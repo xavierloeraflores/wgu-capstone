@@ -7,18 +7,21 @@ import {
   PaginationLast,
 } from "@/components/ui/pagination";
 import { toast } from "sonner";
-import { useAtom } from "jotai";
+import { type PrimitiveAtom, useAtom } from "jotai";
 import { ContentPageAtom } from "@/pages/_app";
 import { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 type FeedPaginationProps = {
   lastPage?: number;
 };
 
-export const FeedPagination: React.FC<FeedPaginationProps> = ({
-  lastPage = 10,
-}) => {
-  const [page, setPage] = useAtom(ContentPageAtom);
+export const FeedPagination: React.FC<
+  FeedPaginationProps & { className?: string }
+> = ({ lastPage = 10, className = "" }) => {
+  const [page, setPage] = useAtom<number>(
+    ContentPageAtom as PrimitiveAtom<number>,
+  );
   const [firstPage, setFirstPage] = useState(1);
   const [secondPage, setSecondPage] = useState(2);
   const [thirdPage, setThirdPage] = useState(3);
@@ -44,7 +47,7 @@ export const FeedPagination: React.FC<FeedPaginationProps> = ({
     setPage(newPage);
   };
   return (
-    <Pagination>
+    <Pagination className={cn("", className)}>
       <PaginationContent>
         <PaginationItem>
           <PaginationFirst onClick={() => updatePage(1)} />
