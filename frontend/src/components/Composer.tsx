@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { createPost, classifyPost } from "@/api/posts";
 import { toast } from "sonner";
 import { type PostInput } from "@/types";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 
 export const Composer: React.FC<{ className?: string }> = ({ className }) => {
   const [characterCount, setCharacterCount] = useState(144);
@@ -78,14 +79,16 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
           onChange={(e) => setPost(e.target.value)}
         />
         <div className="flex items-center space-x-2">
-          <Button
-            aria-label="post"
-            className="h-8"
-            disabled={isPostDisabled}
-            onClick={handleValidate}
-          >
-            Classify
-          </Button>
+          <ClassifyHoverCard>
+            <Button
+              aria-label="post"
+              className="h-8"
+              disabled={isPostDisabled}
+              onClick={handleValidate}
+            >
+              Classify
+            </Button>
+          </ClassifyHoverCard>
           <Button
             aria-label="post"
             className="h-8"
@@ -143,3 +146,18 @@ function TextIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+const ClassifyHoverCard = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <HoverCard openDelay={5} closeDelay={20}>
+      <HoverCardTrigger asChild>{children}</HoverCardTrigger>
+      <HoverCardContent className="flex h-32 flex-col bg-card text-center text-card-foreground">
+        <h3>Classify Draft</h3>
+        <p className="text-sm text-muted-foreground">
+          Classify your draft post as offensive or safe. This will not save or
+          post your draft publicly.
+        </p>
+      </HoverCardContent>
+    </HoverCard>
+  );
+};
