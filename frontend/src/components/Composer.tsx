@@ -89,14 +89,16 @@ export const Composer: React.FC<{ className?: string }> = ({ className }) => {
               Classify
             </Button>
           </ClassifyHoverCard>
-          <Button
-            aria-label="post"
-            className="h-8"
-            disabled={isPostDisabled}
-            onClick={handlePost}
-          >
-            Post
-          </Button>
+          <PostHoverCard>
+            <Button
+              aria-label="post"
+              className="h-8"
+              disabled={isPostDisabled}
+              onClick={handlePost}
+            >
+              Post
+            </Button>
+          </PostHoverCard>
           <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
             <TextIcon className="-translate-y-px-5 h-4 w-4" />
             <div
@@ -156,6 +158,21 @@ const ClassifyHoverCard = ({ children }: { children: React.ReactNode }) => {
         <p className="text-sm text-muted-foreground">
           Classify your draft post as offensive or safe. This will not save or
           post your draft publicly.
+        </p>
+      </HoverCardContent>
+    </HoverCard>
+  );
+};
+
+const PostHoverCard = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <HoverCard openDelay={5} closeDelay={20}>
+      <HoverCardTrigger asChild>{children}</HoverCardTrigger>
+      <HoverCardContent className="flex h-32 flex-col bg-card text-center text-card-foreground">
+        <h3>Post Draft</h3>
+        <p className="text-sm text-muted-foreground">
+          Post your draft to the public feed with an automatic classification
+          based on the content.
         </p>
       </HoverCardContent>
     </HoverCard>
