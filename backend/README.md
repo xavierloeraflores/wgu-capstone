@@ -60,7 +60,7 @@ deactivate
 Start the server:
 
 ```
-uvicorn src/main:app --reload
+uvicorn main:app --reload --app-dir ./src/
 ```
 
 # Build & Start Docker Image using Nixpacks
