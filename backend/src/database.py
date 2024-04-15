@@ -14,3 +14,13 @@ def db_query(query, params=None):
     cursor.close()
     connection.close()
     return result
+
+def db_insert(query, params=None):
+    connection = psycopg2.connect(dsn=DSN)
+    cursor = connection.cursor()
+    cursor.execute(query + ' RETURNING *', params)
+    connection.commit()
+    result = cursor.fetchone()
+    cursor.close()
+    connection.close()
+    return result

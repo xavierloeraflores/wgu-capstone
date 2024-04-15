@@ -1,6 +1,7 @@
-from Models import PostInput
+from Models import PostInput, PostOutput
 import random
-from database import db_query
+from database import db_query, db_insert
+from model import classify_post
 
 dummy_post1 = {
     "id": 1,
@@ -90,4 +91,27 @@ def get_post_by_id(post_id):
     return {"post": result}
 
 def create_post(post: PostInput):
-    return {"Message": "Post created successfully", "post": post}
+    text = post.text
+    classification = classify_post(text)
+    isNSFW = True
+    if classification == "offensive":
+        isNSFW = True
+    else:
+        isNSFW = False
+    result = db_insert("INSERT INTO posts (text, is_nsfw) VALUES (%s, %s)", (text, isNSFW))
+    tags = ["v1"]
+    post_id = result[0]
+    post_tags=[]
+    for tag in tags:
+        tag_result = db_query("SELECT * FROM tags WHERE tag = %s", [tag])
+        tag_id = tag_result[0][0]
+        db_insert("INSERT INTO post_tags (post_id, tag_id) VALUES (%s, %s)", (post_id, tag_id))
+        post_tag=tag_result[0][1]
+        post_tags.append(post_tag)
+    post_output = {
+        "id":result[0],
+        "tags":post_tags,
+        "text":result[1],
+        "isNSFW":result[2]
+    }
+    return post_output
