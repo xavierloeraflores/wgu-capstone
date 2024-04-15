@@ -1,5 +1,6 @@
 from Models import Post
 import random
+from database import db_query
 
 dummy_post1 = {
     "id": 1,
@@ -85,7 +86,8 @@ def get_all_posts(page=1):
     return dummy_posts
 
 def get_post_by_id(post_id):
-    return {"post_id": post_id}
+    result = db_query("SELECT * FROM posts WHERE id = 1")[0]
+    return {"post": result}
 
 def create_post(post: Post):
     return {"Message": "Post created successfully", "post": post}
