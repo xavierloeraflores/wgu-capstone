@@ -2,7 +2,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { CardContent, Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
-import { type JSX, type SVGProps } from "react";
+import { type JSX, type SVGProps, type ChangeEvent } from "react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { createPost, classifyPost } from "@/api/posts";
@@ -14,6 +14,7 @@ export const Composer: React.FC<{
   className?: string;
   refreshPosts: () => void;
 }> = ({ className, refreshPosts }) => {
+  const [classified, setClassified] = useState("blanky.png");
   const [characterCount, setCharacterCount] = useState(144);
   const [post, setPost] = useState("");
   const [isPostDisabled, setIsPostDisabled] = useState(true);
@@ -55,22 +56,28 @@ export const Composer: React.FC<{
       return;
     }
     toast.success("Post classified successfully");
+    if (!result.classification) return;
+    setClassified(
+      result.classification === "offensive" ? "frowny.png" : "smiley.png",
+    );
     setIsPostDisabled(false);
     setTimeout(() => {
-      if (!result.classification) return;
       toast.info(`Post classified using Model-V2`);
     }, 1000);
 
     setTimeout(() => {
-      if (!result.classification) return;
       toast.info(`Post is classified as: ${result.classification}`);
     }, 2000);
+  };
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setPost(e.target.value || "");
+    setClassified("blanky.png");
   };
   return (
     <Card className={cn("min-w-96 max-w-md", className)}>
       <CardContent className="grid gap-2 p-4">
         <div className="flex items-center space-x-2">
-          <NeutralAvatar />
+          <NeutralAvatar AvatarSrc={classified} />
           <div className="grid gap-0.5">
             <p className="font-semibold">Create a post</p>
           </div>
@@ -80,7 +87,7 @@ export const Composer: React.FC<{
           id="tweet"
           placeholder="What's on your mind?"
           value={post}
-          onChange={(e) => setPost(e.target.value)}
+          onChange={handleChange}
         />
         <div className="flex items-center space-x-2">
           <ClassifyHoverCard>
@@ -120,8 +127,7 @@ export const Composer: React.FC<{
   );
 };
 
-const NeutralAvatar = () => {
-  const AvatarSrc = "/blanky.png";
+const NeutralAvatar = ({ AvatarSrc }: { AvatarSrc: string }) => {
   const AvatarAlt = "Neutral Faced Emoji Avatar";
   const AvatarFall = "Me";
   return (
