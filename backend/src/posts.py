@@ -82,9 +82,26 @@ dummy_posts =[
     dummy_post9,
     dummy_post10,
 ]
-def get_all_posts(page=1):
-    random.shuffle(dummy_posts)
-    return dummy_posts
+def get_posts(page=1):
+    posts =[]
+    last_page = (db_query("SELECT COUNT(*) FROM posts")[0][0] // 10) + 1
+    if last_page < page:
+        return {"posts":posts, "currentPage":page, "lastPage":last_page, "message": "Posts retrieved successfully"}
+    offset = (page - 1) * 10
+    result = db_query("SELECT * FROM posts LIMIT 10 OFFSET %s ", [offset])
+    for post in result:
+        tags = []
+        post_tags = db_query("SELECT * FROM post_tags INNER JOIN tags on tags.id=post_tags.tag_id WHERE post_id = %s", [post[0]])
+        for tag in post_tags:
+            tags.append(tag[3])
+        post_output = {
+            "id":post[0],
+            "text":post[1],
+            "isNSFW":post[2],
+            "tags":tags
+        }
+        posts.append(post_output)
+    return {"posts":posts, "currentPage":page, "lastPage":last_page, "message": "Posts retrieved successfully"}
 
 def get_post_by_id(post_id):
     result = db_query("SELECT * FROM posts WHERE id = 1")[0]

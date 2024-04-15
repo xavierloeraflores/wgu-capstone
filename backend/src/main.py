@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from model import classify_post, model_health
-from posts import get_all_posts, get_post_by_id, create_post
+from posts import get_posts, get_post_by_id, create_post
 from Models import PostInput, PostOutput
 app = FastAPI()
 
@@ -29,8 +29,8 @@ def classify(post: PostInput):
 
 @app.get("/api/posts")
 def read_posts(page: int = 1):
-    posts = get_all_posts(page)
-    return {"message": "Posts retrieved successfully", "posts": posts, "currentPage":page, "lastPage":15}
+    result = get_posts(page)
+    return result
 
 @app.get("/api/posts/{post_id}")
 def read_post(post_id: int):
