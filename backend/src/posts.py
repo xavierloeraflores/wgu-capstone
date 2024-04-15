@@ -119,12 +119,13 @@ def create_post(post: PostInput):
     tags = []
     post_id = result[0]
     post_tags=[]
-    for tag in tags:
-        tag_result = db_query("SELECT * FROM tags WHERE tag = %s", [tag])
-        tag_id = tag_result[0][0]
-        db_insert("INSERT INTO post_tags (post_id, tag_id) VALUES (%s, %s)", (post_id, tag_id))
-        post_tag=tag_result[0][1]
-        post_tags.append(post_tag)
+    if len(tags) !=0:
+      for tag in tags:
+          tag_result = db_query("SELECT * FROM tags WHERE tag = %s", [tag])
+          tag_id = tag_result[0][0]
+          db_insert("INSERT INTO post_tags (post_id, tag_id) VALUES (%s, %s)", (post_id, tag_id))
+          post_tag=tag_result[0][1]
+          post_tags.append(post_tag)
     post_output = {
         "id":result[0],
         "tags":post_tags,
