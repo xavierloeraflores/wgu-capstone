@@ -43,7 +43,12 @@ def seed_data(X, y):
     print("Seeding data")
     print(len(y))
     for i in range(len(X)):
-        pass
+        try:
+            text = X[i]
+            classification = y[i]
+            create_post(text, classification)
+        except Exception as e:
+            print(e)
 
 def db_insert(query, params=None):
     connection = psycopg2.connect(dsn=DB_CONNECTION)
@@ -54,6 +59,16 @@ def db_insert(query, params=None):
     cursor.close()
     connection.close()
     return result
+
+def create_post(text, classification):
+    try:
+        is_nsfw = True
+        if classification == "safe":
+            is_nsfw = False
+        result = db_insert('INSERT INTO posts (text, is_nsfw) VALUES (%s, %s)', (text, is_nsfw))
+    except Exception as e:
+        print(e)
+
 ## Main
 dataset1, dataset2 = read_csv_data()
 X, y = format_datasets(dataset1=dataset1, dataset2=dataset2)
