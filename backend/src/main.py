@@ -38,4 +38,4 @@ def read_post(post_id: int):
 
 @app.post("/api/posts")
 def create_post_route(post: PostInput):
-    return {"Message": "Post created successfully", "post": create_post(post)}
+    return {"message": "Post created successfully", "post": create_post(post)}

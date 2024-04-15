@@ -4,7 +4,7 @@ import { type PostInput, type Post } from "@/types";
 
 export interface CreatePostResponse {
   message: string;
-  post?: PostInput;
+  post?: Post;
   error?: string;
 }
 export async function createPost(post: PostInput): Promise<CreatePostResponse> {
