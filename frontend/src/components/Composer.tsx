@@ -34,12 +34,14 @@ export const Composer: React.FC<{
     if (result.error) {
       console.error("Failed to create post");
       toast.error("Failed to create post");
+      setClassified("blanky.png");
       setIsPostDisabled(false);
       return;
     }
     toast.success("Post created successfully");
     setPost("");
     refreshPosts();
+    setClassified("blanky.png");
   };
 
   const handleValidate = async () => {
@@ -69,6 +71,7 @@ export const Composer: React.FC<{
       toast.info(`Post is classified as: ${result.classification}`);
     }, 2000);
   };
+
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setPost(e.target.value || "");
     setClassified("blanky.png");
@@ -94,7 +97,7 @@ export const Composer: React.FC<{
             <Button
               aria-label="post"
               className="h-8"
-              disabled={isPostDisabled}
+              disabled={isPostDisabled || classified !== "blanky.png"}
               onClick={handleValidate}
             >
               Classify
