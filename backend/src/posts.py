@@ -116,7 +116,7 @@ def create_post(post: PostInput):
     else:
         isNSFW = False
     result = db_insert("INSERT INTO posts (text, is_nsfw) VALUES (%s, %s)", (text, isNSFW))
-    tags = ["v1"]
+    tags = []
     post_id = result[0]
     post_tags=[]
     for tag in tags:
