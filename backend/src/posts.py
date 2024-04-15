@@ -104,7 +104,7 @@ def get_posts(page=1):
     return {"posts":posts, "currentPage":page, "lastPage":last_page, "message": "Posts retrieved successfully"}
 
 def get_post_by_id(post_id):
-    result = db_query("SELECT * FROM posts WHERE id = 1")[0]
+    result = db_query("SELECT * FROM posts WHERE id = %s", [post_id])[0]
     return {"post": result}
 
 def create_post(post: PostInput):
