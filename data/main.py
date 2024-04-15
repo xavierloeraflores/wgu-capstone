@@ -1,5 +1,6 @@
 from os import getenv
 from pandas import read_csv, concat
+import psycopg2
 
 DB_CONNECTION = getenv('DB_CONNECTION')
 
@@ -43,7 +44,16 @@ def seed_data(X, y):
     print(len(y))
     for i in range(len(X)):
         pass
-    
+
+def db_insert(query, params=None):
+    connection = psycopg2.connect(dsn=DB_CONNECTION)
+    cursor = connection.cursor()
+    cursor.execute(query + ' RETURNING *', params)
+    connection.commit()
+    result = cursor.fetchone()
+    cursor.close()
+    connection.close()
+    return result
 ## Main
 dataset1, dataset2 = read_csv_data()
 X, y = format_datasets(dataset1=dataset1, dataset2=dataset2)
