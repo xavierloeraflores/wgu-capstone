@@ -16,7 +16,7 @@ def stem_text(text):
     text = " ".join(text)
     return text
 
-def clean_data():
+def clean_data(text):
     text = text.lower()
     text = remove_stopwords(text)
     text = stem_text(text)
