@@ -38,12 +38,16 @@ def remove_punctuation(text):
     text = re.sub(r'[^\w\s]', '', text)
     return text
 
-def clean_data(text):
+def clean_data(text, remove_stopwords=True, stem_text=True, remove_punctuation=True, remove_emojis=True):
     text = text.lower()
-    text = remove_emojis(text)
-    text = remove_punctuation(text)
-    text = remove_stopwords(text)
-    text = stem_text(text)
+    if remove_emojis:
+        text = remove_emojis(text)
+    if remove_punctuation:
+        text = remove_punctuation(text)
+    if remove_stopwords:
+        text = remove_stopwords(text)
+    if stem_text:
+        text = stem_text(text)
     return text
 
 
