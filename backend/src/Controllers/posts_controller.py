@@ -1,7 +1,7 @@
 from Models import PostInput, PostOutput
 import random
 from database import db_query, db_insert
-from Controllers.model import classify_post
+from Controllers.model_controller import classify_post
 
 dummy_post1 = {
     "id": 1,
