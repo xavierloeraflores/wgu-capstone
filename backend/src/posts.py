@@ -88,7 +88,7 @@ def get_posts(page=1):
     if last_page < page:
         return {"posts":posts, "currentPage":page, "lastPage":last_page, "message": "Posts retrieved successfully"}
     offset = (page - 1) * 10
-    result = db_query("SELECT * FROM posts LIMIT 10 OFFSET %s ", [offset])
+    result = db_query("SELECT * FROM posts ORDER BY created_at DESC LIMIT 10 OFFSET %s ", [offset])
     for post in result:
         tags = []
         post_tags = db_query("SELECT * FROM post_tags INNER JOIN tags on tags.id=post_tags.tag_id WHERE post_id = %s", [post[0]])
