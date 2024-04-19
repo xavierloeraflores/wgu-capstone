@@ -1,19 +1,19 @@
 from Models import PostInput
-from database import db_query, db_insert
+from Utils import Database
 from Controllers import ModelController
 
 class PostController:
   @staticmethod
   def get_posts(page=1):
       posts =[]
-      last_page = (db_query("SELECT COUNT(*) FROM posts")[0][0] // 10) + 1
+      last_page = (Database.db_query("SELECT COUNT(*) FROM posts")[0][0] // 10) + 1
       if last_page < page:
           return {"posts":posts, "currentPage":page, "lastPage":last_page, "message": "Posts retrieved successfully"}
       offset = (page - 1) * 10
-      result = db_query("SELECT * FROM posts ORDER BY created_at DESC LIMIT 10 OFFSET %s ", [offset])
+      result = Database.db_query("SELECT * FROM posts ORDER BY created_at DESC LIMIT 10 OFFSET %s ", [offset])
       for post in result:
           tags = []
-          post_tags = db_query("SELECT * FROM post_tags INNER JOIN tags on tags.id=post_tags.tag_id WHERE post_id = %s", [post[0]])
+          post_tags = Database.db_query("SELECT * FROM post_tags INNER JOIN tags on tags.id=post_tags.tag_id WHERE post_id = %s", [post[0]])
           for tag in post_tags:
               tags.append(tag[3])
           post_output = {
@@ -27,7 +27,7 @@ class PostController:
 
   @staticmethod
   def get_post_by_id(post_id):
-      result = db_query("SELECT * FROM posts WHERE id = %s", [post_id])[0]
+      result = Database.db_query("SELECT * FROM posts WHERE id = %s", [post_id])[0]
       return {"post": result}
 
   @staticmethod
@@ -39,15 +39,15 @@ class PostController:
           is_nsfw = True
       else:
           is_nsfw = False
-      result = db_insert("INSERT INTO posts (text, is_nsfw) VALUES (%s, %s)", (text, is_nsfw))
+      result = Database.db_insert("INSERT INTO posts (text, is_nsfw) VALUES (%s, %s)", (text, is_nsfw))
       tags = []
       post_id = result[0]
       post_tags=[]
       if len(tags) !=0:
         for tag in tags:
-            tag_result = db_query("SELECT * FROM tags WHERE tag = %s", [tag])
+            tag_result = Database.db_query("SELECT * FROM tags WHERE tag = %s", [tag])
             tag_id = tag_result[0][0]
-            db_insert("INSERT INTO post_tags (post_id, tag_id) VALUES (%s, %s)", (post_id, tag_id))
+            Database.db_insert("INSERT INTO post_tags (post_id, tag_id) VALUES (%s, %s)", (post_id, tag_id))
             post_tag=tag_result[0][1]
             post_tags.append(post_tag)
       post_output = {
