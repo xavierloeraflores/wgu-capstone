@@ -34,12 +34,12 @@ class PostController:
   def create_post(post: PostInput):
       text = post.text
       classification = ModelController.classify_post(text)
-      isNSFW = True
+      is_nsfw = True
       if classification == "offensive":
-          isNSFW = True
+          is_nsfw = True
       else:
-          isNSFW = False
-      result = db_insert("INSERT INTO posts (text, is_nsfw) VALUES (%s, %s)", (text, isNSFW))
+          is_nsfw = False
+      result = db_insert("INSERT INTO posts (text, is_nsfw) VALUES (%s, %s)", (text, is_nsfw))
       tags = []
       post_id = result[0]
       post_tags=[]
