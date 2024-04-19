@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from Models import PostInput
-from model import classify_post, model_health
+from Controllers import classify_post, model_health
 
 model_router = APIRouter()
 
