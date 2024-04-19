@@ -1,4 +1,4 @@
 import main
 import model
-import posts
+import backend.src.Controllers.posts as posts
 import Routers
