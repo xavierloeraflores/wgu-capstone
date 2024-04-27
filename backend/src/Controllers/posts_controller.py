@@ -28,10 +28,6 @@ class PostController:
       result = Database.db_query("SELECT * FROM posts WHERE id = %s", [post_id])[0]
       return {"post": result}
   
-  @staticmethod
-  def create_post_tag(post_id, tag_id):
-      result = Database.db_insert("INSERT INTO post_tags (post_id, tag_id) VALUES (%s, %s)", (post_id, tag_id))
-      return {"post_tag": result}
 
   @staticmethod
   def create_post(post: PostInput):
