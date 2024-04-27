@@ -48,3 +48,8 @@ class PostController:
           "isNSFW":result[2]
       }
       return post_output
+  
+  @staticmethod
+  def delete_post(post_id):
+    result = Database.db_query("DELETE FROM posts WHERE id = %s", [post_id])
+    return {"message":"Post deleted successfully"}
