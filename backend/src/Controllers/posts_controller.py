@@ -1,6 +1,7 @@
 from Models import PostInput
 from Utils import Database
 from Controllers import ModelController
+import json
 
 class PostController:
   @staticmethod
@@ -41,17 +42,9 @@ class PostController:
           is_nsfw = True
       else:
           is_nsfw = False
-      result = Database.db_insert("INSERT INTO posts (text, is_nsfw) VALUES (%s, %s)", (text, is_nsfw))
-      tags = []
-      post_id = result[0]
-      post_tags=[]
-      if len(tags) !=0:
-        for tag in tags:
-            tag_result = Database.db_query("SELECT * FROM tags WHERE tag = %s", [tag])
-            tag_id = tag_result[0][0]
-            Database.db_insert("INSERT INTO post_tags (post_id, tag_id) VALUES (%s, %s)", (post_id, tag_id))
-            post_tag=tag_result[0][1]
-            post_tags.append(post_tag)
+      tags=["user"] 
+      post_tags = json.dumps(tags)
+      result = Database.db_insert("INSERT INTO posts (text, is_nsfw, tags) VALUES (%s, %s, %s)", (text, is_nsfw, post_tags))
       post_output = {
           "id":result[0],
           "tags":post_tags,
