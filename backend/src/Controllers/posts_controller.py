@@ -12,15 +12,12 @@ class PostController:
       offset = (page - 1) * 10
       result = Database.db_query("SELECT * FROM posts ORDER BY created_at DESC LIMIT 10 OFFSET %s ", [offset])
       for post in result:
-          tags = []
-          post_tags = Database.db_query("SELECT * FROM post_tags INNER JOIN tags on tags.id=post_tags.tag_id WHERE post_id = %s", [post[0]])
-          for tag in post_tags:
-              tags.append(tag[3])
           post_output = {
               "id":post[0],
               "text":post[1],
               "isNSFW":post[2],
-              "tags":tags
+              "date":post[3],
+              "tags":post[4]
           }
           posts.append(post_output)
       return {"posts":posts, "currentPage":page, "lastPage":last_page, "message": "Posts retrieved successfully"}
