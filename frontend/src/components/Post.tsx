@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { useAtom } from "jotai";
 import { ContentFilterAtom } from "@/pages/_app";
 import { type Post as PostType } from "@/types";
-import { Badge } from "./ui/badge";
+import { Tag } from "./Tag";
 
 type PostProps = {
   post: PostType;
@@ -35,19 +35,7 @@ export const Post: React.FC<PostProps & { className?: string }> = ({
       </CardContent>
       <CardFooter className="gap-4 p-4">
         {tags.map((tag, idx) => {
-          if (tag === "") return null;
-          if (tag === "user" || tag === "dataset") {
-            return (
-              <Badge key={idx} variant="secondary">
-                {tag}
-              </Badge>
-            );
-          }
-          return (
-            <Badge key={idx} variant="default">
-              {tag}
-            </Badge>
-          );
+          return <Tag key={idx} tag={tag} />;
         })}
       </CardFooter>
     </Card>
