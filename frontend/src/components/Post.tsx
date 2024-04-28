@@ -31,6 +31,14 @@ export const Post: React.FC<PostProps & { className?: string }> = ({
       </CardContent>
       <CardFooter className="gap-4 p-4">
         {tags.map((tag, idx) => {
+          if (tag === "") return null;
+          if (tag === "user" || tag === "dataset") {
+            return (
+              <Badge key={idx} variant="secondary">
+                {tag}
+              </Badge>
+            );
+          }
           return (
             <Badge key={idx} variant="default">
               {tag}
