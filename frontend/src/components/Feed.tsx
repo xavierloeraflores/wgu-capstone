@@ -11,7 +11,6 @@ export const Feed: React.FC<FeedProps & { className?: string }> = ({
   posts,
   className = "",
 }) => {
-  console.log({ feedPosts: posts });
   return (
     <div className={cn(" mb-4 rounded-md border p-4", className)}>
       <div className="p-4">
