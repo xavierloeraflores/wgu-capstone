@@ -14,13 +14,17 @@ export const Post: React.FC<PostProps & { className?: string }> = ({
   post,
   className = "",
 }) => {
-  const { text, isNSFW, tags } = post;
+  const { text, isNSFW, tags, date } = post;
   const [isFiltered] = useAtom(ContentFilterAtom);
+  const isUserGenerated = tags.includes("user");
+  const dateObj = new Date(date);
   return (
     <Card className={cn("min-h-48 min-w-96 max-w-md", className)}>
-      <CardHeader className="flex flex-row flex-nowrap gap-2 border-b-2">
+      <CardHeader className="flex flex-row flex-nowrap items-center gap-4 border-b-2">
         <PostAvatar isNSFW={isNSFW} />
-        <h1 className="text-lg font-semibold text-primary">{}</h1>
+        <h1 className="text-md text-center font-semibold">
+          {isUserGenerated ? `Posted ${dateObj.toDateString()}` : ""}
+        </h1>
       </CardHeader>
       <CardContent
         className={`py-2 ${isFiltered && isNSFW ? "overflow-hidden blur-xl filter" : ""}`}
