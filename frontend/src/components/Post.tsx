@@ -5,6 +5,7 @@ import { useAtom } from "jotai";
 import { ContentFilterAtom } from "@/pages/_app";
 import { type Post as PostType } from "@/types";
 import { Tag } from "./Tag";
+import { TagHoverCard } from "./TagHoverCard";
 
 type PostProps = {
   post: PostType;
@@ -35,7 +36,11 @@ export const Post: React.FC<PostProps & { className?: string }> = ({
       </CardContent>
       <CardFooter className="gap-4 p-4">
         {tags.map((tag, idx) => {
-          return <Tag key={idx} tag={tag} />;
+          return (
+            <TagHoverCard key={idx} tag={tag}>
+              <Tag tag={tag} />
+            </TagHoverCard>
+          );
         })}
       </CardFooter>
     </Card>
