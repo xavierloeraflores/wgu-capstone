@@ -24,7 +24,9 @@ export const Post: React.FC<PostProps & { className?: string }> = ({
       <CardHeader className="flex flex-row flex-nowrap items-center gap-4 border-b-2">
         <PostAvatar isNSFW={isNSFW} />
         <h1 className="text-md text-center font-semibold">
-          {isUserGenerated ? `Posted ${dateObj.toDateString()}` : ""}
+          {isUserGenerated && date.length > 0
+            ? `Posted ${dateObj.toDateString()}`
+            : ""}
         </h1>
       </CardHeader>
       <CardContent
