@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -88,7 +89,9 @@ const Destination = ({
   const { link, title, text } = props;
   return (
     <Link href={link} legacyBehavior passHref>
-      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+      <NavigationMenuLink
+        className={cn(navigationMenuTriggerStyle(), "w-full")}
+      >
         <div className="flex w-full flex-col rounded-md no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
           <span className="text-sm font-medium leading-none">{title}</span>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
