@@ -8,3 +8,8 @@ export type Post = PostInput & {
   tags: string[];
   date: string;
 };
+
+export type BarChartDataPoint = {
+  label: string;
+  value: number;
+};
