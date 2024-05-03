@@ -16,6 +16,7 @@ import {
   Table,
 } from "@/components/ui/table";
 import Image from "next/image";
+import { DataBarChart } from "@/components/DataBarChart";
 
 export default function DataAnalysis() {
   return (
@@ -157,6 +158,14 @@ const DataCard: React.FC<DataCardProps & { className?: string }> = ({
   );
 };
 
+const bar1 = { label: "Label 1", value: 10 };
+const bar2 = { label: "Label 2", value: 20 };
+const bar3 = { label: "Label 3", value: 5 };
+const testData = [bar1, bar2, bar3];
 const BarChart: React.FC<{ className?: string }> = ({ className = "" }) => {
-  return <div className={cn("", className)}></div>;
+  return (
+    <div className={cn("", className)}>
+      <DataBarChart data={testData} xAxisLabel="Model" yAxisLabel="Value" />
+    </div>
+  );
 };
