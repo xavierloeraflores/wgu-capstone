@@ -1,10 +1,10 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { CardRow } from "@/components/CardRow";
-import { DataCard } from "@/components/DataCard";
+import { DataCardRow } from "@/components/DataCardRow";
 import { DataTable } from "@/components/DataTable";
 import Image from "next/image";
 import { DataBarChart } from "@/components/DataBarChart";
+import { tableHeader, tableRows, testData } from "@/lib/models";
 
 export default function DataAnalysis() {
   return (
@@ -57,26 +57,7 @@ export default function DataAnalysis() {
 
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container grid gap-8 px-4 md:px-6">
-          <CardRow>
-            <DataCard
-              title="Model Accuracy"
-              description="The overall accuracy of the machine learning model."
-            >
-              <BarChart className="aspect-[4/3]" />
-            </DataCard>
-            <DataCard
-              title="Feature Importance"
-              description="The relative importance of each feature in the model."
-            >
-              <BarChart className="aspect-[4/3]" />
-            </DataCard>
-            <DataCard
-              title="Prediction Distribution"
-              description="The distribution of predictions for the model."
-            >
-              <BarChart className="aspect-[4/3]" />
-            </DataCard>
-          </CardRow>
+          <DataCardRow cards={dataCards}></DataCardRow>
           <DataTable />
         </div>
       </section>
@@ -84,14 +65,65 @@ export default function DataAnalysis() {
   );
 }
 
-const bar1 = { label: "Label 1", value: 10 };
-const bar2 = { label: "Label 2", value: 20 };
-const bar3 = { label: "Label 3", value: 5 };
-const testData = [bar1, bar2, bar3];
-const BarChart: React.FC<{ className?: string }> = ({ className = "" }) => {
-  return (
-    <div className={cn("", className)}>
-      <DataBarChart data={testData} xAxisLabel="Model" yAxisLabel="Value" />
-    </div>
-  );
-};
+const dataCards = [
+  {
+    title: "Model Accuracy",
+    description: "The overall accuracy of the machine learning model.",
+    children: (
+      <DataBarChart
+        className="aspect-[4/3]"
+        data={testData}
+        xAxisLabel="Model"
+        yAxisLabel="Value"
+      />
+    ),
+  },
+  {
+    title: "Feature Importance",
+    description: "The relative importance of each feature in the model.",
+    children: (
+      <DataBarChart
+        className="aspect-[4/3]"
+        data={testData}
+        xAxisLabel="Model"
+        yAxisLabel="Value"
+      />
+    ),
+  },
+  {
+    title: "Prediction Distribution",
+    description: "The distribution of predictions for the model.",
+    children: (
+      <DataBarChart
+        className="aspect-[4/3]"
+        data={testData}
+        xAxisLabel="Model"
+        yAxisLabel="Value"
+      />
+    ),
+  },
+  {
+    title: "Prediction Distribution",
+    description: "The distribution of predictions for the model.",
+    children: (
+      <DataBarChart
+        className="aspect-[4/3]"
+        data={testData}
+        xAxisLabel="Model"
+        yAxisLabel="Value"
+      />
+    ),
+  },
+  {
+    title: "Prediction Distribution",
+    description: "The distribution of predictions for the model.",
+    children: (
+      <DataBarChart
+        className="aspect-[4/3]"
+        data={testData}
+        xAxisLabel="Model"
+        yAxisLabel="Value"
+      />
+    ),
+  },
+];
