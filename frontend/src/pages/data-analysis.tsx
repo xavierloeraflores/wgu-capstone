@@ -33,8 +33,26 @@ export default function DataAnalysis() {
                 raw data files.
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <a className={buttonVariants({ variant: "default" })} href="#">
-                  Download Files
+                <a
+                  className={buttonVariants({ variant: "default" })}
+                  href="/data/train.csv"
+                  download={true}
+                >
+                  Download 1st Training Dataset
+                </a>
+                <a
+                  className={buttonVariants({ variant: "default" })}
+                  href="/data/labeled_data.csv"
+                  download={true}
+                >
+                  Download 2nd Training Dataset
+                </a>
+                <a
+                  className={buttonVariants({ variant: "default" })}
+                  href="/data/test.csv"
+                  download={true}
+                >
+                  Download Testing Dataset
                 </a>
               </div>
             </div>
