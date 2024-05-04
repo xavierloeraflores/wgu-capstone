@@ -17,42 +17,58 @@ import {
 
 import { cn } from "@/lib/utils";
 
-export const DataTable: React.FC<{ className?: string }> = ({
+type TableValues = {
+  value: string | number;
+};
+
+type TableRow = {
+  values: TableValues[];
+};
+
+type DataTableProps = {
+  title?: string;
+  description?: string;
+  header?: TableRow;
+  rows?: TableRow[];
+};
+
+export const DataTable: React.FC<DataTableProps & { className?: string }> = ({
+  title = "",
+  description = "",
+  header = {
+    values: [],
+  },
+  rows = [],
   className = "",
 }) => {
+  if (rows.length === 0) {
+    return null;
+  }
   return (
     <Card className={cn("", className)}>
       <CardHeader>
-        <CardTitle>Model Performance Metrics</CardTitle>
-        <CardDescription>
-          Key performance metrics for the machine learning model.
-        </CardDescription>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Metric</TableHead>
-              <TableHead className="text-right">Value</TableHead>
+              {header.values.map((value, index) => (
+                <TableHead key={index}>{value.value}</TableHead>
+              ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow>
-              <TableCell>Accuracy</TableCell>
-              <TableCell className="text-right">0.92</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Precision</TableCell>
-              <TableCell className="text-right">0.88</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Recall</TableCell>
-              <TableCell className="text-right">0.91</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>F1-Score</TableCell>
-              <TableCell className="text-right">0.89</TableCell>
-            </TableRow>
+            {rows.map((row, idx) => {
+              return (
+                <TableRow key={idx}>
+                  {row.values.map((value, index) => (
+                    <TableCell key={index}>{value.value}</TableCell>
+                  ))}
+                </TableRow>
+              );
+            })}
           </TableBody>
         </Table>
       </CardContent>

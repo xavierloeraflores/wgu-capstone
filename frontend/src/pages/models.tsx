@@ -77,12 +77,56 @@ export default function DataAnalysis() {
               <BarChart className="aspect-[4/3]" />
             </DataCard>
           </CardRow>
-          <DataTable />
+          <DataTable
+            title="Model Training Methods"
+            description="The different methods used to train each machine learning model"
+            header={tableHeader}
+            rows={tableRows}
+          />
         </div>
       </section>
     </>
   );
 }
+const tableHeader = {
+  values: [
+    { value: "Model" },
+    { value: "Training Method" },
+    { value: "Accuracy" },
+    { value: "Precision" },
+    { value: "Recall" },
+  ],
+};
+
+const tableRows = [
+  {
+    values: [
+      { value: "Model 1" },
+      { value: "Random Forest" },
+      { value: 0.9 },
+      { value: 0.8 },
+      { value: 0.9 },
+    ],
+  },
+  {
+    values: [
+      { value: "Model 2" },
+      { value: "Logistic Regression" },
+      { value: 0.8 },
+      { value: 0.7 },
+      { value: 0.8 },
+    ],
+  },
+  {
+    values: [
+      { value: "Model 3" },
+      { value: "SVM" },
+      { value: 0.85 },
+      { value: 0.75 },
+      { value: 0.85 },
+    ],
+  },
+];
 
 const bar1 = { label: "Label 1", value: 10 };
 const bar2 = { label: "Label 2", value: 20 };
