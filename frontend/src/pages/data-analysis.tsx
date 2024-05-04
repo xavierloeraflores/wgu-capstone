@@ -1,10 +1,14 @@
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { DataCardRow } from "@/components/DataCardRow";
 import { DataTable } from "@/components/DataTable";
 import Image from "next/image";
 import { DataBarChart } from "@/components/DataBarChart";
-import { tableHeader, tableRows, testData } from "@/lib/models";
+import {
+  tableHeader,
+  tableRows,
+  testData,
+  dataDropdown,
+} from "@/lib/data-analysis";
+import { DownloadDropdown } from "@/components/DownloadDropdown";
 
 export default function DataAnalysis() {
   return (
@@ -21,27 +25,11 @@ export default function DataAnalysis() {
                 raw data files.
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <a
-                  className={buttonVariants({ variant: "default" })}
-                  href="/data/train.csv"
-                  download={true}
-                >
-                  Download 1st Training Dataset
-                </a>
-                <a
-                  className={buttonVariants({ variant: "default" })}
-                  href="/data/labeled_data.csv"
-                  download={true}
-                >
-                  Download 2nd Training Dataset
-                </a>
-                <a
-                  className={buttonVariants({ variant: "default" })}
-                  href="/data/test.csv"
-                  download={true}
-                >
-                  Download Testing Dataset
-                </a>
+                <DownloadDropdown
+                  menuTrigger={dataDropdown.menuTrigger}
+                  menuLabel={dataDropdown.menuLabel}
+                  menuItems={dataDropdown.menuItems}
+                />
               </div>
             </div>
             <Image
@@ -58,7 +46,12 @@ export default function DataAnalysis() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container grid gap-8 px-4 md:px-6">
           <DataCardRow cards={dataCards}></DataCardRow>
-          <DataTable />
+          <DataTable
+            title="Model Training Methods"
+            description="The different methods used to train each machine learning model"
+            header={tableHeader}
+            rows={tableRows}
+          />
         </div>
       </section>
     </>
