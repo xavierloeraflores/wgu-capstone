@@ -1,20 +1,8 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import {
-  CardTitle,
-  CardDescription,
-  CardHeader,
-  CardContent,
-  Card,
-} from "@/components/ui/card";
-import {
-  TableHead,
-  TableRow,
-  TableHeader,
-  TableCell,
-  TableBody,
-  Table,
-} from "@/components/ui/table";
+import { CardRow } from "@/components/CardRow";
+import { DataCard } from "@/components/DataCard";
+import { DataTable } from "@/components/DataTable";
 import Image from "next/image";
 import { DataBarChart } from "@/components/DataBarChart";
 
@@ -95,86 +83,6 @@ export default function DataAnalysis() {
     </>
   );
 }
-
-const DataTable: React.FC<{ className?: string }> = ({ className = "" }) => {
-  return (
-    <Card className={cn("", className)}>
-      <CardHeader>
-        <CardTitle>Model Performance Metrics</CardTitle>
-        <CardDescription>
-          Key performance metrics for the machine learning model.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Metric</TableHead>
-              <TableHead className="text-right">Value</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            <TableRow>
-              <TableCell>Accuracy</TableCell>
-              <TableCell className="text-right">0.92</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Precision</TableCell>
-              <TableCell className="text-right">0.88</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Recall</TableCell>
-              <TableCell className="text-right">0.91</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>F1-Score</TableCell>
-              <TableCell className="text-right">0.89</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-      </CardContent>
-    </Card>
-  );
-};
-
-type DataCardProps = {
-  title: string;
-  description: string;
-  children: React.ReactNode;
-};
-
-const CardRow: React.FC<{ className?: string; children: React.ReactNode }> = ({
-  children,
-  className,
-}) => {
-  return (
-    <div
-      className={cn(
-        "grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3",
-        className,
-      )}
-    >
-      {children}
-    </div>
-  );
-};
-
-const DataCard: React.FC<DataCardProps & { className?: string }> = ({
-  title,
-  description,
-  children,
-  className = "",
-}) => {
-  return (
-    <Card className={cn("", className)}>
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-      <CardContent>{children}</CardContent>
-    </Card>
-  );
-};
 
 const bar1 = { label: "Label 1", value: 10 };
 const bar2 = { label: "Label 2", value: 20 };
