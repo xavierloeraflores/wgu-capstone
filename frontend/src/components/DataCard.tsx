@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
-type DataCardProps = {
+export type DataCardProps = {
   title: string;
   description: string;
   children: React.ReactNode;
