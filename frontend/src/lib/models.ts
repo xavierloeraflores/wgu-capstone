@@ -2,9 +2,9 @@ export const tableHeader = {
   values: [
     { value: "Model" },
     { value: "Training Method" },
-    { value: "Accuracy" },
-    { value: "Precision" },
-    { value: "Recall" },
+    { value: "Datasets" },
+    { value: "Cleaning" },
+    { value: "Accuracy (On Test Dataset)" },
   ],
 };
 
@@ -12,28 +12,31 @@ export const tableRows = [
   {
     values: [
       { value: "Model 1" },
-      { value: "Random Forest" },
-      { value: 0.9 },
-      { value: 0.8 },
-      { value: 0.9 },
+      { value: "Logistic Regression" },
+      { value: "80% of Dataset 1" },
+      { value: "Snowball Stemmer, Stopwords" },
+      { value: 0.95 },
     ],
   },
   {
     values: [
       { value: "Model 2" },
       { value: "Logistic Regression" },
-      { value: 0.8 },
-      { value: 0.7 },
-      { value: 0.8 },
+      { value: "95% of Dataset 1 & 2" },
+      { value: "Snowball Stemmer, Stopwords" },
+      { value: 0.95 },
     ],
   },
   {
     values: [
       { value: "Model 3" },
-      { value: "SVM" },
-      { value: 0.85 },
-      { value: 0.75 },
-      { value: 0.85 },
+      { value: "Logistic Regression" },
+      { value: "80% of Dataset 1 & 2" },
+      {
+        value:
+          "Snowball Stemmer, Stopwords, Punctation, Symbols, Emojis, Markup",
+      },
+      { value: 0.94 },
     ],
   },
 ];
