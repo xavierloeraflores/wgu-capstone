@@ -57,10 +57,10 @@ export default function DataAnalysis() {
               </div>
             </div>
             <Image
-              alt="Image representing the model"
+              alt="Emoji icon representing data analysis with a bar chart"
               className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
-              height="550"
-              width="550"
+              height="150"
+              width="150"
               src="/smiley.png"
             />
           </div>
