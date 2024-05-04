@@ -1,10 +1,9 @@
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { DownloadDropdown } from "@/components/DownloadDropdown";
 import { DataCardRow } from "@/components/DataCardRow";
 import { DataTable } from "@/components/DataTable";
 import Image from "next/image";
 import { DataBarChart } from "@/components/DataBarChart";
-import { tableHeader, tableRows, testData } from "@/lib/models";
+import { tableHeader, tableRows, testData, modelsDropdown } from "@/lib/models";
 
 export default function DataAnalysis() {
   return (
@@ -21,27 +20,11 @@ export default function DataAnalysis() {
                 pickle files.
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <a
-                  className={buttonVariants({ variant: "default" })}
-                  href="/model/model-v1.pkl"
-                  download={true}
-                >
-                  Download Model v1
-                </a>
-                <a
-                  className={buttonVariants({ variant: "default" })}
-                  href="/model/model-v2.pkl"
-                  download={true}
-                >
-                  Download Model v2
-                </a>
-                <a
-                  className={buttonVariants({ variant: "default" })}
-                  href="/model/model-v3.pkl"
-                  download={true}
-                >
-                  Download Model v3
-                </a>
+                <DownloadDropdown
+                  menuTrigger={modelsDropdown.menuTrigger}
+                  menuLabel={modelsDropdown.menuLabel}
+                  menuItems={modelsDropdown.menuItems}
+                />
               </div>
             </div>
             <Image
