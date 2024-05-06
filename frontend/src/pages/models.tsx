@@ -1,6 +1,7 @@
 import { DataCardRow } from "@/components/DataCardRow";
 import { DataTable } from "@/components/DataTable";
 import { DataBarChart } from "@/components/DataBarChart";
+import { DataPieChart } from "@/components/DataPieChart";
 import { tableHeader, tableRows, testData, modelsDropdown } from "@/lib/models";
 import { DataHeader } from "@/components/DataHeader";
 
@@ -47,14 +48,7 @@ const dataCards = [
   {
     title: "Feature Importance",
     description: "The relative importance of each feature in the model.",
-    children: (
-      <DataBarChart
-        className="aspect-[4/3]"
-        data={testData}
-        xAxisLabel="Model"
-        yAxisLabel="Value"
-      />
-    ),
+    children: <DataPieChart className="aspect-[4/3]" data={testData} />,
   },
   {
     title: "Prediction Distribution",
