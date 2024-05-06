@@ -13,7 +13,7 @@ type DownloadDropDownMenuItem = {
   name: string;
 };
 
-type DownloadDropDownMenuProps = {
+export type DownloadDropDownMenuProps = {
   menuTrigger?: string;
   menuLabel?: string;
   menuItems?: DownloadDropDownMenuItem[];
