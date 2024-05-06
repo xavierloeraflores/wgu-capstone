@@ -37,7 +37,7 @@ export default function DataAnalysis() {
               className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
               height="150"
               width="150"
-              src="/smiley.png"
+              src="/images/chart.png"
             />
           </div>
         </div>
