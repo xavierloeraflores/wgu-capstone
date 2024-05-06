@@ -68,6 +68,13 @@ export const Header: React.FC = () => {
                     text: "Explore the data analysis",
                   }}
                 />
+                <Destination
+                  props={{
+                    link: "/models",
+                    title: "Models",
+                    text: "Explore the different models",
+                  }}
+                />
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
