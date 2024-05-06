@@ -13,3 +13,8 @@ export type BarChartDataPoint = {
   label: string;
   value: number;
 };
+
+export type PieChartDataPoint = {
+  label: string;
+  value: number;
+};
