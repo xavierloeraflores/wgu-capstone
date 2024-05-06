@@ -40,11 +40,12 @@ export const DataHeader: React.FC<DataHeaderProps & { className?: string }> = ({
               />
             </div>
           </div>
+
           <Image
             alt={image.alt}
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
-            height="150"
-            width="150"
+            className="mx-auto aspect-[1/1] max-w-64 overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
+            height="400"
+            width="400"
             src={image.src}
           />
         </div>
