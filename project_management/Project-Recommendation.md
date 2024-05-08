@@ -12,6 +12,26 @@
 
 ## Methodology
 
+### Project Management Methodology
+
+### Standard Methodology
+Cross-Industry Standard Process for Data Mining, also known as (CRISP-DM), will be used as the standard methodology for the project since it is a widely used and accepted methodology for machine learning projects and provides a structured approach for proceeding with the project.
+
+CRIPS-DM is a 6-phase process that includes the following phases:
+
+- Business Understanding: The Social Club L.L.C needs the machine learning solution to help reduce the workload of the moderation team and to improve the quality of the moderation for users on the platform. This would not only save time and resources for the company but would also drive growth and user engagement on the platform.
+
+- Data Understanding: The data used to train the model will need to be user-generated content to allow the model to learn patterns in the data and make predictions on new data for offensive content detection. 
+
+- Data Preparation: The data will need to be cleaned, categorized, and preprocessed before it can be used for modeling. Data will be categorized based on the content within the posts to be used for training the model. The data will also be cleaned to remove common stop words, symbols, and other irrelevant data that may not be useful for the model.
+
+- Modeling: Using logistic regression and supervised learning, the model will be trained to accurately categorize the posts based on the offensiveness of the content. This will allow the model to predict new posts and categorize whether they are offensive or not. 
+
+- Evaluation: The solution will be evaluated to ensure that it meets the requirements and objectives of the project. This will involve testing the model with new data to ensure that it is accurately categorizing the content and saving the human moderation team time.
+
+- Deployment: The machine learning solution will be deployed as a backend service that will be utilized within a fullstack application where users can post content under the moderation of the model.  
+
+
 ## Budget
 
 The following section represents the proposed estimated budget for the project including a cost breakdown for development and maintenance. Labor costs are separated into the categories of engineering labor, project management labor, and maintenance labor. A consolidated hardware and resources cost is also included as well as the ongoing estimated cost for cloud usage. A full breakdown of the labor cost is provided in this budget proposal.
