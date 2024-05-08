@@ -9,10 +9,10 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import { type BarChartDataPoint } from "@/types";
+import { type DataPoint } from "@/types";
 
 type BarChartProps = {
-  data: BarChartDataPoint[];
+  data: DataPoint[];
   xAxisLabel?: string;
   yAxisLabel?: string;
 };

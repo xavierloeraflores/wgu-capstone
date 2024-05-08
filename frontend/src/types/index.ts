@@ -9,12 +9,7 @@ export type Post = PostInput & {
   date: string;
 };
 
-export type BarChartDataPoint = {
-  label: string;
-  value: number;
-};
-
-export type PieChartDataPoint = {
+export type DataPoint = {
   label: string;
   value: number;
 };

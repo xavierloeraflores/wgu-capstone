@@ -2,10 +2,10 @@
 import { cn } from "@/lib/utils";
 import { PieChart, Tooltip, Pie, ResponsiveContainer } from "recharts";
 
-import { type PieChartDataPoint } from "@/types";
+import { type DataPoint } from "@/types";
 
 type PieChartProps = {
-  data: PieChartDataPoint[];
+  data: DataPoint[];
 };
 
 export const DataPieChart: React.FC<PieChartProps & { className?: string }> = ({
