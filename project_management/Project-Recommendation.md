@@ -73,6 +73,8 @@ Labor Cost Breakdown:
 The data used for training the model was carefully selected to adhere with company policy and legal regulations. Beyond ensuring that data was collected ethically in accordance with the company's privacy policy, the data was also anonymized to protect the privacy of the users. During the cleaning process, content in posts was also altered to remove any mentions of other users as well as any personal information that could be used to identify individuals. It is also important to note that we also only used publicly available data and did not use any private data in the training of the model. The machine learning model will not use any metadata or personal information to make predictions on the content of the posts. Predictions are made purely based on the content of the posts and the patterns in the data that the model has learned during training.
 
 ## Expertise
+The team is comprised of experienced and versatile engineers with strong backgrounds in their respective disciplines. The team comprises of 2 machine learning engineers, 1 fullstack engineer, 1 dedicated backend engineer, and a project manager all with high level degrees in computer science or data science and at least 3 years of experience delivering end to end machine learning solutions at large scale. The team has worked on similar projects in the past and has the expertise to deliver a high-quality machine learning solution that meets the requirements of the project. Every member of the team including myself is dedicated to the success of the project and will work diligently to ensure that the project is delivered on time and within budget.
+
 
 ---
 | Database Storage                | $5,000               |
