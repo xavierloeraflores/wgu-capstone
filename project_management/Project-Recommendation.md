@@ -70,6 +70,8 @@ Labor Cost Breakdown:
 
 ## Data Precautions
 
+The data used for training the model was carefully selected to adhere with company policy and legal regulations. Beyond ensuring that data was collected ethically in accordance with the company's privacy policy, the data was also anonymized to protect the privacy of the users. During the cleaning process, content in posts was also altered to remove any mentions of other users as well as any personal information that could be used to identify individuals. It is also important to note that we also only used publicly available data and did not use any private data in the training of the model. The machine learning model will not use any metadata or personal information to make predictions on the content of the posts. Predictions are made purely based on the content of the posts and the patterns in the data that the model has learned during training.
+
 ## Expertise
 
 ---
