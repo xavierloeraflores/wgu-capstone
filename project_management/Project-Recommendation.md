@@ -74,9 +74,3 @@ The data used for training the model was carefully selected to adhere with compa
 
 ## Expertise
 The team is comprised of experienced and versatile engineers with strong backgrounds in their respective disciplines. The team comprises of 2 machine learning engineers, 1 fullstack engineer, 1 dedicated backend engineer, and a project manager all with high level degrees in computer science or data science and at least 3 years of experience delivering end to end machine learning solutions at large scale. The team has worked on similar projects in the past and has the expertise to deliver a high-quality machine learning solution that meets the requirements of the project. Every member of the team including myself is dedicated to the success of the project and will work diligently to ensure that the project is delivered on time and within budget.
-
-
----
-| Database Storage                | $5,000               |
-| Data Processing Compute Usage   | $5,000               |
-| ML Model Training Compute Usage | $20,000              |
