@@ -14,6 +14,8 @@ The machine learning model will be trained on data sourced from within the compa
 
 ## Objectives & Hypothesis
 
+The main objective of the model would be to categorize new posts for moderation, allowing a large portion of moderation to be automated. Once implemented there should be a reduction the amount of publicly visible inappropriate content on the platform resulting in an improved user experience. The model will be implemented using logistic regression and under supervised training on labeled data. Hypothetically, the model will be able to accurately categorize new posts based on the patterns in the data that it has learned during training. The model will be evaluated based on its accuracy in categorizing new posts and its ability to increase the efficiency of the moderation team.
+
 ## Methodology
 
 ### Project Management Methodology
