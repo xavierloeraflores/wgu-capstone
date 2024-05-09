@@ -8,6 +8,8 @@ The Social Club L.L.C's social media platform is currently facing numerous issue
 
 ## Application Description
 
+The application will be a fullstack web application that allows users to make posts to the feed. Every post will be automatically categorized as offensive or safe when the any user makes a post. All users will be able to see the public feed and see which posts were flagged for offensive content. Users will also be allowed to explore the training and test data to see how these posts were flagged by the machine learning model. Additionally, users will be able to preview whether their post is offensive without making their content public. By default most users will not be able to read the contents of offensive posts but can opt in to toggle the ability to view offensive content at their own discretion.
+
 ## Data Description
 
 The machine learning model will be trained on data sourced from within the company. The data will consist of user-generated content that has been labeled for offensive content. Each data point will consist only of content in the social media post, the identifier of the post, and a labeled indicated whether the content is safe or offensive. For the purposes of the project demo, data has been sourced from over 2 Kaggle datasets containing over 50 thousand posts combined that have been categorized based on content . All of the posts are text only and none of the posts contain any personal information or metadata that could be used to identify individuals who posted the content.
