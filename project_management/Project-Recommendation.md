@@ -2,6 +2,8 @@
 
 ## Problem Summary
 
+The Social Club L.L.C's social media platform is currently facing numerous issues which are hindering growth, hurting user experiences, and costing the company vast amounts of resources. Large amounts of user-generated content are being uploaded daily at an exponential rate which consequentially means more content that goes against the platform's moderation policies is also being uploaded as well. The company's moderation efforts are unable to keep pace with the increase in the amount of moderation request tickets to be processed by the moderation team. As a result, the platform is facing a backlog of moderation ticket requests, and a decrease in the quality of moderation for posts on the platform. While the company can attempt to scale the moderation team to meet the demand, this would be costly and inefficient. The company needs a more scalable and efficient solution to address the issue of inappropriate content on the platform.
+
 ## Application Benefits
 
 ## Application Description
@@ -68,8 +70,6 @@ Labor Cost Breakdown:
 | Maintenance Labor | IT Analyst | $50K - $75K | $1.5k - $2.25K Monthly |
 
 ## Timeline
-
-### Project Timeline
 
 A rough estimate of the project timeline is as follows:
 
