@@ -10,6 +10,8 @@ The Social Club L.L.C's social media platform is currently facing numerous issue
 
 ## Data Description
 
+The machine learning model will be trained on data sourced from within the company. The data will consist of user-generated content that has been labeled for offensive content. Each data point will consist only of content in the social media post, the identifier of the post, and a labeled indicated whether the content is safe or offensive. For the purposes of the project demo, data has been sourced from over 50 thousand posts that have been categorized based on content. All of the posts are text only and none of the posts contain any personal information or metadata that could be used to identify individuals who posted the content.
+
 ## Objectives & Hypothesis
 
 ## Methodology
