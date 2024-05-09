@@ -69,6 +69,72 @@ Labor Cost Breakdown:
 
 ## Timeline
 
+### Project Timeline
+
+A rough estimate of the project timeline is as follows:
+
+Sprint Timeline Overview:
+|Sprint| Dates | Task |
+|------|-------|------|
+| 1 | 04/01/2024 - 04/08/2024 | Project Planning |
+| 2 | 04/08/2024 - 04/22/2024 | Data Collection |
+| 3 | 04/22/2024 - 05/06/2024 | Data Preparation |
+| 4 | 05/06/2024 - 05/27/2024 | Model Training |
+| 5 | 05/27/2024 - 06/10/2024 | Integration & Testing |
+| 6 | 06/10/2024 - 06/17/2024 | Evaluation |
+| 7 | 06/17/2024 - 07/01/2024 | Model Deployment |
+
+Sprint 1: Project Planning ( 1 Week )
+
+- Define the project scope and goals
+- Define the project timeline
+- Define the project budget
+- Define the project team
+
+Sprint 2: Data Collection ( 2 Weeks )
+
+- Identify the data sources
+- Write the data collection method
+- Collect the data
+- Store the data
+
+Sprint 3: Data Preparation ( 2 Weeks )
+
+- Clean the data
+- Format the data
+- Mitigate data anomalies
+- Validate the data
+
+Sprint 4: Model Training ( 3 Weeks )
+
+- Set up the machine learning environment
+- Train the machine learning model
+- Debug the model
+- Optimize the model
+- Validate the model
+
+Sprint 5: Integration & Testing ( 2 Weeks )
+
+- Integrate the model with the platform
+- Write tests for the model
+- Test the model
+- End-to-end testing
+- Create a maintenance plan
+
+Sprint 6: Evaluation ( 1 Week )
+
+- Deploy the model to a small subset of users
+- Monitor the model
+- Collect feedback
+- Evaluate the model
+
+Sprint 7: Model Deployment ( 2 Weeks )
+
+- Deploy the model to the entire platform
+- Monitor the model
+- Collect feedback
+- Document the model
+
 ## Data Precautions
 
 The data used for training the model was carefully selected to adhere with company policy and legal regulations. Beyond ensuring that data was collected ethically in accordance with the company's privacy policy, the data was also anonymized to protect the privacy of the users. During the cleaning process, content in posts was also altered to remove any mentions of other users as well as any personal information that could be used to identify individuals. It is also important to note that we also only used publicly available data and did not use any private data in the training of the model. The machine learning model will not use any metadata or personal information to make predictions on the content of the posts. Predictions are made purely based on the content of the posts and the patterns in the data that the model has learned during training.
