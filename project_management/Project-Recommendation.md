@@ -6,6 +6,8 @@ The Social Club L.L.C's social media platform is currently facing numerous issue
 
 ## Application Benefits
 
+The machine learning content moderation system will benefit the Social Club L.L.C platform in several ways. Firstly, it will help reduce the workload of the moderation team by automatically flagging inappropriate content, allowing the moderation team to focus on reviewing appealed content rather than addressing every report ticket. Secondly, it will help improve the quality of moderation on the platform by providing consistent and accurate moderation decisions in an instant without needing a user to report the content. Finally, it will help improve the user experience on the platform by allowing users to have information about their content before they post. Once implemented there should be a reduction the amount of publicly visible inappropriate content on the platform and a lower amount of strain on the moderation team.
+
 ## Application Description
 
 The application will be a fullstack web application that allows users to make posts to the feed. Every post will be automatically categorized as offensive or safe when the any user makes a post. All users will be able to see the public feed and see which posts were flagged for offensive content. Users will also be allowed to explore the training and test data to see how these posts were flagged by the machine learning model. Additionally, users will be able to preview whether their post is offensive without making their content public. By default most users will not be able to read the contents of offensive posts but can opt in to toggle the ability to view offensive content at their own discretion.
