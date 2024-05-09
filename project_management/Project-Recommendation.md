@@ -14,6 +14,8 @@
 
 ### Project Management Methodology
 
+Since the goal is to implement a solution that includes a model trained with supervised data, development of the model will adhere to a waterfall style of project management. This is because the project has a clear goal and requirements that can be defined at the beginning of the project and do not require frequent changes. Once the project has been deployed and released, we can revisit potentially switching to an agile approach if we plan to continue improving the model with new features and updates.The waterfall approach will allow the development team to focus on the implementation of the model and ensure that it meets the requirements of the project.
+
 ### Standard Methodology
 
 Cross-Industry Standard Process for Data Mining, also known as (CRISP-DM), will be used as the standard methodology for the project since it is a widely used and accepted methodology for machine learning projects and provides a structured approach for proceeding with the project.
