@@ -69,14 +69,9 @@ def create_post(text, classification):
     except Exception as e:
         print(e)
 
-def create_tag(tag):
-    try:
-        result = db_insert('INSERT INTO tags (tag) VALUES (%s)', [tag])
-    except Exception as e:
-        print(e)
+
 
 ## Main
 dataset1, dataset2 = read_csv_data()
 X, y = format_datasets(dataset1=dataset1, dataset2=dataset2)
 seed_data(X, y)
-create_tag("v1")
