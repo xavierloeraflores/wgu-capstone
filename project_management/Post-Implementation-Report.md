@@ -12,7 +12,15 @@ required). Write everything in the past tense.
 
 ## Data Summary
 
-• Provide the source of the raw data, how the data was collected, or how it was simulated.
+The data was sourced from two separate datasets from Kaggle. The first dataset, the training data from the Twitter Sentiment Analysis Hatred Speech dataset contained over 29 thousand rows of data containing a social media post and a label indicating whether the post was racist or not. The second dataset, the Hate Speech & Offensive Language dataset, contained over 25 thousand rows of data with a social media post and a label indicating whether the post contained hate speech, offensive language, or neither. The data was processed to map the labels to a binary classification of offensive or not offensive. The data was then split into training and testing sets for use in the machine learning model.
+
+```python
+
+# Issue: #179
+# CODE BLOCK: Data Preprocessing
+
+```
+
 • Describe how data was processed and managed throughout the application development life
 cycle: design, development, maintenance, or others.
 
@@ -35,6 +43,7 @@ Identify the location of at least three unique visualizations. They can addition
 
 ## User Guide
 
+The following user guide provides instructions on how to access and use the application either via the hosted web application or via a self hosting the development environment.
 
 ### Accessing the website
 To access the website, follow the steps below:
