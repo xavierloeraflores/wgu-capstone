@@ -12,7 +12,7 @@ required). Write everything in the past tense.
 
 ## Data Summary
 
-The data was sourced from two separate datasets from Kaggle. The first dataset, the training data from the Twitter Sentiment Analysis Hatred Speech dataset contained over 29 thousand rows of data containing a social media post and a label indicating whether the post was racist or not. The second dataset, the Hate Speech & Offensive Language dataset, contained over 25 thousand rows of data with a social media post and a label indicating whether the post contained hate speech, offensive language, or neither. The data was processed to map the labels to a binary classification of offensive or not offensive. The data was then split into training and testing sets for use in the machine learning model.
+The data was sourced from two separate datasets from Kaggle. The first dataset, the training data from the Twitter Sentiment Analysis dataset contained over 29 thousand rows of data containing a social media post and a label indicating whether the post was racist or not. The second dataset, the Hate Speech & Offensive Language dataset, contained over 25 thousand rows of data with a social media post and a label indicating whether the post contained hate speech, offensive language, or neither. The data was processed to map the labels to a binary classification of offensive or not offensive. The data was then split into training and testing sets for use in the machine learning model.
 
 ```python
 
