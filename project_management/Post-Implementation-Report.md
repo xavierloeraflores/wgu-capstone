@@ -12,7 +12,7 @@ required). Write everything in the past tense.
 
 ## Data Summary
 
-The data was sourced from two separate datasets from Kaggle. The first dataset, the training data from the Twitter Sentiment Analysis dataset contained over 29 thousand rows of data containing a social media post and a label indicating whether the post was racist or not. The second dataset, the Hate Speech & Offensive Language dataset, contained over 25 thousand rows of data with a social media post and a label indicating whether the post contained hate speech, offensive language, or neither. The data was processed to map the labels to a binary classification of offensive or not offensive. The data was then split into training and testing sets for use in the machine learning model.
+The data was sourced from two separate datasets from Kaggle. The first dataset, the training data from the Twitter Sentiment Analysis dataset(train.csv) contained over 29 thousand rows of data containing a social media post and a label indicating whether the post was racist or not. The second dataset, the Hate Speech & Offensive Language dataset(labeled_data.csv), contained over 25 thousand rows of data with a social media post and a label indicating whether the post contained hate speech, offensive language, or neither. The data was processed to map the labels to a binary classification of offensive or not offensive. The data was then split into training and testing sets for use in the machine learning model.
 
 ```python
 
@@ -21,8 +21,31 @@ The data was sourced from two separate datasets from Kaggle. The first dataset, 
 
 ```
 
-• Describe how data was processed and managed throughout the application development life
-cycle: design, development, maintenance, or others.
+The data was sourced from csv files and loaded into pandas for processing. After loading the different datasets, the data was then preprocessed to standardize the format of the data from the different datasets. The data was then combined into a singular dataset that was cleaned and prepared for splitting into training and testing sets. 
+
+```python
+
+# Issue: #186
+# CODE BLOCK: Data Cleaning
+
+```
+
+To develop the model, the data was first vectorized using a TF-IDF vectorizer. The vectorized data was then used to train a logistic regression model. After evaluating the model using the testing data to determine its accuracy, the model was then saved to a pkl file for use in the backend server application.
+
+```python
+
+# Issue: #185
+# CODE BLOCK: Data Vectorization
+
+```
+
+```python
+
+# Issue: #184
+# CODE BLOCK: Model Training
+
+```
+A separate module then uses those saved models and vectorizors to classify the posts from the dataset. After classifying the posts, the data and classifications are then saved to a PostgreSQL database.
 
 ## Machine Learning
 
