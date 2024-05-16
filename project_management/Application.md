@@ -21,7 +21,7 @@
 - README.md: Project README File
 - .gitignore: Git Ignore File
 
-## Machine Learning Algorithm & Vectorizor
+## Machine Learning Algorithm & Vectorizer
 
 ## User Interface
 

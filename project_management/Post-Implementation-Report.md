@@ -45,7 +45,7 @@ To develop the model, the data was first vectorized using a TF-IDF vectorizer. T
 # CODE BLOCK: Model Training
 
 ```
-A separate module then uses those saved models and vectorizors to classify the posts from the dataset. After classifying the posts, the data and classifications are then saved to a PostgreSQL database.
+A separate module then uses those saved models and vectorizers to classify the posts from the dataset. After classifying the posts, the data and classifications are then saved to a PostgreSQL database.
 
 ## Machine Learning
 
