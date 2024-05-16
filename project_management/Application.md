@@ -23,6 +23,8 @@
 
 ## Machine Learning Algorithm & Vectorizer
 
+The machine learning algorithm used in this project is the Logistic Regression and the vectorizer method used in this project is the using TF-IDF(Term Frequency Inverse Document Frequency) both of which have implementations in the SciKit-Learn library.
+
 ## User Interface
 
 ## System Design
