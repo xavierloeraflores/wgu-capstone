@@ -6,7 +6,7 @@ The Social Club L.L.C's social media platform is currently facing numerous issue
 
 ## Application Benefits
 
-The machine learning content moderation system will benefit the Social Club L.L.C in several ways. Firstly, it will help reduce the workload of the moderation team by automatically identifying inappropriate content, allowing the moderation team to focus on reviewing appealed content rather than addressing every report ticket. Secondly, it will help improve the quality of moderation on the platform by providing consistent and accurate moderation decisions in an instant without needing a user to report the content. Finally, it will help improve the user experience on the website by allowing users to have vital content filtering information about before they post. Once implemented there should be a reduction in the amount of publicly visible inappropriate content on the platform and a lower amount of strain on the moderation team.
+The machine learning content moderation system will benefit the Social Club L.L.C in several ways. Firstly, it will help reduce the workload of the moderation team by automatically identifying inappropriate content, allowing the moderation team to focus on reviewing appealed content rather than addressing every report ticket. Secondly, it will help improve the quality of moderation on the platform by providing consistent and accurate moderation decisions in an instant without needing a user to report the content. Finally, it will help improve the user experience on the website by allowing users to have vital content filtering information about before they post. Once implemented, there should be a reduction in the amount of publicly visible inappropriate content on the platform and a lower amount of strain on the moderation team.
 
 ## Application Description
 
@@ -14,7 +14,7 @@ The application will be a full-stack web application that allows users to make p
 
 ## Data Description
 
-The machine learning model will be trained on data stored from within the company that was already gathered from the platform. The data will consist of content posted by users that has been categorized for offensive content. Each data point will consist only of content in the social media post, the identifier of the post, and a label indicating whether the content is safe or offensive. For the purposes of the project demo, data will be sourced from over 2 Kaggle datasets containing over 50 thousand posts combined that have been categorized based on content. All of the posts are text only and none of the posts contain any personal information or metadata that could be used to identify individuals who posted the content.
+The machine learning model will be trained on data that will be gathered from data stored on the company's platform. The data will consist of content posted by users that has been categorized for offensive content. Each data point will consist only of content in the social media post, the identifier of the post, and a label indicating whether the content is safe or offensive. For the purposes of the project demo, data will be sourced from 2 datasets from Kaggle containing over 50 thousand posts combined that have been categorized based on content. All of the posts are text only and none of the posts contain any personal information or metadata that could be used to identify individuals who posted the content.
 
 ## Objectives & Hypothesis
 
@@ -97,13 +97,13 @@ Sprint Timeline Overview:
 - Sprint 3 Data Preparation : Clean, format, and validate the data to prepare for model training
 - Sprint 4 Model Training : Set up, train, debug, optimize, and validate the machine learning model
 - Sprint 5 Integration & Testing : Integrate the model with the platform and develop a testing/maintenance plan
-- Sprint 6 Evaluation : Monitor and collect feedback from a small subset of users with access to the model for evaluation.
-- Sprint 7 Model Deployment : Release the feature to all users, and begin monitoring, surveying, and documenting the system.
+- Sprint 6 Evaluation : Monitor and collect feedback from a small subset of users with access to the model for evaluation
+- Sprint 7 Model Deployment : Release the feature to all users, and begin monitoring, surveying, and documenting the system
 
 
 ## Data Precautions
 
-The data used for training the model was carefully selected to adhere to company policies and legal regulations. Beyond ensuring that data was collected ethically in accordance with the company's privacy policy, the data was also anonymized to protect the privacy of the users. During the cleaning process, content in posts was also altered to remove any mentions of other users as well as any personal information that could be used to identify individuals. It is also important to note that we only used publicly available data and did not use any private data in the training of the model. The machine learning model will not use any metadata or personal information to make predictions on the content of the posts. Predictions are made purely based on the content of the posts and the patterns in the data that the model has learned during training.
+The data used for training the model will carefully selected to adhere to company policies and legal regulations. Beyond ensuring that data will be collected ethically in accordance with the company's privacy policy, the data will also be anonymized to protect the privacy of the users. During the cleaning process, content in posts will be altered to remove any mentions of other users as well as any personal information that could be used to identify individuals. It is also important to note that we only used publicly available data and did not use any private data in the training of the model. The machine learning model will not use any metadata or personal information to make predictions on the content of the posts. Predictions are made purely based on the content of the posts and the patterns in the data that the model has learned during training.
 
 ## Expertise
 
