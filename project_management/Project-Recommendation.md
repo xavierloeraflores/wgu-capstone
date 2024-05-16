@@ -92,56 +92,14 @@ Sprint Timeline Overview:
 | 6 | 06/10/2024 - 06/17/2024 | Evaluation |
 | 7 | 06/17/2024 - 07/01/2024 | Model Deployment |
 
-Sprint 1: Project Planning ( 1 Week )
+- Sprint 1 Project Planning : Define the project requirements such as scope, goals, budget, timeline, and team
+- Sprint 2 Data Collection : Identify collect, and store the data needed for the project
+- Sprint 3 Data Preparation : Clean, format, and validate the data to prepare for model training
+- Sprint 4 Model Training : Set up, train, debug, optimize, and validate the machine learning model
+- Sprint 5 Integration & Testing : Integrate the model with the platform and develop a testing/maintenance plan
+- Sprint 6 Evaluation : Monitor and collect feedback from a small subset of users with access to the model for evaluation.
+- Sprint 7 Model Deployment : Release the feature to all users, and begin monitoring, surveying, and documenting the system.
 
-- Define the project scope and goals
-- Define the project timeline
-- Define the project budget
-- Define the project team
-
-Sprint 2: Data Collection ( 2 Weeks )
-
-- Identify the data sources
-- Write the data collection method
-- Collect the data
-- Store the data
-
-Sprint 3: Data Preparation ( 2 Weeks )
-
-- Clean the data
-- Format the data
-- Mitigate data anomalies
-- Validate the data
-
-Sprint 4: Model Training ( 3 Weeks )
-
-- Set up the machine learning environment
-- Train the machine learning model
-- Debug the model
-- Optimize the model
-- Validate the model
-
-Sprint 5: Integration & Testing ( 2 Weeks )
-
-- Integrate the model with the platform
-- Write tests for the model
-- Test the model
-- End-to-end testing
-- Create a maintenance plan
-
-Sprint 6: Evaluation ( 1 Week )
-
-- Deploy the model to a small subset of users
-- Monitor the model
-- Collect feedback
-- Evaluate the model
-
-Sprint 7: Model Deployment ( 2 Weeks )
-
-- Deploy the model to the entire platform
-- Monitor the model
-- Collect feedback
-- Document the model
 
 ## Data Precautions
 
