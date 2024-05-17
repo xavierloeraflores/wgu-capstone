@@ -37,6 +37,27 @@ export const Header: React.FC = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
+            <NavigationMenuTrigger>Analysis</NavigationMenuTrigger>
+            <NavigationMenuContent className="bg-background">
+              <div className="flex w-64 flex-col p-2">
+                <Destination
+                  props={{
+                    link: "/data-analysis",
+                    title: "Data",
+                    text: "Explore the data analysis",
+                  }}
+                />
+                <Destination
+                  props={{
+                    link: "/models",
+                    title: "Models",
+                    text: "Explore the different models",
+                  }}
+                />
+              </div>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
             <NavigationMenuTrigger>About</NavigationMenuTrigger>
             <NavigationMenuContent className="bg-background">
               <div className="flex w-64 flex-col p-2">
@@ -59,20 +80,6 @@ export const Header: React.FC = () => {
                     link: "/tech",
                     title: "Tech Stack",
                     text: "Learn how the site was built",
-                  }}
-                />
-                <Destination
-                  props={{
-                    link: "/data-analysis",
-                    title: "Analysis",
-                    text: "Explore the data analysis",
-                  }}
-                />
-                <Destination
-                  props={{
-                    link: "/models",
-                    title: "Models",
-                    text: "Explore the different models",
                   }}
                 />
               </div>
