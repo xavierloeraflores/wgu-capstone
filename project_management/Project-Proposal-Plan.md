@@ -1,17 +1,50 @@
 # Project Proposal Plan
 
-The project proposal should target your client’s middle management. This audience may be IT
-professionals but have limited computer science expertise. Use appropriate industry jargon and sufficient
-technical details to describe the proposed project and its application. Remember, you’re establishing the
-technical context for your project manager and how it will be implemented for the client. Write everything in
-the future tense.
 
 ## Project Summary
 
-• Describe the problem.
-• Summarize the client and their needs as related to the problem.
-• Provide descriptions of all deliverables. For example, the finished application and a user guide.
-• Provide a summary justifying how the application will benefit the client.
+### Problem Description
+The Social Club L.L.C. is experiencing significant challenges with moderating user-generated content on its social media platform. The exponential increase in content has led to an overwhelming number of moderation requests, resulting in a backlog and a decline in moderation quality. Scaling the moderation team is not a feasible solution due to high costs and inefficiency. Thus, the company requires a more scalable and efficient method to manage inappropriate content and improve user experience.
+
+### Client Summary and Needs
+The Social Club L.L.C. is a social media company that needs an automated content moderation solution to handle the vast amounts of user-generated content. The primary goals include:
+
+- Reducing the workload on the moderation team.
+- Improving the quality and consistency of content moderation.
+- Enhancing user experience by minimizing exposure to inappropriate content.
+- Providing users with content filtering options before posting.
+
+
+### Deliverables
+
+#### Data Handling and Processing
+- Collection and preprocessing of user-generated content data for model training.
+- Ensuring data privacy by anonymizing and cleaning the data.
+
+#### Machine Learning Model
+- A logistic regression model trained on labeled data to identify and categorize offensive content.
+- The model will be integrated into the backend of the web application to provide real-time moderation.
+
+#### Full-Stack Web Application
+- A platform for users to post content to a timeline feed.
+- Automatic moderation of posts for offensive content upon submission.
+- Public feed displaying content with moderation indicators.
+- Functionality for users to preview potential offensiveness of their posts.
+- Opt-in feature for users to view flagged content.
+
+#### Documentation
+- A comprehensive user guide detailing how to use the application and its features.
+- Technical documentation for the development and maintenance of the machine learning model and application.
+
+
+### Benefits Justification
+The machine learning content moderation system will significantly benefit The Social Club L.L.C. by:
+
+- Efficiency: Automating the moderation process reduces the workload on moderation team, allowing them to focus on reviewing appeals.
+- User Experience: Ensuring consistent, fast, and accurate moderation decisions improves the overall quality of content on the platform by hiding content as its uploaded quickly filtering out inappropriate content and providing users with pre-posting feedback on potential content issues.
+- Scalability: Offering a scalable solution that can handle the growing amount of content without proportional increases in moderation costs or need to mass hire new team members.
+- Cost-Effectiveness: By reducing the need for extensive human moderation, the company will be saving on operational costs.
+By implementing this solution, The Social Club L.L.C. can address its content moderation challenges effectively, improving both platform integrity and user satisfaction.
 
 ## Data Summary
 
