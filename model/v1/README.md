@@ -5,3 +5,4 @@
 - stemmer: SnowballStemmer
 - metrics: accuracy_score
 - dataset: [Twitter Sentiment Analysis]
+- accuracy: 0.9497888315344909
