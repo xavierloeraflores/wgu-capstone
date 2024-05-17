@@ -15,7 +15,7 @@ export const tableRows = [
       { value: "Logistic Regression" },
       { value: "80% of Dataset 1" },
       { value: "Snowball Stemmer, Stopwords" },
-      { value: 0.95 },
+      { value: 0.9497888315344909 },
     ],
   },
   {
@@ -24,7 +24,7 @@ export const tableRows = [
       { value: "Logistic Regression" },
       { value: "95% of Dataset 1 & 2" },
       { value: "Snowball Stemmer, Stopwords" },
-      { value: 0.95 },
+      { value: 0.9422128259337562 },
     ],
   },
   {
@@ -36,7 +36,7 @@ export const tableRows = [
         value:
           "Snowball Stemmer, Stopwords, Punctation, Symbols, Emojis, Markup",
       },
-      { value: 0.94 },
+      { value: 0.9383368569415081 },
     ],
   },
 ];
@@ -59,6 +59,24 @@ const downloadItems = [
     href: "/model/model-v3.pkl",
   },
 ];
+
+export const AccuracyChart = {
+  title: "Model Accuracy",
+  description: "The overall accuracy of the machine learning model.",
+  type: "bar",
+  chart: {
+    data: [
+      { label: "Model 1", value: 0.9497888315344909 },
+      { label: "Model 2", value: 0.9422128259337562 },
+      { label: "Model 3", value: 0.9383368569415081 },
+    ],
+    xAxisLabel: "Model",
+    yAxisLabel: "Value",
+    domain: [0.93, "auto"] as [number | string, number | string],
+  },
+};
+
+export const charts = [AccuracyChart];
 export const modelsDropdown = {
   menuTrigger: "Download Models",
   menuLabel: "Models",

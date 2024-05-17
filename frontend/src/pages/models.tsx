@@ -2,7 +2,14 @@ import { DataCardRow } from "@/components/DataCardRow";
 import { DataTable } from "@/components/DataTable";
 import { DataBarChart } from "@/components/DataBarChart";
 import { DataPieChart } from "@/components/DataPieChart";
-import { tableHeader, tableRows, testData, modelsDropdown } from "@/lib/models";
+import {
+  tableHeader,
+  tableRows,
+  testData,
+  modelsDropdown,
+  charts,
+  AccuracyChart,
+} from "@/lib/models";
 import { DataHeader } from "@/components/DataHeader";
 
 export default function DataAnalysis() {
@@ -34,14 +41,15 @@ export default function DataAnalysis() {
 
 const dataCards = [
   {
-    title: "Model Accuracy",
-    description: "The overall accuracy of the machine learning model.",
+    title: AccuracyChart.title,
+    description: AccuracyChart.description,
     children: (
       <DataBarChart
         className="aspect-[4/3]"
-        data={testData}
-        xAxisLabel="Model"
-        yAxisLabel="Value"
+        data={AccuracyChart.chart.data}
+        xAxisLabel={AccuracyChart.chart.xAxisLabel}
+        yAxisLabel={AccuracyChart.chart.yAxisLabel}
+        domain={AccuracyChart.chart.domain}
       />
     ),
   },
