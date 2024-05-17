@@ -15,6 +15,7 @@ type BarChartProps = {
   data: DataPoint[];
   xAxisLabel?: string;
   yAxisLabel?: string;
+  domain?: [number | string, number | string];
 };
 
 export const DataBarChart: React.FC<BarChartProps & { className?: string }> = ({
@@ -22,6 +23,7 @@ export const DataBarChart: React.FC<BarChartProps & { className?: string }> = ({
   className = "",
   xAxisLabel = "",
   yAxisLabel = "",
+  domain = [0, "auto"],
 }) => {
   return (
     <ResponsiveContainer width="100%" height={350}>
@@ -32,7 +34,7 @@ export const DataBarChart: React.FC<BarChartProps & { className?: string }> = ({
         width={300}
       >
         <XAxis dataKey="label" stroke="#888888" />
-        <YAxis stroke="#888888" />
+        <YAxis stroke="#888888" domain={domain} />
         <Tooltip
           formatter={(value) => [value, yAxisLabel]}
           labelFormatter={(label) => `${xAxisLabel}: ${label}`}
