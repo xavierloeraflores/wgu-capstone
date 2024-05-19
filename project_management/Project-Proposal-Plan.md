@@ -92,10 +92,27 @@ There are no significant ethical or legal concerns with our data as we will ensu
 
 ## Implementation
 
-• Describe an industry-standard methodology to be used.
-• An outline of the project’s implementation plan. This outline can focus on the project’s
-development as a whole; or it may focus on only the implementation of the machine learning
-solution.
+### Project Management Methodology
+
+Since the goal is to implement a solution that includes a model trained with supervised data, we will adhere to a waterfall project management approach especially given the project’s clear goals and well-defined requirements. This approach allows us to systematically progress through each development phase, ensuring all specifications are met before moving forward. Once the model is deployed, we may revisit and transition to an agile methodology to accommodate iterative improvements and feature enhancements if the company sees success in the implementation of the service. This initial waterfall approach will ensure the development team can focus on meeting the precise project requirements before iterating on future enhancements.
+
+### Standard Methodology
+
+Cross-Industry Standard Process for Data Mining, also known as (CRISP-DM), will be used as the standard methodology for the project since it is wifely used for machine learning projects and provides a structured approach for proceeding with the project.
+
+CRIPS-DM is a 6-phase process that includes the following phases:
+
+- Business Understanding: The Social Club L.L.C. needs a automatic machine learning service to help reduce the workload of the moderation team and to improve the quality of the moderation for users on the platform. This would not only save time and resources for the company but would also drive growth and user engagement on the platform.
+
+- Data Understanding: The data used to train the model will need to be user-generated content to allow the model to learn patterns in the data and make predictions on new data for offensive content detection. Using user-generated content in a Natural Language Processing model will allow the model to learn the context and patterns of offensive content.
+
+- Data Preparation: The data will need to be cleaned, categorized, and preprocessed before it can be used for training to ensure the model isn't training on incomplete or irrelevant data. Data will be categorized based on the content within the posts to be used for training the model. The data will also be cleaned to remove common stop words, symbols, and other anomalies that may not be useful for the model.
+
+- Modeling: Using natural language processing and supervised learning techniques and logistic regression, the model will be trained to accurately categorize the posts based on the offensiveness of the content. This will allow the model to predict future user-generated posts and categorize whether they are offensive or not allowing the content to be automatically moderated.
+
+- Evaluation: The solution will be evaluated to ensure that it meets the requirements and objectives of the project. This will involve testing the model with a testing data and new user-generated data to ensure that it is accurately categorizing the content and saving the human moderation team time.
+
+- Deployment: The machine learning solution will be deployed as a backend service that will be utilized within a full-stack application where users can post content that will be categorized by the model. Users will also be able to see how the model moderates their content.
 
 ## Timeline
 
