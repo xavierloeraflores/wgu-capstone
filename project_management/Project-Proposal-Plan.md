@@ -52,12 +52,43 @@ The machine learning content moderation system will significantly benefit The So
 
 ## Data Summary
 
-• Provide the source of the raw data, how the data will be collected, or how it will be simulated.
-• Describe how data will be processed and managed throughout the application development life
-cycle: design, development, maintenance, or others.
-• Justify why the data meets the needs of the project. If relevant, describe how data anomalies, e.g.,
-outliers, incomplete data, etc., will be handled.
-• Address any ethical or legal concerns regarding the data. If there are no concerns, explain why.
+### Data Source and Collection
+
+The machine learning model will be trained on data that will be gathered from data stored on the company's platform. The data will consist of content posted by users that has been categorized for offensive content. For this demo project, we will source our data from two publicly available datasets on Kaggle, which together contain over 50,000 posts combined. These datasets have already been categorized based on content on whether the content is safe or offensive. The data points will consist of the text of the posts, the ID of each post, and a boolean label containing its classification. Importantly, the data will have no personal information or metadata that could identify individuals.
+
+### Data Processing and Management
+
+Design Phase: During the design phase, we will define the structure and requirements of our dataset, ensuring it aligns with our model's needs. The following data schema represents how we will store the data:
+
+- text (string): The text content of the social media post
+- id (number): A unique identifier
+- is_nsfw (boolean): A flag indicating if it is offensive (true) or safe (false)
+
+Development Phase: In the development phase, data preprocessing will be critical. This includes:
+
+- Data Cleaning: Removing mentions of other users and any personal information to ensure anonymity.
+- Data Normalization: Standardizing the format of the text (e.g., lowercasing, removing special characters) to maintain consistency.
+- Data Splitting: Dividing the dataset into training, validation, and test sets to evaluate the model's performance accurately.
+
+Maintenance Phase: During maintenance, we will continuously monitor the data and model performance. This involves:
+
+- Updating the Dataset: Saving new data posted to the platform to prepare in case we need to retain the model.
+- Handling Anomalies: Identifying and managing data anomalies such as outliers or incomplete data.
+- Re-training the Model: The model can be retrained with the updated dataset to ensure it adapts to evolving patterns in offensive content.
+
+### Justification of Data Suitability
+
+The chosen datasets from Kaggle are well-suited for our project due to their large dataset size and categorized data. The data also features no personal information and metadata which ensures that our model's predictions are based solely on the content of the posts and not on other contextual factors.In order to handle data anomalies, we will need to clean and preprocess the data which contains a large amounts of words and symbols that are irrelevant. Outliers and incomplete data will be managed through preprocessing steps, ensuring the integrity and quality of the dataset.
+
+### Ethical and Legal Considerations
+
+Our data handling and processing protocols are designed to adhere strictly to ethical guidelines, legal regulations, and company policy.
+
+- Privacy: Data will be anonymized by removing personal information and user mentions.
+- Ethical Sourcing: Only publicly available data will used while abiding by our privacy policy.
+- Transparency: Clear documentation of data sources and collection practices will be made public.
+
+There are no significant ethical or legal concerns with our data as we will ensure that all data is anonymized and ethically sourced. By focusing solely on publicly available data and removing any potentially identifying information, we comply with privacy laws and ethical standards. The users of the platform can read about the data collection process and opt out of data collection for training purposes. In summary, the data we will source from Kaggle for the demo and the data we will source from our users will ensure that we meet the project's needs effectively while upholding the highest ethical and legal standards.
 
 ## Implementation
 
