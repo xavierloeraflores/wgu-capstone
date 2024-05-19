@@ -32,7 +32,7 @@ The Social Club L.L.C. is a social media company that needs an automated content
 - A platform for users to post content to a timeline feed.
 - Automatic moderation of posts for offensive content upon submission.
 - Public feed displaying content with moderation indicators.
-- Functionality for users to preview potential offensiveness of their posts.
+- Functionality for users to preview the potential offensiveness of their posts.
 - Opt-in feature for users to view flagged content.
 
 #### Documentation
@@ -44,9 +44,9 @@ The Social Club L.L.C. is a social media company that needs an automated content
 
 The machine learning content moderation system will significantly benefit The Social Club L.L.C. by:
 
-- Efficiency: Automating the moderation process reduces the workload on moderation team, allowing them to focus on reviewing appeals.
-- User Experience: Ensuring consistent, fast, and accurate moderation decisions improves the overall quality of content on the platform by hiding content as its uploaded quickly filtering out inappropriate content and providing users with pre-posting feedback on potential content issues.
-- Scalability: Offering a scalable solution that can handle the growing amount of content without proportional increases in moderation costs or need to mass hire new team members.
+- Efficiency: Automating the moderation process reduces the workload on the moderation team, allowing them to focus on reviewing appeals.
+- User Experience: Ensuring consistent, fast, and accurate moderation decisions improves the overall quality of content on the platform by hiding content as it's uploaded quickly filtering out inappropriate content, and providing users with pre-posting feedback on potential content issues.
+- Scalability: Offering a scalable solution that can handle the growing amount of content without proportional increases in moderation costs or the need to mass hire new team members.
 - Cost-Effectiveness: By reducing the need for extensive human moderation, the company will be saving on operational costs.
   By implementing this solution, The Social Club L.L.C. can address its content moderation challenges effectively, improving both platform integrity and user satisfaction.
 
@@ -99,7 +99,7 @@ solution.
 
 ## Timeline
 
-The project timeline forecast the development process for each milestone step along with the deliverables for each of the milestones. Overall, the project is expected to be complete in in about 3 months or about 90 days. The project timeline is as follows:
+The project timeline forecasts the development process for each milestone step along with the deliverables for each of the milestones. Overall, the project is expected to be completed in about 3 months or about 90 days. The project timeline is as follows:
 
 Sprint Timeline Overview:
 |Sprint| Dates | Task |
@@ -112,7 +112,7 @@ Sprint Timeline Overview:
 | 6 | 06/10/2024 - 06/17/2024 | Evaluation |
 | 7 | 06/17/2024 - 07/01/2024 | Model Deployment |
 
-The project timeline is broken down into 7 milestones with each lasting 1-3 weeks. Each milestone sprint is broken down into the following tasks and deliverables:
+The project timeline is broken down into 7 milestones each lasting 1-3 weeks. Each milestone sprint is broken down into the following tasks and deliverables:
 
 Sprint 1: Project Planning ( 1 Week )
 
@@ -123,7 +123,7 @@ Sprint 1: Project Planning ( 1 Week )
 
 Sprint 2: Data Collection ( 2 Weeks )
 
-- Identify validate the training data sources
+- Identify and validate the training data sources
 - Plan the data collection method
 - Write code scripts to collect the data
 - Store the data in a database for preparation
