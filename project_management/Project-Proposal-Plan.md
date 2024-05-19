@@ -1,12 +1,13 @@
 # Project Proposal Plan
 
-
 ## Project Summary
 
 ### Problem Description
+
 The Social Club L.L.C. is experiencing significant challenges with moderating user-generated content on its social media platform. The exponential increase in content has led to an overwhelming number of moderation requests, resulting in a backlog and a decline in moderation quality. Scaling the moderation team is not a feasible solution due to high costs and inefficiency. Thus, the company requires a more scalable and efficient method to manage inappropriate content and improve user experience.
 
 ### Client Summary and Needs
+
 The Social Club L.L.C. is a social media company that needs an automated content moderation solution to handle the vast amounts of user-generated content. The primary goals include:
 
 - Reducing the workload on the moderation team.
@@ -14,18 +15,20 @@ The Social Club L.L.C. is a social media company that needs an automated content
 - Enhancing user experience by minimizing exposure to inappropriate content.
 - Providing users with content filtering options before posting.
 
-
 ### Deliverables
 
 #### Data Handling and Processing
+
 - Collection and preprocessing of user-generated content data for model training.
 - Ensuring data privacy by anonymizing and cleaning the data.
 
 #### Machine Learning Model
+
 - A logistic regression model trained on labeled data to identify and categorize offensive content.
 - The model will be integrated into the backend of the web application to provide real-time moderation.
 
 #### Full-Stack Web Application
+
 - A platform for users to post content to a timeline feed.
 - Automatic moderation of posts for offensive content upon submission.
 - Public feed displaying content with moderation indicators.
@@ -33,18 +36,19 @@ The Social Club L.L.C. is a social media company that needs an automated content
 - Opt-in feature for users to view flagged content.
 
 #### Documentation
+
 - A comprehensive user guide detailing how to use the application and its features.
 - Technical documentation for the development and maintenance of the machine learning model and application.
 
-
 ### Benefits Justification
+
 The machine learning content moderation system will significantly benefit The Social Club L.L.C. by:
 
 - Efficiency: Automating the moderation process reduces the workload on moderation team, allowing them to focus on reviewing appeals.
 - User Experience: Ensuring consistent, fast, and accurate moderation decisions improves the overall quality of content on the platform by hiding content as its uploaded quickly filtering out inappropriate content and providing users with pre-posting feedback on potential content issues.
 - Scalability: Offering a scalable solution that can handle the growing amount of content without proportional increases in moderation costs or need to mass hire new team members.
 - Cost-Effectiveness: By reducing the need for extensive human moderation, the company will be saving on operational costs.
-By implementing this solution, The Social Club L.L.C. can address its content moderation challenges effectively, improving both platform integrity and user satisfaction.
+  By implementing this solution, The Social Club L.L.C. can address its content moderation challenges effectively, improving both platform integrity and user satisfaction.
 
 ## Data Summary
 
@@ -64,7 +68,7 @@ solution.
 
 ## Timeline
 
-The project timeline forecast the development process for each milestone step along with the deliverables for each of the milestones. The project timeline is as follows:
+The project timeline forecast the development process for each milestone step along with the deliverables for each of the milestones. Overall, the project is expected to be complete in in about 3 months or about 90 days. The project timeline is as follows:
 
 Sprint Timeline Overview:
 |Sprint| Dates | Task |
@@ -89,7 +93,7 @@ Sprint 1: Project Planning ( 1 Week )
 Sprint 2: Data Collection ( 2 Weeks )
 
 - Identify validate the training data sources
-- Plan the data collection method 
+- Plan the data collection method
 - Write code scripts to collect the data
 - Store the data in a database for preparation
 
@@ -130,10 +134,6 @@ Sprint 7: Model Deployment ( 2 Weeks )
 - Monitor the system and collect feedback
 - Document the system and write post-implementation reports
 
-## Duration
-
-(hours or days) Projected start date Anticipated end date
-
 ## Evaluation Plan
 
 • Describe the verification method(s) to be used at each stage of development.
@@ -144,33 +144,32 @@ Sprint 7: Model Deployment ( 2 Weeks )
 The following section represents the proposed estimated budget for the project including a cost breakdown for development and maintenance. Labor costs are separated into the categories of engineering labor, project management labor, and maintenance labor. A consolidated hardware and resources cost is also included as well as the ongoing estimated cost for cloud usage. A full breakdown of the labor cost is provided in this budget proposal.
 
 Development Cost Overview Breakdown:
-| Resource                        | Cost                 |
+| Resource | Cost |
 | ------------------------------- | -------------------- |
-| Engineering Labor               | $100K-150K           |
-| Project Management Labor        | $20K-30K             |
-| Database Storage                | $5,000               |
-| Data Processing Compute Usage   | $5,000               |
-| ML Model Training Compute Usage | $20,000              |
-| Upfront Cost Total              | ~$150K-200K          |
+| Engineering Labor | $100K-150K |
+| Project Management Labor | $20K-30K |
+| Database Storage | $5,000 |
+| Data Processing Compute Usage | $5,000 |
+| ML Model Training Compute Usage | $20,000 |
+| Upfront Cost Total | ~$150K-200K |
 
 Ongoing Cost Breakdown:
-| Resource                        | Cost                 |
+| Resource | Cost |
 | ------------------------------- | -------------------- |
-| Cloud Server Usage              | ~$35K-45K Monthly    |
-| Maintenance Engineering Labor   | $10K-15K Monthly     |
-| On-Going Total                  | ~$45K-60k Monthly    |
-
+| Cloud Server Usage | ~$35K-45K Monthly |
+| Maintenance Engineering Labor | $10K-15K Monthly |
+| On-Going Total | ~$45K-60k Monthly |
 
 The following labor cost full breakdown estimates are based on the salaries of the individual respective roles. The real cost is calculated based on a 3-month development timeline.
 
-Labor Cost Breakdown: 
-| Type              | Role                      | Salary        | Real Cost              |
+Labor Cost Breakdown:
+| Type | Role | Salary | Real Cost |
 | ----------------- | ------------------------- | ------------- | ---------------------- |
-| Engineering Labor | Machine Learning Engineer | $100K - $150K | $25k - $37.5K          |
-| Engineering Labor | Machine Learning Engineer | $100K - $150K | $25k - $37.5K          |
-| Engineering Labor | Fullstack Engineer        | $100K - $150K | $25k - $37.5K          |
-| Engineering Labor | Backend Engineer          | $100K - $150K | $25k - $37.5K          |
-| Management Labor  | Project Manager           | $80K - $120K  | $20k - $30K            |
-| Maintenance Labor | Senior IT Analyst         | $84K - $126K  | $7K - $10.5K Monthly   |
-| Maintenance Labor | IT Analyst                | $50K - $75K   | $1.5k - $2.25K Monthly |
-| Maintenance Labor | IT Analyst                | $50K - $75K   | $1.5k - $2.25K Monthly |
+| Engineering Labor | Machine Learning Engineer | $100K - $150K | $25k - $37.5K |
+| Engineering Labor | Machine Learning Engineer | $100K - $150K | $25k - $37.5K |
+| Engineering Labor | Fullstack Engineer | $100K - $150K | $25k - $37.5K |
+| Engineering Labor | Backend Engineer | $100K - $150K | $25k - $37.5K |
+| Management Labor | Project Manager | $80K - $120K | $20k - $30K |
+| Maintenance Labor | Senior IT Analyst | $84K - $126K | $7K - $10.5K Monthly |
+| Maintenance Labor | IT Analyst | $50K - $75K | $1.5k - $2.25K Monthly |
+| Maintenance Labor | IT Analyst | $50K - $75K | $1.5k - $2.25K Monthly |
