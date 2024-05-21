@@ -98,11 +98,11 @@ Since the goal is to implement a solution that includes a model trained with sup
 
 ### Standard Methodology
 
-Cross-Industry Standard Process for Data Mining, also known as (CRISP-DM), will be used as the standard methodology for the project since it is wifely used for machine learning projects and provides a structured approach for proceeding with the project.
+Cross-Industry Standard Process for Data Mining, also known as (CRISP-DM), will be used as the standard methodology for the project since it is widely used for machine learning projects and provides a structured approach for proceeding with the project.
 
 CRIPS-DM is a 6-phase process that includes the following phases:
 
-- Business Understanding: The Social Club L.L.C. needs a automatic machine learning service to help reduce the workload of the moderation team and to improve the quality of the moderation for users on the platform. This would not only save time and resources for the company but would also drive growth and user engagement on the platform.
+- Business Understanding: The Social Club L.L.C. needs an automatic machine learning service to help reduce the workload of the moderation team and to improve the quality of the moderation for users on the platform. This would not only save time and resources for the company but would also drive growth and user engagement on the platform.
 
 - Data Understanding: The data used to train the model will need to be user-generated content to allow the model to learn patterns in the data and make predictions on new data for offensive content detection. Using user-generated content in a Natural Language Processing model will allow the model to learn the context and patterns of offensive content.
 
@@ -110,7 +110,7 @@ CRIPS-DM is a 6-phase process that includes the following phases:
 
 - Modeling: Using natural language processing and supervised learning techniques and logistic regression, the model will be trained to accurately categorize the posts based on the offensiveness of the content. This will allow the model to predict future user-generated posts and categorize whether they are offensive or not allowing the content to be automatically moderated.
 
-- Evaluation: The solution will be evaluated to ensure that it meets the requirements and objectives of the project. This will involve testing the model with a testing data and new user-generated data to ensure that it is accurately categorizing the content and saving the human moderation team time.
+- Evaluation: The solution will be evaluated to ensure that it meets the requirements and objectives of the project. This will involve testing the model with testing data and new user-generated data to ensure that it is accurately categorizing the content and saving the human moderation team time.
 
 - Deployment: The machine learning solution will be deployed as a backend service that will be utilized within a full-stack application where users can post content that will be categorized by the model. Users will also be able to see how the model moderates their content.
 
@@ -188,7 +188,7 @@ At each stage of the project, we will evaluate the progress of the machine learn
     - Model Accuracy: The model's accuracy will be evaluated using a testing dataset to ensure that it is accurately categorizing the content.
     - Model Efficiency: The model's efficiency will be evaluated by measuring the time it takes to process a large number of requests.
 
-Since the project's main goals are to improve customer satisfaction and reduce the workload of the moderation team, the verification methods will focus on the model's accuracy and efficiency. The best model to solve the problem the Social Club L.L.C.'s problem will be the one that can process requests as fast as possible while being as accurate as possible. The models will be benchmarked to measure the model's accuracy on a testing dataset and the model's speed on a large number of requests. Post implementation, verification methods will include: A/B testing on users, user feedback, and monitoring the system for any issues. 
+Since the project's main goals are to improve customer satisfaction and reduce the workload of the moderation team, the verification methods will focus on the model's accuracy and efficiency. The best model to solve the problem of the Social Club L.L.C.'s problem will be the one that can process requests as fast as possible while being as accurate as possible. The models will be benchmarked to measure the model's accuracy on a testing dataset and the model's speed on a large number of requests. Post implementation, verification methods will include A/B testing on users, user feedback, and monitoring the system for any issues. 
 
 ## Resources and Costs
 
