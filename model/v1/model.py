@@ -6,6 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from wordcloud import WordCloud, STOPWORDS , ImageColorGenerator
 import pickle
+import time
 
 data = read_csv('../datasets/train.csv')
 
@@ -38,6 +39,18 @@ y_pred = model.predict(X_test_vec)
 
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
+
+test_data = read_csv('../datasets/test.csv')
+test_X = data['tweet']
+test_X = test_X.apply(clean)
+test_vec = vectorizer.transform(test_data)
+print("Measuring Time...")
+start_time = time.time()
+for _ in range(10000):
+        model.predict(test_vec)
+end_time = time.time()
+elapsed_time = end_time - start_time
+print("Elapsed Time:", elapsed_time)
 
 input = [clean("Test Text")]
 output = model.predict(vectorizer.transform(input))

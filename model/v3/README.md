@@ -6,6 +6,7 @@
 - metrics: accuracy_score
 - dataset: [Twitter Sentiment Analysis], [Hate Speech & Offensive Language]
 - accuracy: 0.9383368569415081
+- time(s) on 10000 copies of test data: 4.4583580493927
 
 Combines the two datasets by mapping classifications of "hate speech"/"offensive"/"safe" from Hate Speech & Offensive Language(HSOL) to the binary results of "offensive"/"safe" of Twitter Sentiment Analysis(TSA).
 

@@ -14,3 +14,9 @@ def preprocess_data():
     categorized_y2 = raw_y2.map({0: 'offensive', 1: 'offensive', 2: 'safe'})
     y = concat([categorized_y1, categorized_y2])
     return X, y
+
+def preprocess_test_data():
+    data = read_csv('../datasets/test.csv')
+    X = data['tweet']
+    X = X.apply(clean_data)
+    return X

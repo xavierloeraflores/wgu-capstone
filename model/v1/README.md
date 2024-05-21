@@ -6,3 +6,4 @@
 - metrics: accuracy_score
 - dataset: [Twitter Sentiment Analysis]
 - accuracy: 0.9497888315344909
+- time(s) on 10000 copies of test data: 0.7006411552429199
