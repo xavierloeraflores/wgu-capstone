@@ -1,9 +1,5 @@
 # Post-implementation Report
 
-Create a post-implementation as outlined below. Provide sufficient detail so that a reader knowledgeable
-in computer science but unfamiliar with your project can understand what you have accomplished. Using
-examples and visualizations (including screenshots) beyond the three required is recommended (but not
-required). Write everything in the past tense.
 
 ## Solution Summary
 
@@ -171,7 +167,7 @@ For each employed method described in the section above provide the following:
 
 ## Visualizations
 
-Identify the location of at least three unique visualizations. They can additionally included here.
+Below are visualizations of the data and the machine learning model. Some of the visualizations are sourced from the development process and of the screenshots are sourced from the final web application and can be viewed in the final application. The web application features high resolution images and interactive charts on the analysis pages that can be accessed via the navigation bar.
 
 ## User Guide
 
