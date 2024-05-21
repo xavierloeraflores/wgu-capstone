@@ -184,8 +184,11 @@ Sprint 7: Model Deployment ( 2 Weeks )
 
 ## Evaluation Plan
 
-• Describe the verification method(s) to be used at each stage of development.
-• Describe the validation method to be used upon completion of the project.
+At each stage of the project, we will evaluate the progress of the machine learning model and the full-stack application to verify that the project is on track and meeting the requirements of the Social Club L.L.C. Alongside requirement validation and extensive testing throughout development the following metrics are going to be tracked:
+    - Model Accuracy: The model's accuracy will be evaluated using a testing dataset to ensure that it is accurately categorizing the content.
+    - Model Efficiency: The model's efficiency will be evaluated by measuring the time it takes to process a large number of requests.
+
+Since the project's main goals are to improve customer satisfaction and reduce the workload of the moderation team, the verification methods will focus on the model's accuracy and efficiency. The best model to solve the problem the Social Club L.L.C.'s problem will be the one that can process requests as fast as possible while being as accurate as possible. The models will be benchmarked to measure the model's accuracy on a testing dataset and the model's speed on a large number of requests. Post implementation, verification methods will include: A/B testing on users, user feedback, and monitoring the system for any issues. 
 
 ## Resources and Costs
 
