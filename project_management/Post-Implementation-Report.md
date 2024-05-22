@@ -29,6 +29,12 @@ def preprocess_data():
     y = concat([categorized_y1, categorized_y2])
     return X, y
 
+def preprocess_test_data():
+    data = read_csv('../datasets/test.csv')
+    X = data['tweet']
+    X = X.apply(clean_data)
+    return X
+
 ```
 
 The data was sourced from CSV files and loaded into pandas for processing. After loading the different datasets, the data was then preprocessed to standardize the format of the data from the different datasets. The data was then combined into a singular dataset that was cleaned and prepared for splitting into training and testing sets. 
@@ -140,7 +146,7 @@ def visualize():
 
 ```python
 
-from data import preprocess_data
+from data import preprocess_data, preprocess_test_data
 from visualization import visualize
 from test import test_model
 from persistance import persist
@@ -148,7 +154,8 @@ from train import train
 
 visualize()
 X, y = preprocess_data()
-model, vectorizer = train(X, y)
+test = preprocess_test_data()
+model, vectorizer = train(X, y, test)
 test_model(model, vectorizer)
 persist(model, vectorizer)
 
