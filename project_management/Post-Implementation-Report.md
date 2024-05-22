@@ -126,21 +126,24 @@ To develop the model, the data was first vectorized using a TF-IDF vectorizer. T
 
 ```python
 
-from wordcloud import WordCloud, STOPWORDS , ImageColorGenerator
-from data import preprocess_data
+import pickle
+version = 'v3'
 
+def dump_model(model):
+    pickle.dump(model, open(f'model-{version}.pkl', 'wb'))
 
-def generate_wordcloud(words_data):
-    wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white")
-    wordcloud.generate(' '.join(tweet for tweet in words_data))
-    wordcloud.to_file("wordcloud.png")
+def dump_vectorizer(vectorizer):
+    pickle.dump(vectorizer, open(f'vectorizer-{version}.pkl', 'wb'))
 
-def visualize_raw_data():
-    X, y = preprocess_data()
-    generate_wordcloud(X)
+def load_model():
+    return pickle.load(open(f'model-{version}.pkl', 'rb'))
 
-def visualize():
-    visualize_raw_data()
+def load_vectorizer():
+    return pickle.load(open(f'vectorizer-{version}.pkl', 'rb'))
+
+def persist(model, vectorizer):
+    dump_model(model)
+    dump_vectorizer(vectorizer)
 
 ```
 
@@ -169,6 +172,56 @@ How:  The development of the logistic regression model involved several key step
 
 Why: Logistic Regression was chosen because of its effectiveness in binary classification and natural language processing problems. The logistic regression implementation from the SciKit-Learn library provides a probabilistic approach that is easy to understand and implement. Additionally, logistic regression is computationally efficient which is suitable for real-time moderation on the server while demonstrating a capability to accurately identify offensive content. Logistic regression aligns with the Social Club L.L.C's goal of providing a reliable, fast, and scalable content moderation system.
 
+The following code snippet shows the implementation of the logistic regression model using the SciKit-Learn library in Python.
+```python
+
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+import time
+
+def print_accuracy_metrics(model, x_test_vec, y_test):
+    y_pred = model.predict(x_test_vec)
+    accuracy = accuracy_score(y_test, y_pred)
+    print("Accuracy:", accuracy)
+
+def print_speed_metrics(model, test_vec):
+    print("Measuring Time...")
+    start_time = time.time()
+    for _ in range(10000):
+        model.predict(test_vec)
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print("Elapsed Time:", elapsed_time)
+
+def fit_vectorizer(x_train, x_test):
+    vectorizer = TfidfVectorizer()  
+    x_train_vec = vectorizer.fit_transform(x_train)
+    x_test_vec = vectorizer.transform(x_test)
+    return vectorizer, x_train_vec, x_test_vec
+
+def fit_model(x_train_vec, y_train):
+    model = LogisticRegression()
+    model.fit(x_train_vec, y_train)
+    return model
+
+def split_data(x,y):
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.05, random_state=64)
+    return x_train, x_test, y_train, y_test
+
+def train(x,y, test):
+    x_train, x_test, y_train, y_test =split_data(x,y)
+    vectorizer, x_train_vec, x_test_vec = fit_vectorizer(x_train, x_test)
+    model = fit_model(x_train_vec, y_train)
+    print_accuracy_metrics(model, x_test_vec, y_test)
+    test_vec = vectorizer.transform(test)
+    print_speed_metrics(model, test_vec)
+
+    return model, vectorizer
+
+```
+
 ## Validation
 
 Upon the completion of the machine learning project for the Social Club L.L.C. project, we carried out a comprehensive validation process as outlined in our project proposal. The primary metrics used for evaluation were model accuracy and processing speed, with the objective of enhancing customer satisfaction and easing the workload of the moderation team. Three models were tested: Model 1, Model 2, and Model 3.
@@ -179,6 +232,23 @@ Model 1 demonstrated the highest accuracy at 0.9498, followed by Model 2 at 0.94
 Post-Implementation Verification:
 Following the deployment of the machine learning system, extensive A/B testing will be conducted with a segment of users to compare the user experience of the new system against the previous one. Additionally, continuous monitoring will be needed to ensure there are no significant issues and that the system maintains high performance even under intense loads. The business team will need to consult and measure the efficiency gains in processing speed and accuracy directly contributed to reduced moderation workload.
 
+The following code snippet shows how accuracy and speed were measured and displayed in the validation process. 
+```python
+def print_accuracy_metrics(model, x_test_vec, y_test):
+    y_pred = model.predict(x_test_vec)
+    accuracy = accuracy_score(y_test, y_pred)
+    print("Accuracy:", accuracy)
+
+def print_speed_metrics(model, test_vec):
+    print("Measuring Time...")
+    start_time = time.time()
+    for _ in range(10000):
+        model.predict(test_vec)
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print("Elapsed Time:", elapsed_time)
+
+```
 ## Visualizations
 
 Below are visualizations of the data and the machine-learning model. Some of the visualizations are sourced from the development process and the screenshots are sourced from the final web application and can be viewed in the final application. The web application features high-resolution images and interactive charts on the analysis pages that can be accessed via the navigation bar.
