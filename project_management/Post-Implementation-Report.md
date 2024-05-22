@@ -3,8 +3,11 @@
 
 ## Solution Summary
 
-• Summarize the problem and solution.
-• Describe how the application provides a solution to the problem from parts A and B.
+The Social Club L.L.C. faced significant challenges in moderating the vast amount of user-generated content on its social media platform, resulting in a backlog and decline in moderation quality. To address these issues, the company needed an efficient and scalable content moderation system. The implemented solution is a machine learning-based automated moderation system that reduces the workload on the moderation team, provides consistent and fast content filtering, and enhances user experience by reducing inappropriate content on the platform.
+
+The new system uses a logistic regression model trained on user-generated data to categorize offensive content. Since the model is integrated into the backend of the social media platform, it enables real-time content moderation and significantly improves the efficiency of the moderation process. Additionally, the solution includes a full-stack web application that allows users to post and view auto-moderated content, preview potential content warnings before posting, and opt-in to view inappropriate content. This approach ensures the scalability of the moderation process and also offers a cost-effective way to maintain high-quality content on the platform.
+
+The Social Club L.L.C. can handle the increasing volume of content without expanding the moderation team and save on long term operational costs by automating the content moderation. The machine learning system is supported by a responsive and mobile-friendly interface built with the Next.js framework that can be accessed on most modern web browsers. The deployment architecture is robust and scalable since it features a Next.js frontend hosted on Vercel, a FastAPI backend hosted on Railway, and a PostgreSQL database hosted via VercelDB all of which can automatically scale with traffic. In summary, the implemented solution ensures a high-quality user experience and reduces the workload on the moderation team by providing a cost-effective, accurate, and efficient way to moderate content on the Social Club L.L.C. platform.
 
 ## Data Summary
 
