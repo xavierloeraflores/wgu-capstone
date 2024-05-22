@@ -6,7 +6,7 @@ The Social Club L.L.C's social media platform is currently facing numerous issue
 
 ## Application Benefits
 
-The machine learning content moderation system will benefit the Social Club L.L.C in several ways. Firstly, it will help reduce the workload of the moderation team by automatically identifying inappropriate content, allowing the moderation team to focus on reviewing appealed content rather than addressing every report ticket. Secondly, it will help improve the quality of moderation on the platform by providing consistent and accurate moderation decisions in an instant without needing a user to report the content. Finally, it will help improve the user experience on the website by allowing users to have vital content filtering information about before they post. Once implemented, there should be a reduction in the amount of publicly visible inappropriate content on the platform and a lower amount of strain on the moderation team.
+The machine learning content moderation system will benefit the Social Club L.L.C. in several ways. Firstly, it will help reduce the workload of the moderation team by automatically identifying inappropriate content, allowing the moderation team to focus on reviewing appealed content rather than addressing every report ticket. Secondly, it will help improve the quality of moderation on the platform by providing consistent and accurate moderation decisions in an instant without needing a user to report the content. Finally, it will help improve the user experience on the website by allowing users to have vital content filtering information before they post. Once implemented, there should be a reduction in the amount of publicly visible inappropriate content on the platform and a lower amount of strain on the moderation team.
 
 ## Application Description
 
@@ -30,7 +30,7 @@ Since the goal is to implement a solution that includes a model trained with sup
 
 Cross-Industry Standard Process for Data Mining, also known as (CRISP-DM), will be used as the standard methodology for the project since it is a widely used and accepted methodology for machine learning projects and provides a structured approach for proceeding with the project.
 
-CRIPS-DM is a 6-phase process that includes the following phases:
+CRISP-DM is a 6-phase process that includes the following phases:
 
 - Business Understanding: The Social Club L.L.C. needs a machine learning solution to help reduce the workload of the moderation team and to improve the quality of the moderation for users on the platform. This would not only save time and resources for the company but would also drive growth and user engagement on the platform.
 
@@ -92,18 +92,17 @@ Sprint Timeline Overview:
 | 6 | 06/10/2024 - 06/17/2024 | Evaluation |
 | 7 | 06/17/2024 - 07/01/2024 | Model Deployment |
 
-- Sprint 1 Project Planning : Define the project requirements such as scope, goals, budget, timeline, and team
-- Sprint 2 Data Collection : Identify collect, and store the data needed for the project
-- Sprint 3 Data Preparation : Clean, format, and validate the data to prepare for model training
-- Sprint 4 Model Training : Set up, train, debug, optimize, and validate the machine learning model
-- Sprint 5 Integration & Testing : Integrate the model with the platform and develop a testing/maintenance plan
-- Sprint 6 Evaluation : Monitor and collect feedback from a small subset of users with access to the model for evaluation
-- Sprint 7 Model Deployment : Release the feature to all users, and begin monitoring, surveying, and documenting the system
-
+- Sprint 1 Project Planning: Define the project requirements such as scope, goals, budget, timeline, and team
+- Sprint 2 Data Collection: Identify collect, and store the data needed for the project
+- Sprint 3 Data Preparation: Clean, format, and validate the data to prepare for model training
+- Sprint 4 Model Training: Set up, train, debug, optimize, and validate the machine learning model
+- Sprint 5 Integration & Testing: Integrate the model with the platform and develop a testing/maintenance plan
+- Sprint 6 Evaluation: Monitor and collect feedback from a small subset of users with access to the model for evaluation
+- Sprint 7 Model Deployment: Release the feature to all users, and begin monitoring, surveying, and documenting the system
 
 ## Data Precautions
 
-The data used for training the model will carefully selected to adhere to company policies and legal regulations. Beyond ensuring that data will be collected ethically in accordance with the company's privacy policy, the data will also be anonymized to protect the privacy of the users. During the cleaning process, content in posts will be altered to remove any mentions of other users as well as any personal information that could be used to identify individuals. It is also important to note that we only used publicly available data and did not use any private data in the training of the model. The machine learning model will not use any metadata or personal information to make predictions on the content of the posts. Predictions are made purely based on the content of the posts and the patterns in the data that the model has learned during training.
+The data used for training the model will be carefully selected to adhere to company policies and legal regulations. Beyond ensuring that data will be collected ethically in accordance with the company's privacy policy, the data will also be anonymized to protect the privacy of the users. During the cleaning process, content in posts will be altered to remove any mentions of other users as well as any personal information that could be used to identify individuals. It is also important to note that we only used publicly available data and did not use any private data in the training of the model. The machine learning model will not use any metadata or personal information to make predictions on the content of the posts. Predictions are made purely based on the content of the posts and the patterns in the data that the model has learned during training.
 
 ## Expertise
 

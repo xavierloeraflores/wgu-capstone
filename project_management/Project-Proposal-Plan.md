@@ -78,7 +78,7 @@ Maintenance Phase: During maintenance, we will continuously monitor the data and
 
 ### Justification of Data Suitability
 
-The chosen datasets from Kaggle are well-suited for our project due to their large dataset size and categorized data. The data also features no personal information and metadata which ensures that our model's predictions are based solely on the content of the posts and not on other contextual factors.In order to handle data anomalies, we will need to clean and preprocess the data which contains a large amounts of words and symbols that are irrelevant. Outliers and incomplete data will be managed through preprocessing steps, ensuring the integrity and quality of the dataset.
+The chosen datasets from Kaggle are well-suited for our project due to their large dataset size and categorized data. The data also features no personal information and metadata which ensures that our model's predictions are based solely on the content of the posts and not on other contextual factors. In order to handle data anomalies, we will need to clean and preprocess the data which contains a large amounts of words and symbols that are irrelevant. Outliers and incomplete data will be managed through preprocessing steps, ensuring the integrity and quality of the dataset.
 
 ### Ethical and Legal Considerations
 
@@ -100,7 +100,7 @@ Since the goal is to implement a solution that includes a model trained with sup
 
 Cross-Industry Standard Process for Data Mining, also known as (CRISP-DM), will be used as the standard methodology for the project since it is widely used for machine learning projects and provides a structured approach for proceeding with the project.
 
-CRIPS-DM is a 6-phase process that includes the following phases:
+CRISP-DM is a 6-phase process that includes the following phases:
 
 - Business Understanding: The Social Club L.L.C. needs an automatic machine learning service to help reduce the workload of the moderation team and to improve the quality of the moderation for users on the platform. This would not only save time and resources for the company but would also drive growth and user engagement on the platform.
 
@@ -184,11 +184,9 @@ Sprint 7: Model Deployment ( 2 Weeks )
 
 ## Evaluation Plan
 
-At each stage of the project, we will evaluate the progress of the machine learning model and the full-stack application to verify that the project is on track and meeting the requirements of the Social Club L.L.C. Alongside requirement validation and extensive testing throughout development the following metrics are going to be tracked:
-    - Model Accuracy: The model's accuracy will be evaluated using a testing dataset to ensure that it is accurately categorizing the content.
-    - Model Efficiency: The model's efficiency will be evaluated by measuring the time it takes to process a large number of requests.
+At each stage of the project, we will evaluate the progress of the machine learning model and the full-stack application to verify that the project is on track and meeting the requirements of the Social Club L.L.C. Alongside requirement validation and extensive testing throughout development the following metrics are going to be tracked: - Model Accuracy: The model's accuracy will be evaluated using a testing dataset to ensure that it is accurately categorizing the content. - Model Efficiency: The model's efficiency will be evaluated by measuring the time it takes to process a large number of requests.
 
-Since the project's main goals are to improve customer satisfaction and reduce the workload of the moderation team, the verification methods will focus on the model's accuracy and efficiency. The best model to solve the problem of the Social Club L.L.C.'s problem will be the one that can process requests as fast as possible while being as accurate as possible. The models will be benchmarked to measure the model's accuracy on a testing dataset and the model's speed on a large number of requests. Post implementation, verification methods will include A/B testing on users, user feedback, and monitoring the system for any issues. 
+Since the project's main goals are to improve customer satisfaction and reduce the workload of the moderation team, the verification methods will focus on the model's accuracy and efficiency. The best model to solve the problem of the Social Club L.L.C.'s problem will be the one that can process requests as fast as possible while being as accurate as possible. The models will be benchmarked to measure the model's accuracy on a testing dataset and the model's speed on a large number of requests. Post implementation, verification methods will include A/B testing on users, user feedback, and monitoring the system for any issues.
 
 ## Resources and Costs
 

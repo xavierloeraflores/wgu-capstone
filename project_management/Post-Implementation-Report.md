@@ -1,6 +1,5 @@
 # Post-implementation Report
 
-
 ## Solution Summary
 
 The Social Club L.L.C. faced significant challenges in moderating the vast amount of user-generated content on its social media platform, resulting in a backlog and a decline in moderation quality. To address these issues, the company needed an efficient and scalable content moderation system. The implemented solution is a machine learning-based automated moderation system that reduces the workload on the moderation team, provides consistent and fast content filtering, and enhances user experience by reducing inappropriate content on the platform.
@@ -37,7 +36,7 @@ def preprocess_test_data():
 
 ```
 
-The data was sourced from CSV files and loaded into pandas for processing. After loading the different datasets, the data was then preprocessed to standardize the format of the data from the different datasets. The data was then combined into a singular dataset that was cleaned and prepared for splitting into training and testing sets. 
+The data was sourced from CSV files and loaded into pandas for processing. After loading the different datasets, the data was then preprocessed to standardize the format of the data from the different datasets. The data was then combined into a singular dataset that was cleaned and prepared for splitting into training and testing sets.
 
 ```python
 
@@ -57,11 +56,11 @@ def remove_special_terms(text):
 
 def remove_emojis(text):
     regex_pattern = re.compile("["
-                               u"\U0001F600-\U0001F64F"  
-                               u"\U0001F300-\U0001F5FF"  
-                               u"\U0001F680-\U0001F6FF"  
-                               u"\U0001F1E0-\U0001F1FF"  
-                               u"\U00002500-\U00002BEF"  
+                               u"\U0001F600-\U0001F64F"
+                               u"\U0001F300-\U0001F5FF"
+                               u"\U0001F680-\U0001F6FF"
+                               u"\U0001F1E0-\U0001F1FF"
+                               u"\U00002500-\U00002BEF"
                                u"\U00002702-\U000027B0"
                                u"\U00002702-\U000027B0"
                                u"\U000024C2-\U0001F251"
@@ -76,18 +75,18 @@ def remove_emojis(text):
 
 def remove_markdown(text):
     result = re.sub("<[a][^>]*>(.+?)</[a]>", 'link ', text)
-    result = re.sub('ð', '', result) 
+    result = re.sub('ð', '', result)
     result = re.sub('â', '', result)
     result = re.sub('&#x27;', "'", result) # apostrophe
-    result = re.sub('&quot;', '"', result) 
+    result = re.sub('&quot;', '"', result)
     result = re.sub('&amp;', '&', result)
     result = re.sub('&#x2F;', ' ', result)
     result = re.sub('<p>', ' ', result)
-    result = re.sub('<i>', ' ', result) 
+    result = re.sub('<i>', ' ', result)
     result = re.sub('&#62;', '', result)
     result = re.sub('&gt;', "", result) # >
     result = re.sub('&lt;', "", result) # <
-    result = re.sub("\n", '', result) # newline 
+    result = re.sub("\n", '', result) # newline
     return result
 
 def remove_stopwords(text):
@@ -152,7 +151,7 @@ def persist(model, vectorizer):
 from data import preprocess_data, preprocess_test_data
 from visualization import visualize
 from test import test_model
-from persistance import persist
+from persistence import persist
 from train import train
 
 visualize()
@@ -163,16 +162,19 @@ test_model(model, vectorizer)
 persist(model, vectorizer)
 
 ```
+
 A separate module then uses those saved models and vectorizers to classify the posts from the dataset. After classifying the posts, the data and classifications are then saved to a PostgreSQL database.
 
 ## Machine Learning
+
 What: Logistic Regression is a statistical method that can be well suited for binary classification problems. It serves as the project's primary algorithm for identifying and categorizing offensive content in user-generated posts by classifying whether a post is offensive or not.
 
-How:  The development of the logistic regression model involved several key steps. First, the user-generated labeled content dataset was preprocessed to clean, stem, and standardize the text by removing stop words, normalizing cases, and using tokenization. The cleaned text data was then vectorized using the TF-IDF (Term Frequency-Inverse Document Frequency) vectorizer to transform the text into numerical features which were used to train the logistic regression model on the labeled dataset. After evaluating the model on accuracy and efficiency, the trained model was saved and persisted as a PKL (Pickle) file for integration into the backend server application.
+How: The development of the logistic regression model involved several key steps. First, the user-generated labeled content dataset was preprocessed to clean, stem, and standardize the text by removing stop words, normalizing cases, and using tokenization. The cleaned text data was then vectorized using the TF-IDF (Term Frequency-Inverse Document Frequency) vectorizer to transform the text into numerical features which were used to train the logistic regression model on the labeled dataset. After evaluating the model on accuracy and efficiency, the trained model was saved and persisted as a PKL (Pickle) file for integration into the backend server application.
 
 Why: Logistic Regression was chosen because of its effectiveness in binary classification and natural language processing problems. The logistic regression implementation from the SciKit-Learn library provides a probabilistic approach that is easy to understand and implement. Additionally, logistic regression is computationally efficient which is suitable for real-time moderation on the server while demonstrating a capability to accurately identify offensive content. Logistic regression aligns with the Social Club L.L.C's goal of providing a reliable, fast, and scalable content moderation system.
 
 The following code snippet shows the implementation of the logistic regression model using the SciKit-Learn library in Python.
+
 ```python
 
 from sklearn.model_selection import train_test_split
@@ -196,7 +198,7 @@ def print_speed_metrics(model, test_vec):
     print("Elapsed Time:", elapsed_time)
 
 def fit_vectorizer(x_train, x_test):
-    vectorizer = TfidfVectorizer()  
+    vectorizer = TfidfVectorizer()
     x_train_vec = vectorizer.fit_transform(x_train)
     x_test_vec = vectorizer.transform(x_test)
     return vectorizer, x_train_vec, x_test_vec
@@ -227,12 +229,13 @@ def train(x,y, test):
 Upon the completion of the machine learning project for the Social Club L.L.C. project, we carried out a comprehensive validation process as outlined in our project proposal. The primary metrics used for evaluation were model accuracy and processing speed, with the objective of enhancing customer satisfaction and easing the workload of the moderation team. Three models were tested: Model 1, Model 2, and Model 3.
 
 Model Accuracy and Efficiency Evaluation:
-Model 1 demonstrated the highest accuracy at 0.9498, followed by Model 2 at 0.9422, and Model 3 at 0.9383. While all three models performed well in terms of accuracy, Model 1 outperformed the others, indicating its superior capability in accurately categorizing content. However, upon using the model in real-world tests, it appeared as if Model 3 performed the best from a subjective perspective since the first two models failed to recognize very clear cases of offensive content. In terms of efficiency, Model 1 processed requests at a speed of 0.7006 seconds per request, which is slightly slower than Model 2's 0.6921 seconds but significantly faster than Model 3, which took 4.4584 seconds per request. Although Model 2 was slightly faster than Model 1, the difference was negligible, meaning Model 1 would be the optimal choice given its higher accuracy. Model 3 was however chosen due because of its subjective performance. These validation tests need to be revisited and more data is needed to determine the best model.
+Model 1 demonstrated the highest accuracy at 0.9498, followed by Model 2 at 0.9422, and Model 3 at 0.9383. While all three models performed well in terms of accuracy, Model 1 outperformed the others, indicating its superior capability in accurately categorizing content. However, upon using the model in real-world tests, it appeared as if Model 3 performed the best from a subjective perspective since the first two models failed to recognize very clear cases of offensive content. In terms of efficiency, Model 1 processed requests at a speed of 0.7006 seconds per request, which is slightly slower than Model 2's 0.6921 seconds but significantly faster than Model 3, which took 4.4584 seconds per request. Although Model 2 was slightly faster than Model 1, the difference was negligible, meaning Model 1 would be the optimal choice given its higher accuracy. Model 3 was however chosen because of its subjective performance. These validation tests need to be revisited and more data is needed to determine the best model.
 
 Post-Implementation Verification:
 Following the deployment of the machine learning system, extensive A/B testing will be conducted with a segment of users to compare the user experience of the new system against the previous one. Additionally, continuous monitoring will be needed to ensure there are no significant issues and that the system maintains high performance even under intense loads. The business team will need to consult and measure the efficiency gains in processing speed and accuracy directly contributed to reduced moderation workload.
 
-The following code snippet shows how accuracy and speed were measured and displayed in the validation process. 
+The following code snippet shows how accuracy and speed were measured and displayed in the validation process.
+
 ```python
 def print_accuracy_metrics(model, x_test_vec, y_test):
     y_pred = model.predict(x_test_vec)
@@ -249,22 +252,23 @@ def print_speed_metrics(model, test_vec):
     print("Elapsed Time:", elapsed_time)
 
 ```
+
 ## Visualizations
 
 Below are visualizations of the data and the machine-learning model. Some of the visualizations are sourced from the development process and the screenshots are sourced from the final web application and can be viewed in the final application. The web application features high-resolution images and interactive charts on the analysis pages that can be accessed via the navigation bar.
 
 ## User Guide
 
-The following user guide provides instructions on how to access and use the application either via the hosted web application or via a self hosting the development environment.
+The following user guide provides instructions on how to access and use the application either via the hosted web application or via self-hosting the development environment.
 
 ### Accessing the website
+
 To access the website, follow the steps below:
 
-1. Open a web browser on your desktop or mobile device. The site is built to be responsive and should work on most devices but works best on desktop.
+1. Open a web browser on your desktop or mobile device. The site is built to be responsive and should work on most devices but works best on desktops.
 2. Enter the URL of the website [wgu-capstone-xavier-loera-flores.vercel.app](wgu-capstone-xavier-loera-flores.vercel.app) in the address bar and press enter to navigate to the website.
 3. Modules of the site may take a few seconds to load as they are set to sleep during periods with low activity. Once the website loads, you will be presented with the homepage.
 4. Once the website loads, you will be presented with the homepage.
-
 
 ### Navigating the Website
 
@@ -273,20 +277,20 @@ Once you are on the home page, you can navigate the website using the following 
 1. Use the navigation menu at the top of the page to access different sections of the website.
 2. Click on the links to navigate to specific pages or click on the toggle buttons to perform actions.
 3. The following pages are available on the website:
-    - Home: The main landing page of the website where users can view the timeline or make a post.
-    - About: View supplemental information about the site and its creation.   
-    - Analysis: View data analysis or visualizations related to the data or the machine learning solution.
-    - Docs: Access documentation for the api.
-4. The following actions can be performed via the toggle buttons on the nav bar. 
-    - Dark Mode: Toggle between light and dark mode.
-    - Content Filter: Filter the content on the page based for offensive content.
+   - Home: The main landing page of the website where users can view the timeline or make a post.
+   - About: View supplemental information about the site and its creation.
+   - Analysis: View data analysis or visualizations related to the data or the machine learning solution.
+   - Docs: Access documentation for the api.
+4. The following actions can be performed via the toggle buttons on the nav bar.
+   - Dark Mode: Toggle between light and dark mode.
+   - Content Filter: Filter the content on the page based for offensive content.
 
 ### Using the Main Application
 
 To use the application, follow these steps:
 
 1. On the homepage, you can scroll and view posts that other users have made. You can navigate between pages of posts using the navigation buttons at the bottom of the page.
-2. Using the text box at the top of the page, you can create a compose a post by entering your text.  
+2. Using the text box at the top of the page, you can compose a post by entering your text.
 3. You now have the option to either submit your post or to simply see how the model would classify your post.
 4. After submitting to classifying a post, you will see notifications about your post pop up on the bottom right of the screen.
 
@@ -296,17 +300,20 @@ To view analysis, follow these steps:
 
 1. Navigate to the Analysis tab using the navigation bar and select a specific analysis page to view.
 2. You can view visualizations and analysis of the data or machine learning model on the analysis page.
-3. You can also download raw files relating to the page using the the dropdown menu near the top of the page.
+3. You can also download raw files relating to the page using the dropdown menu near the top of the page.
 
 ### Accessing Documentation and Other Information
 
 There are other pages on the site which are purely informational. You can access these pages by clicking on the links in the navigation bar.
+
 1. To access the API documentation, click on the Docs link in the navigation bar.
-2. To access information about the site and its creation, click on the About tab in the navigation bar and select the specific about page you would like to view.
+2. To access information about the site and its creation, click on the About tab in the navigation bar and select the specific About page you would like to view.
 
 ### Running the Application Locally
-Alternatively, you can run modules of the entire program locally using the instructions in the README.md file each of the modules directly.
+
+Alternatively, you can run modules of the entire program locally using the instructions in the README.md file for each of the modules directly.
 Once you have downloaded the entire repository, you will see the following directories:
+
 - backend
 - frontend
 - data
