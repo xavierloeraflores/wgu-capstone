@@ -1,7 +1,7 @@
 from data import preprocess_data, preprocess_test_data
 from visualization import visualize
 from test import test_model
-from persistance import persist
+from persistence import persist
 from train import train
 
 
