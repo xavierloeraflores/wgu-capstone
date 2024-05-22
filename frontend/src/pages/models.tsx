@@ -9,6 +9,7 @@ import {
   modelsDropdown,
   charts,
   AccuracyChart,
+  SpeedChart,
 } from "@/lib/models";
 import { DataHeader } from "@/components/DataHeader";
 
@@ -50,6 +51,19 @@ const dataCards = [
         xAxisLabel={AccuracyChart.chart.xAxisLabel}
         yAxisLabel={AccuracyChart.chart.yAxisLabel}
         domain={AccuracyChart.chart.domain}
+      />
+    ),
+  },
+  {
+    title: SpeedChart.title,
+    description: SpeedChart.description,
+    children: (
+      <DataBarChart
+        className="aspect-[4/3]"
+        data={SpeedChart.chart.data}
+        xAxisLabel={SpeedChart.chart.xAxisLabel}
+        yAxisLabel={SpeedChart.chart.yAxisLabel}
+        domain={SpeedChart.chart.domain}
       />
     ),
   },

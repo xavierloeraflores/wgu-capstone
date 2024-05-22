@@ -71,12 +71,28 @@ export const AccuracyChart = {
       { label: "Model 3", value: 0.9383368569415081 },
     ],
     xAxisLabel: "Model",
-    yAxisLabel: "Value",
+    yAxisLabel: "Accuracy",
     domain: [0.93, "auto"] as [number | string, number | string],
   },
 };
 
-export const charts = [AccuracyChart];
+export const SpeedChart = {
+  title: "Model Speed",
+  description: "Time(s) to completely predict the test dataset 10,000 times.",
+  type: "bar",
+  chart: {
+    data: [
+      { label: "Model 1", value: 0.7006411552429199 },
+      { label: "Model 2", value: 0.6921260356903076 },
+      { label: "Model 3", value: 4.4583580493927 },
+    ],
+    xAxisLabel: "Model",
+    yAxisLabel: "Seconds",
+    domain: [0.5, "auto"] as [number | string, number | string],
+  },
+};
+
+export const charts = [AccuracyChart, SpeedChart];
 export const modelsDropdown = {
   menuTrigger: "Download Models",
   menuLabel: "Models",
