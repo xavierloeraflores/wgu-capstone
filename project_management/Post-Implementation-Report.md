@@ -156,11 +156,11 @@ persist(model, vectorizer)
 A separate module then uses those saved models and vectorizers to classify the posts from the dataset. After classifying the posts, the data and classifications are then saved to a PostgreSQL database.
 
 ## Machine Learning
+What: Logistic Regression is a statistical method which can be well suited for binary classification problems. In this project, it serves as the primary algorithm for identifying and categorizing offensive content in user-generated posts by classifying whether a post is offensive or not.
 
-For each employed method (at least one is required) provide the following:
-• Identify the method and what it does (the “what”).
-• Describe how the method was developed (the “how”).
-• Justify the selection and development of the method (the “why”).
+How:  The development of the logistic regression model involved several key steps. First, the user-generated labeled content dataset was preprocessed to clean, stem, and standardize the text by removing stop words, normalizing case, and by using tokenization. The cleaned text data was then vectorized using the TF-IDF (Term Frequency-Inverse Document Frequency) vectorizer to transform the text into numerical features which were used to train the logistic regression model on the labeled dataset. After evaluating the model on accuracy and efficiency, the trained model was saved and persisted as a PKL (Pickle) file for integration into the backend server application.
+
+Why: Logistic Regression was chosen because of its effectiveness in binary classification and in natural language processing problems. The logistic regression implementation from the SciKit-Learn library provides a probabilistic approach that is easy to understand and implement. Additionally, logistic regression is computationally efficient which is suitable for real-time moderation on the server while demonstrating a capability to accurately identify offensive content. Logistic regression aligns with the Social Club L.L.C's goal of providing a reliable, fast, and scalable content moderation system.
 
 ## Validation
 
