@@ -161,9 +161,13 @@ For each employed method (at least one is required) provide the following:
 
 ## Validation
 
-For each employed method described in the section above provide the following:
-• An appropriate validation method.An appropriate validation method.
-• Results of the validation method or a future plan to obtain those results.
+Upon the completion of the machine learning project for the Social Club L.L.C. project, we carried out a comprehensive validation process as outlined in our project proposal. The primary metrics used for evaluation were model accuracy and processing speed, with the objective of enhancing customer satisfaction and easing the workload of the moderation team. Three models were tested: Model 1, Model 2, and Model 3.
+
+Model Accuracy and Efficiency Evaluation:
+Model 1 demonstrated the highest accuracy at 0.9498, followed by Model 2 at 0.9422, and Model 3 at 0.9383. While all three models performed well in terms of accuracy, Model 1 outperformed the others, indicating its superior capability in accurately categorizing content. However, upon using model in real world tests, it appeared as if Model 3 performed the best from a subjective perspective since the first two models failed to recognize very clear cases of offensive content. In terms of efficiency, Model 1 processed requests at a speed of 0.7006 seconds per request, which is slightly slower than Model 2's 0.6921 seconds but significantly faster than Model 3, which took 4.4584 seconds per request. Although Model 2 was slightly faster than Model 1, the difference was negligible, meaning Model 1 would be the optimal choice given its higher accuracy. Model 3 was however chosen due because of its subjective performance. These validation tests need to be revisited and more data is needed to determine the best model.
+
+Post-Implementation Verification:
+Following the deployment of the machine learning system, extensive A/B testing will be conducted with a segment of users to compare the user experience of the new system against the previous one. Additionally, continuous monitoring will be needed to ensure there are no significant issues and that the system maintains high performance even under intense loads. The business team will need to consult and measure the efficiency gains in processing speed and accuracy directly contributed to reduced moderation workload.
 
 ## Visualizations
 
