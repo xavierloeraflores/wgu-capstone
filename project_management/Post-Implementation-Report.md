@@ -255,7 +255,26 @@ def print_speed_metrics(model, test_vec):
 
 ## Visualizations
 
-Below are visualizations of the data and the machine-learning model. Some of the visualizations are sourced from the development process and the screenshots are sourced from the final web application and can be viewed in the final application. The web application features high-resolution images and interactive charts on the analysis pages that can be accessed via the navigation bar.
+Below are visualizations of the data and the machine-learning model. Some of the images are sourced from the development process and some are sourced from the final web application. The web application features high-resolution images and interactive charts on the analysis pages that can be accessed via the navigation bar.
+
+Visualizations 1-3 can be found on the analysis pages of the websites featuring different charts about the models or the data. 
+
+Visual 1: Charts about the data with wordcloud
+![visual1](./visuals/visual1.png)
+Visual 2: Charts about the data
+![visual2](./visuals/visual2.png)
+Visual 3: Charts about the model
+![visual3](./visuals/visual3.png)
+
+Visualizations 4-6 are wordcloud images sourced from the development process and showcase the most prominent words sourced from the datasets.
+
+Visual 4: Wordcloud of Training Dataset 1
+![visual4](./visuals/visual4.png)
+Visual 5: Wordcloud of Training Dataset 2
+![visual5](./visuals/visual5.png)
+Visual 6: Wordcloud of Training Dataset 1 & 2 with extensive cleaning
+![visual6](./visuals/visual6.png)
+
 
 ## User Guide
 
