@@ -1,4 +1,4 @@
-from wordcloud import WordCloud, STOPWORDS , ImageColorGenerator
+from wordcloud import WordCloud
 from data import preprocess_data
 
 

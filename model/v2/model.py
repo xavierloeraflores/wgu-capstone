@@ -65,7 +65,7 @@ input = [clean(text)]
 output = model.predict(vectorizer.transform(input))
 print([text],":", input, ":", output)
 
-_wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white").generate(' '.join(tweet for tweet in data['tweet']))
+_wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white").generate(' '.join(tweet for tweet in data2['tweet']))
 _wordcloud.to_file("wordcloud.png")
 
 pickle.dump(model, open('model-v2.pkl', 'wb'))
