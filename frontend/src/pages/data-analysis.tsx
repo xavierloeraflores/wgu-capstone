@@ -1,11 +1,18 @@
 import { DataCardRow } from "@/components/DataCardRow";
 import { DataTable } from "@/components/DataTable";
 import { DataBarChart } from "@/components/DataBarChart";
+import { DataPieChart } from "@/components/DataPieChart";
 import {
   tableHeader,
   tableRows,
   testData,
   dataDropdown,
+  DataProportionChart,
+  DataSizeChart,
+  Dataset1ProportionChart,
+  Dataset2ProportionChart,
+  Dataset2DistributionChart,
+  TotalDatasetProportionChart,
 } from "@/lib/data-analysis";
 import { DataHeader } from "@/components/DataHeader";
 
@@ -39,62 +46,68 @@ export default function DataAnalysis() {
 
 const dataCards = [
   {
-    title: "Model Accuracy",
-    description: "The overall accuracy of the machine learning model.",
+    title: DataSizeChart.title,
+    description: DataSizeChart.description,
     children: (
       <DataBarChart
         className="aspect-[4/3]"
-        data={testData}
-        xAxisLabel="Model"
-        yAxisLabel="Value"
+        data={DataSizeChart.chart.data}
+        xAxisLabel={DataSizeChart.chart.xAxisLabel}
+        yAxisLabel={DataSizeChart.chart.yAxisLabel}
+        domain={DataSizeChart.chart.domain}
       />
     ),
   },
   {
-    title: "Feature Importance",
-    description: "The relative importance of each feature in the model.",
+    title: TotalDatasetProportionChart.title,
+    description: TotalDatasetProportionChart.description,
     children: (
-      <DataBarChart
+      <DataPieChart
         className="aspect-[4/3]"
-        data={testData}
-        xAxisLabel="Model"
-        yAxisLabel="Value"
+        data={TotalDatasetProportionChart.chart.data}
       />
     ),
   },
   {
-    title: "Prediction Distribution",
-    description: "The distribution of predictions for the model.",
+    title: DataProportionChart.title,
+    description: DataProportionChart.description,
     children: (
-      <DataBarChart
+      <DataPieChart
         className="aspect-[4/3]"
-        data={testData}
-        xAxisLabel="Model"
-        yAxisLabel="Value"
+        data={DataProportionChart.chart.data}
       />
     ),
   },
   {
-    title: "Prediction Distribution",
-    description: "The distribution of predictions for the model.",
+    title: Dataset1ProportionChart.title,
+    description: Dataset1ProportionChart.description,
     children: (
-      <DataBarChart
+      <DataPieChart
         className="aspect-[4/3]"
-        data={testData}
-        xAxisLabel="Model"
-        yAxisLabel="Value"
+        data={Dataset1ProportionChart.chart.data}
       />
     ),
   },
   {
-    title: "Prediction Distribution",
-    description: "The distribution of predictions for the model.",
+    title: Dataset2ProportionChart.title,
+    description: Dataset2ProportionChart.description,
+    children: (
+      <DataPieChart
+        className="aspect-[4/3]"
+        data={Dataset2ProportionChart.chart.data}
+      />
+    ),
+  },
+  {
+    title: Dataset2DistributionChart.title,
+    description: Dataset2DistributionChart.description,
     children: (
       <DataBarChart
         className="aspect-[4/3]"
-        data={testData}
-        xAxisLabel="Model"
-        yAxisLabel="Value"
+        data={Dataset2DistributionChart.chart.data}
+        xAxisLabel={Dataset2DistributionChart.chart.xAxisLabel}
+        yAxisLabel={Dataset2DistributionChart.chart.yAxisLabel}
+        domain={Dataset2DistributionChart.chart.domain}
       />
     ),
   },
