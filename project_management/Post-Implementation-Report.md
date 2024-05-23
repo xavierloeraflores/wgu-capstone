@@ -275,6 +275,24 @@ Visual 5: Wordcloud of Training Dataset 2
 Visual 6: Wordcloud of Training Dataset 1 & 2 with extensive cleaning
 ![visual6](./visuals/visual6.png)
 
+The following is the code used to generate the wordcloud image for the data used to train Model 3 (Visual 6). The other wordcloud images were generated using similar code. 
+
+```python
+from wordcloud import WordCloud
+from data import preprocess_data
+
+def generate_wordcloud(words_data):
+    wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white")
+    wordcloud.generate(' '.join(tweet for tweet in words_data))
+    wordcloud.to_file("wordcloud.png")
+
+def visualize_raw_data():
+    X, y = preprocess_data()
+    generate_wordcloud(X)
+
+def visualize():
+    visualize_raw_data()
+```
 
 ## User Guide
 
