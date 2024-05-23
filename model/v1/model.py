@@ -39,6 +39,10 @@ y_pred = model.predict(X_test_vec)
 
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
+print("Coefficients:", model.coef_)
+print("Intercept:", model.intercept_)
+print("Classes:", model.classes_)
+print("Number of iterations:", model.n_iter_)
 
 test_data = read_csv('../datasets/test.csv')
 test_X = data['tweet']

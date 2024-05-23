@@ -4,6 +4,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import time
 
+def print_model_info(model):
+    print("Coefficients:", model.coef_)
+    print("Intercept:", model.intercept_)
+    print("Classes:", model.classes_)
+    print("Number of iterations:", model.n_iter_)
 
 def print_accuracy_metrics(model, x_test_vec, y_test):
     y_pred = model.predict(x_test_vec)
@@ -40,6 +45,7 @@ def train(x,y, test):
     x_train, x_test, y_train, y_test =split_data(x,y)
     vectorizer, x_train_vec, x_test_vec = fit_vectorizer(x_train, x_test)
     model = fit_model(x_train_vec, y_train)
+    print_model_info(model)
     print_accuracy_metrics(model, x_test_vec, y_test)
     test_vec = vectorizer.transform(test)
     print_speed_metrics(model, test_vec)
