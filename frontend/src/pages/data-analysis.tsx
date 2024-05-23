@@ -2,6 +2,7 @@ import { DataCardRow } from "@/components/DataCardRow";
 import { DataTable } from "@/components/DataTable";
 import { DataBarChart } from "@/components/DataBarChart";
 import { DataPieChart } from "@/components/DataPieChart";
+import Image from "next/image";
 import {
   tableHeader,
   tableRows,
@@ -69,12 +70,14 @@ const dataCards = [
     ),
   },
   {
-    title: DataProportionChart.title,
-    description: DataProportionChart.description,
+    title: "Word Cloud",
+    description: "The most common words in the dataset",
     children: (
-      <DataPieChart
-        className="aspect-[4/3]"
-        data={DataProportionChart.chart.data}
+      <Image
+        src="/images/wordcloud.png"
+        width={1600}
+        height={900}
+        alt="An image showcasing the most common words in the dataset"
       />
     ),
   },
