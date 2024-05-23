@@ -33,12 +33,6 @@ export default function DataAnalysis() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container grid gap-8 px-4 md:px-6">
           <DataCardRow cards={dataCards}></DataCardRow>
-          <DataTable
-            title="Model Training Methods"
-            description="The different methods used to train each machine learning model"
-            header={tableHeader}
-            rows={tableRows}
-          />
         </div>
       </section>
     </>
