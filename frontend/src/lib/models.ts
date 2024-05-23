@@ -92,7 +92,27 @@ export const SpeedChart = {
   },
 };
 
-export const charts = [AccuracyChart, SpeedChart];
+// Number of iterations 1: [27]
+// Number of iterations 2: [18]
+// Number of iterations 3: [16]
+export const IterationsChart = {
+  title: "Model Iterations",
+  description:
+    "The number of iterations required to train each machine learning model.",
+  type: "bar",
+  chart: {
+    data: [
+      { label: "Model 1", value: 27 },
+      { label: "Model 2", value: 18 },
+      { label: "Model 3", value: 16 },
+    ],
+    xAxisLabel: "Model",
+    yAxisLabel: "Iterations",
+    domain: [0, "auto"] as [number | string, number | string],
+  },
+};
+
+export const charts = [AccuracyChart, SpeedChart, IterationsChart];
 export const modelsDropdown = {
   menuTrigger: "Download Models",
   menuLabel: "Models",

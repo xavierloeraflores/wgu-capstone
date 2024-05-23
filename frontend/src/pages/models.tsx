@@ -10,6 +10,7 @@ import {
   charts,
   AccuracyChart,
   SpeedChart,
+  IterationsChart,
 } from "@/lib/models";
 import { DataHeader } from "@/components/DataHeader";
 
@@ -68,43 +69,15 @@ const dataCards = [
     ),
   },
   {
-    title: "Feature Importance",
-    description: "The relative importance of each feature in the model.",
-    children: <DataPieChart className="aspect-[4/3]" data={testData} />,
-  },
-  {
-    title: "Prediction Distribution",
-    description: "The distribution of predictions for the model.",
+    title: IterationsChart.title,
+    description: IterationsChart.description,
     children: (
       <DataBarChart
         className="aspect-[4/3]"
-        data={testData}
-        xAxisLabel="Model"
-        yAxisLabel="Value"
-      />
-    ),
-  },
-  {
-    title: "Prediction Distribution",
-    description: "The distribution of predictions for the model.",
-    children: (
-      <DataBarChart
-        className="aspect-[4/3]"
-        data={testData}
-        xAxisLabel="Model"
-        yAxisLabel="Value"
-      />
-    ),
-  },
-  {
-    title: "Prediction Distribution",
-    description: "The distribution of predictions for the model.",
-    children: (
-      <DataBarChart
-        className="aspect-[4/3]"
-        data={testData}
-        xAxisLabel="Model"
-        yAxisLabel="Value"
+        data={IterationsChart.chart.data}
+        xAxisLabel={IterationsChart.chart.xAxisLabel}
+        yAxisLabel={IterationsChart.chart.yAxisLabel}
+        domain={IterationsChart.chart.domain}
       />
     ),
   },
