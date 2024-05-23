@@ -1,6 +1,7 @@
 from os import getenv
 from pandas import read_csv, concat
 import psycopg2
+import json
 
 DB_CONNECTION = getenv('DB_CONNECTION')
 
@@ -65,7 +66,9 @@ def create_post(text, classification):
         is_nsfw = True
         if classification == "safe":
             is_nsfw = False
-        result = db_insert('INSERT INTO posts (text, is_nsfw) VALUES (%s, %s)', (text, is_nsfw))
+        tags=["dataset"] 
+        post_tags = json.dumps(tags)
+        _result = db_insert("INSERT INTO posts (text, is_nsfw, tags) VALUES (%s, %s, %s)", (text, is_nsfw, post_tags))
     except Exception as e:
         print(e)
 
