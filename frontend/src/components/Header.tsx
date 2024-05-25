@@ -25,18 +25,6 @@ export const Header: React.FC = () => {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link
-              href="https://wgu-capstone-docs.vercel.app/"
-              legacyBehavior
-              passHref
-            >
-              <a target="_blank" className={navigationMenuTriggerStyle()}>
-                Docs
-              </a>
-            </Link>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
             <NavigationMenuTrigger>Analysis</NavigationMenuTrigger>
             <NavigationMenuContent className="bg-background">
               <div className="flex w-64 flex-col p-2">
@@ -82,6 +70,14 @@ export const Header: React.FC = () => {
                     text: "Learn how the site was built",
                   }}
                 />
+                <Destination
+                  props={{
+                    link: "https://wgu-capstone-docs.vercel.app/",
+                    title: "API Docs",
+                    text: "View the API documentation",
+                    external: true,
+                  }}
+                />
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -98,12 +94,13 @@ export const Header: React.FC = () => {
 const Destination = ({
   props,
 }: {
-  props: { link: string; title: string; text?: string };
+  props: { link: string; title: string; text?: string; external?: boolean };
 }) => {
-  const { link, title, text } = props;
+  const { link, title, text, external } = props;
   return (
     <Link href={link} legacyBehavior passHref>
       <NavigationMenuLink
+        target={external ? "_blank" : undefined}
         className={cn(navigationMenuTriggerStyle(), "w-full")}
       >
         <div className="flex w-full flex-col rounded-md no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
