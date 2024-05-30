@@ -20,7 +20,7 @@ export const Post: React.FC<PostProps & { className?: string }> = ({
   const isUserGenerated = tags.includes("user");
   const dateObj = new Date(date);
   return (
-    <Card className={cn("min-h-48 min-w-96 max-w-md", className)}>
+    <Card className={cn("min-h-48 min-w-64 max-w-md", className)}>
       <CardHeader className="flex flex-row flex-nowrap items-center gap-4 border-b-2">
         <PostAvatar isNSFW={isNSFW} />
         <h1 className="text-md text-center font-semibold">
