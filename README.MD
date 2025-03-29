@@ -1,4 +1,6 @@
 # Capstone Project for WGU
+(Offensive Language Detector)
+
 
 ## Frontend
 
